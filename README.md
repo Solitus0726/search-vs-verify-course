@@ -16,8 +16,8 @@ find the best split on your own model.
 | Path | What it is |
 |------|------------|
 | `notebooks/` | Five Jupyter notebooks (00 self-check → 04 baseline review) — the hands-on core |
-| `video/full_1080p.mp4` | Five-minute concept video (English narration, hardcoded subtitles, SRT included) |
-| `slides/策略讲解.pptx`, `slides/策略讲解.pdf` | Lecture slides: the math behind the trade-off |
+| `video/concept_video.mp4` | Five-minute concept video (English narration, hardcoded subtitles, SRT included) |
+| `slides/lecture_slides.pptx`, `slides/lecture_slides.pdf` | Lecture slides: the math behind the trade-off |
 | `syllabus.md` | Course syllabus: concept, leveling, learning objectives, core principle, worked example, decision tree, progressive experiments |
 | `paper/` | The two-page submission paper (PDF + LaTeX source) |
 | `figures/` | Learning-path diagram and strategy comparison diagram |
