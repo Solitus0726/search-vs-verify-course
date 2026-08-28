@@ -138,7 +138,7 @@ def fix_a_slash_b(string):
         new_string = "\\frac{" + str(a) + "}{" + str(b) + "}"
         return new_string
     except (AssertionError, ValueError):
-        # ValueError：模型输出不可控（如 "1/2miles"），int() 失败时按原文返回（官方脚本假设输入规范，本材料输入为模型输出）
+        # ValueError: model output is uncontrollable (e.g. "1/2miles"); when int() fails, return the string as-is (the official script assumes well-formed input, while our material feeds in model output)
         return string
 
 

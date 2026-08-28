@@ -1,7 +1,7 @@
-# download_models.py —— 六模型 GGUF 下载（ModelScope 镜像 + sha256 校验）
-# GGUF 镜像下载与 checksum；ZIP 离线复现用
-# 学生/作者均用此脚本：下载后统一命名 <模型名>-<量化档>.gguf 放入 model/
-# 运行：python scripts/download_models.py [--model qwen3-4b]（缺省下载全部）
+# download_models.py —— download GGUF for six models (ModelScope mirror + sha256 verification)
+# GGUF mirror download and checksum; for ZIP offline reproduction
+# Used by both students and authors: after download, files are named <model>-<quant>.gguf and placed in model/
+# Run: python scripts/download_models.py [--model qwen3-4b] (downloads all by default)
 import argparse
 import hashlib
 import os
@@ -10,8 +10,8 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_DIR = os.path.join(PROJECT_ROOT, "model")
 
-# 六模型：ModelScope repo + 仓库内文件名 + 本地命名 + sha256（与 model_hashes.json 一致）
-# 来源：Qwen3 系 = Qwen 官方 GGUF 仓库；gemma/Phi-4-Mini = unsloth 转换仓库
+# Six models: ModelScope repo + file name in repo + local name + sha256 (consistent with model_hashes.json)
+# Sources: Qwen3 family = Qwen official GGUF repo; gemma/Phi-4-Mini = unsloth conversion repo
 MODELS = {
     "qwen3-0.6b": {
         "repo": "Qwen/Qwen3-0.6B-GGUF", "remote": "Qwen3-0.6B-Q8_0.gguf",
@@ -58,9 +58,9 @@ def sha256_file(path: str, chunk: int = 1 << 20) -> str:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="六模型 GGUF 下载（ModelScope + sha256 校验）")
+    ap = argparse.ArgumentParser(description="download GGUF for six models (ModelScope + sha256 verification)")
     ap.add_argument("--model", default=None, choices=sorted(MODELS),
-                    help="只下载指定模型（缺省全部）")
+                    help="download only the specified model (all by default)")
     args = ap.parse_args()
 
     os.makedirs(MODEL_DIR, exist_ok=True)
@@ -69,26 +69,26 @@ def main() -> None:
         info = MODELS[key]
         dst = os.path.join(MODEL_DIR, info["local"])
         if os.path.exists(dst):
-            # 已存在：校验 sha256，一致则跳过
+            # Already exists: verify sha256; skip if it matches
             if sha256_file(dst) == info["sha256"]:
-                print(f"[跳过] {info['local']} 已存在且校验通过")
+                print(f"[skip] {info['local']} already exists and passed verification")
                 continue
-            print(f"[覆盖] {info['local']} 已存在但 sha256 不符，重新下载")
-        print(f"[下载] {info['repo']}/{info['remote']} → {info['local']}")
+            print(f"[overwrite] {info['local']} exists but sha256 mismatch, downloading again")
+        print(f"[download] {info['repo']}/{info['remote']} → {info['local']}")
         try:
             from modelscope import snapshot_download
             cache_dir = snapshot_download(info["repo"], allow_file_pattern=[info["remote"]])
             src = os.path.join(cache_dir, info["remote"])
             if not os.path.exists(src):
-                # 兼容子目录结构
+                # tolerate subdirectory layout
                 for root, _, files in os.walk(cache_dir):
                     if info["remote"] in files:
                         src = os.path.join(root, info["remote"])
                         break
             if not os.path.exists(src):
-                print(f"  [失败] 下载文件中未找到 {info['remote']}")
+                print(f"  [failed] {info['remote']} not found among downloaded files")
                 continue
-            # 移动到 model/ 并重命名
+            # move to model/ and rename
             tmp = dst + ".part"
             if os.path.exists(tmp):
                 os.remove(tmp)
@@ -96,13 +96,13 @@ def main() -> None:
             digest = sha256_file(tmp)
             if digest == info["sha256"]:
                 os.rename(tmp, dst)
-                print(f"  [完成] {info['local']} sha256 校验通过")
+                print(f"  [done] {info['local']} sha256 verification passed")
             else:
                 os.remove(tmp)
-                print(f"  [失败] sha256 不符：期望 {info['sha256'][:16]}… 实际 {digest[:16]}…")
+                print(f"  [failed] sha256 mismatch: expected {info['sha256'][:16]}… got {digest[:16]}…")
         except Exception as e:
-            print(f"  [失败] 下载异常：{str(e)[:150]}")
-    print("全部完成")
+            print(f"  [failed] download error: {str(e)[:150]}")
+    print("all done")
 
 
 if __name__ == "__main__":
