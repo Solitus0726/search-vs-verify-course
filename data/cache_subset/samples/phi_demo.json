@@ -1,0 +1,859 @@
+{
+ "model": "Phi-4-Mini-Instruct (p=0.39)",
+ "dataset": "MATH-500",
+ "problem_id": 265,
+ "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
+ "gt": "4005",
+ "config_demo": {
+  "N": 10,
+  "M": 4
+ },
+ "records": [
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 0,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, let's analyze the pattern of the sequence.\n\nThe sequence of odd numbers is given by:\n\\[ a_n = 1, 3, 5, 7, \\dots \\]\n\nThis sequence can be represented by the formula for the \\(n\\)-th term of an arithmetic sequence:\n\\[ a_n = a_1 + (n-1)d \\]\n\nHere, \\(a_1\\) (the first term) is 1, and the common difference \\(d\\) is 2 (since each term increases by 2).\n\nNow, we need to find the 2003rd term (\\(a_{2003}\\)).\n\nUsing the formula for the \\(n\\)-th term:\n\\[ a_{2003} = a_1 + (2003-1)d \\]\n\nSubstitute the values \\(a_1 = 1\\) and \\(d = 2\\):\n\\[ a_{2003} = 1 + (2003-1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nThus, the 2003rd term of the sequence of odd numbers is:\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 1,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, we need to determine the pattern and use a formula to find the desired term.\n\nThe sequence of odd numbers starts with 1, and each subsequent term increases by 2. This can be represented as:\n\\[ a_n = 1 + (n-1) \\cdot 2 \\]\n\nWhere:\n- \\( a_n \\) is the nth term of the sequence,\n- \\( n \\) is the position of the term in the sequence.\n\nWe need to find the 2003rd term (\\( n = 2003 \\)):\n\\[ a_{2003} = 1 + (2003 - 1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nTherefore, the 2003rd term of the sequence of odd numbers is:\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 2,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, we need to understand the pattern and the formula for the nth term of the sequence.\n\nThe sequence of odd numbers starts with 1, and each term increases by 2. This means that the sequence is an arithmetic sequence where the first term \\( a = 1 \\) and the common difference \\( d = 2 \\).\n\nThe nth term of an arithmetic sequence can be found using the formula:\n\n\\[ a_n = a + (n - 1)d \\]\n\nGiven:\n- \\( a = 1 \\)\n- \\( d = 2 \\)\n- \\( n = 2003 \\)\n\nPlug these values into the formula:\n\n\\[ a_{2003} = 1 + (2003 - 1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nSo, the 2003rd term of the sequence is 4005.\n\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 3,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, we need to understand the general pattern of the sequence. The sequence starts with 1, and each subsequent term increases by 2. This can be represented as follows:\n\n1, 3, 5, 7, $\\dots$\n\nWe observe that the nth term of the sequence can be written using the formula for the nth term of an arithmetic sequence:\n\\[ a_n = a_1 + (n-1)d \\]\n\nWhere:\n- \\( a_n \\) is the nth term\n- \\( a_1 \\) is the first term (which is 1)\n- \\( d \\) is the common difference (which is 2)\n- \\( n \\) is the term number we want to find\n\nFor the 2003rd term:\n\\[ a_{2003} = 1 + (2003-1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nTherefore, the 2003rd term of the sequence of odd numbers is:\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 4,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, we need to determine the general term of this sequence. The sequence starts at 1 and increases by 2 for each subsequent term. \n\nThe formula for the \\(n\\)-th term of an arithmetic sequence can be given by:\n\n\\[ a_n = a_1 + (n - 1)d \\]\n\nwhere:\n- \\( a_n \\) is the \\(n\\)-th term,\n- \\( a_1 \\) is the first term,\n- \\( d \\) is the common difference,\n- \\( n \\) is the term number.\n\nFor our sequence:\n- \\( a_1 = 1 \\)\n- \\( d = 2 \\)\n\nPlugging these values into the formula, we get:\n\n\\[ a_n = 1 + (n - 1) \\cdot 2 \\]\n\nNow, we need to find the 2003rd term (\\( n = 2003 \\)):\n\n\\[ a_{2003} = 1 + (2003 - 1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nSo, the 2003rd term of the sequence of odd numbers is ####4005."
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 5,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers, we need to understand the pattern of the sequence.\n\nThe sequence of odd numbers can be represented as follows:\n1, 3, 5, 7, 9, $\\dots$\n\nNotice that the sequence is an arithmetic sequence where the first term \\( a_1 \\) is 1, and the common difference \\( d \\) is 2. The formula for the \\( n \\)-th term of an arithmetic sequence is given by:\n\n\\[ a_n = a_1 + (n-1)d \\]\n\nIn this problem:\n- \\( a_1 = 1 \\)\n- \\( d = 2 \\)\n- \\( n = 2003 \\)\n\nSubstitute these values into the formula to find the 2003rd term:\n\n\\[ a_{2003} = 1 + (2003 - 1) \\times 2 \\]\n\\[ a_{2003} = 1 + 2002 \\times 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nTherefore, the 2003rd term of the sequence of odd numbers is #### 4005."
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 6,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, \\(\\dots\\), we need to identify a general formula for the \\(n\\)th term of this sequence.\n\nThe sequence of odd numbers is an arithmetic sequence where:\n- The first term \\(a_1\\) is 1.\n- The common difference \\(d\\) is 2 (since each term increases by 2).\n\nThe formula for the \\(n\\)th term of an arithmetic sequence is given by:\n\\[ a_n = a_1 + (n-1) \\cdot d \\]\n\nSubstituting the known values:\n\\[ a_{2003} = 1 + (2003-1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 7,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$, we can use the formula for the \\( n \\)-th term of an arithmetic sequence. The general formula for the \\( n \\)-th term of an arithmetic sequence is:\n\n\\[ a_n = a_1 + (n - 1) \\cdot d \\]\n\nwhere:\n- \\( a_n \\) is the \\( n \\)-th term,\n- \\( a_1 \\) is the first term,\n- \\( d \\) is the common difference,\n- \\( n \\) is the term number.\n\nFor the given sequence:\n- The first term \\( a_1 = 1 \\),\n- The common difference \\( d = 2 \\) (since each term increases by 2).\n\nWe need to find the 2003rd term (\\( n = 2003 \\)).\n\nUsing the formula:\n\n\\[ a_{2003} = 1 + (2003 - 1) \\cdot 2 \\]\n\nSimplify inside the parentheses:\n\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\nMultiply:\n\n\\[ a_{2003} = 1 + 4004 \\]\n\nAdd the numbers:\n\n\\[ a_{2003} = 4005 \\]\n\nThus, the 2003rd term of the sequence is:\n\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 8,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "The sequence of odd numbers is an arithmetic sequence where the first term \\( a = 1 \\) and the common difference \\( d = 2 \\).\n\nThe nth term of an arithmetic sequence can be found using the formula:\n\\[ a_n = a + (n - 1) d \\]\n\nWe need to find the 2003rd term (\\( n = 2003 \\)) of the sequence:\n\n\\[ a_{2003} = 1 + (2003 - 1) \\cdot 2 \\]\n\\[ a_{2003} = 1 + 2002 \\cdot 2 \\]\n\\[ a_{2003} = 1 + 4004 \\]\n\\[ a_{2003} = 4005 \\]\n\nThus, the 2003rd term of the sequence of odd numbers is:\n\\[ \\boxed{4005} \\]"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 9,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "To find the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, ..., we can observe that this sequence is an arithmetic sequence where each term increases by 2.\n\nThe general formula for the \\(n\\)-th term of an arithmetic sequence is given by:\n\\[\na_n = a_1 + (n-1) \\cdot d\n\\]\nwhere:\n- \\(a_n\\) is the \\(n\\)-th term,\n- \\(a_1\\) is the first term,\n- \\(d\\) is the common difference between the terms,\n- \\(n\\) is the term number.\n\nFor our sequence:\n- The first term \\(a_1 = 1\\),\n- The common difference \\(d = 2\\).\n\nWe want to find the 2003rd term (\\(a_{2003}\\)):\n\\[\na_{2003} = a_1 + (2003 - 1) \\cdot d\n\\]\nSubstituting the known values:\n\\[\na_{2003} = 1 + (2003 - 1) \\cdot 2\n\\]\n\\[\na_{2003} = 1 + 2002 \\cdot 2\n\\]\n\\[\na_{2003} = 1 + 4004\n\\]\n\\[\na_{2003} = 4005\n\\]\n\nThus, the 2003rd term of the sequence is:\n#### 4005"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n\n理由：提供的解答正确地使用了序列公式来确定特定项的值，步骤清晰且逻辑。候选解答正确和完整。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n候选解答准确且清晰，步骤逻辑严谨，最后得出的结果与题目要求一致。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n\n候选解答正确，遵循了问题陈述并正确使用了给定的数学公式来计算特定项。计算过程清晰且逻辑性强。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n这个解答准确且清晰地遵循了所需的数学步骤，并正确计算了序列中的2003项。合理的推导和清晰的计算证明了其有效性。分数 8 因此是合适的。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n候选解答中的逻辑步骤清晰、准确，且正确地使用公式找到序列的2003个项。答案清楚地展示了计算过程，最终准确得出4005。这个过程是全面理解所需的，表现出高水平的数学理解。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n候选解答遵循了问题要求，通过确定和使用正确的公式来找到所需的数列项。步骤清晰、逻辑严密，并且最终答案是正确的。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n该解答清晰准确地遵循了所提供的数学问题的要求，并正确地计算了序列中的2003个项。该解答展示了正确使用公式和逻辑推理以得出最终答案的过程。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n理由：该解答正确、详细且清晰地说明了如何找到序列中的2003项。计算过程正确且有逻辑性，最终得出正确的答案。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n\n候选解答清晰地使用了正确的公式和步骤来找到序列中的第2003项。计算准确且逻辑上没有错误，因此得分高。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n这段解释清楚且正确地说明了如何找到2003个项的序列中的第2003项的过程。数学计算也正确，并且最终答案正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n这个答案清晰、准确地遵循了题目中描述的数学方法，并正确计算了2003次的第一个奇数。解答步骤详尽且逻辑清晰。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n候选解答正确且完整地描述了找到一个数列中特定项的过程，并且最后的计算是正确的。所有步骤清晰，逻辑严密，没有错误。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n该解答准确且清晰地遵循了数学问题的要求。提供的步骤和最终答案都正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n该解答准确、清晰，并遵循了正确的数学过程。最终答案正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这个解答准确、清晰和直接，正确地使用了几何数列的公式来找到特定项的值，表明了理解的准确性。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这个解答正确且逻辑清晰，步骤明确，按照题目要求找到序列中的2003项得出正确答案。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这是一个清晰准确的计算过程，正确应用了给定的数学公式，得出了正确的结果。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n这个解答正确地应用了给定的序列公式，并准确找到了2003次项。步骤清晰且逻辑严密。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n候选解答展示了对数列求解的清晰过程，包括正确使用公式并应用于特定项（2003）。计算步骤准确，最终答案正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n理由：候选解答正确应用了给定的公式，并在准确地应用公式的过程中得到了正确的结果。整个过程清晰、逻辑且完整。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n这个解答是清晰准确的，正确遵循了给定的数学问题，准确使用了公式得到了正确的结果。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n该解决方案准确、清晰且直接，按照要求的步骤详细解释了如何找到给定序列中的特定项。计算过程正确，并且最终答案是正确的。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n理由：候选解答准确且详细地应用了给定的公式，以找到序列中的2003rd项。计算过程清晰且正确，最终得出正确的答案。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n\n理由：候选解答正确地应用了给定的数学公式，准确地计算出了2003次项的值。解决过程清晰、逻辑，并且最终的答案是正确的。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n该解答正确且完整，准确地使用了给定的公式并计算出了2003rd项。该步骤清晰且逻辑性强。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n该解答正确且计算方法正确。清晰的逻辑和准确的数学运算表明高度的准确性。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n该候选解答正确地使用了给定的信息来找到序列中的 2003 阶的特定项。计算过程清晰、逻辑严密，并正确应用了递推公式。该解答是完美的。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n该解决方案正确且详细，精确计算了所需的项。公式正确使用，并且正确应用到问题中。最后的答案也正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n理由：候选解答正确且详细，准确应用了给定的数学公式，并且计算步骤清晰。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n\n该解答准确且完整，使用了正确的公式并正确计算了所需的项。理由是该解决方案的数学过程正确并且连贯。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n理由：候选解答正确使用了给定的公式和步骤，正确找到了2003次项的值为4005。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n理由：候选解答正确地使用了给定的公式来找到序列的2003个项，计算结果正确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n候选解答提供了一个清晰、逻辑一致、准确的过程来找到给定序列的2003个项。它正确应用了所需的公式，并正确计算了结果。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n该解答准确、清晰、完整且正确地应用了给定的数学公式。通过适当的数学运算，正确地得到了2003项的序列中第2003项的值。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n理由：候选解答提供了正确的公式和步骤，正确计算了2003rd项的值。计算和逻辑清晰且准确。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n候选解答的解决过程清晰、逻辑完整且正确。使用了正确的公式并仔细地计算了2003rd项。最终答案正确且一致地与问题的要求匹配。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这个解答是正确的，步骤清晰且逻辑严密。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这是一个清晰、准确且逻辑严密的解答过程，正确应用了给定的数学公式。解答过程连贯，最终答案正确得以呈现。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "10\n\n这个解答正确地使用了给定的数学公式，并且正确计算出了2003rd个项。数学证明清晰且准确，符合所要求的标准。"
+  },
+  {
+   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "9\n这个解答正确且详细，使用了正确的公式，并且在计算过程中的每一步都正确。候选解答清晰且有逻辑。"
+  },
+  {
+   "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
+   "dataset": "MATH-500",
+   "problem_id": 265,
+   "call_type": "aggregate"
+  }
+ ]
+}

@@ -1,0 +1,217 @@
+{
+  "unified": [
+    {
+      "model": "Gemma-3-1B-Instruct (p=0.29)",
+      "dataset": "MATH-500",
+      "mode": "self",
+      "configs": [
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 5,
+            "M": 9
+          },
+          "accuracy": 0.4,
+          "std": 0.4983,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Gemma-3-1B-Instruct (p=0.29)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+          "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": true
+          },
+          "canonical": true,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 113920
+          }
+        },
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 10,
+            "M": 4
+          },
+          "accuracy": 0.4667,
+          "std": 0.5074,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Gemma-3-1B-Instruct (p=0.29)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+          "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": true
+          },
+          "canonical": false,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 112640
+          }
+        }
+      ]
+    },
+    {
+      "model": "Gemma-3-1B-Instruct (p=0.29)",
+      "dataset": "MATH-500",
+      "mode": "unified",
+      "configs": [
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 5,
+            "M": 9
+          },
+          "accuracy": 0.5667,
+          "std": 0.504,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Gemma-3-1B-Instruct (p=0.29)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+          "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": true
+          },
+          "canonical": true,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 113920
+          }
+        },
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 10,
+            "M": 4
+          },
+          "accuracy": 0.5667,
+          "std": 0.504,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Gemma-3-1B-Instruct (p=0.29)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+          "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": true
+          },
+          "canonical": false,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 112640
+          }
+        }
+      ]
+    },
+    {
+      "model": "Qwen3-1.7B-Instruct (p=0.62)",
+      "dataset": "MATH-500",
+      "mode": "unified",
+      "configs": [
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 5,
+            "M": 9
+          },
+          "accuracy": 0.8667,
+          "std": 0.3457,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Qwen3-1.7B-Instruct (p=0.62)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "Qwen3-1.7B-Instruct-Q8_0.gguf",
+          "gguf_sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": false
+          },
+          "canonical": true,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 113920
+          }
+        },
+        {
+          "config": {
+            "strategy": "verify",
+            "N": 10,
+            "M": 4
+          },
+          "accuracy": 0.8,
+          "std": 0.4068,
+          "runs": 1,
+          "seeds": [
+            0
+          ],
+          "budget": 50,
+          "dataset": "MATH-500",
+          "model": "Qwen3-1.7B-Instruct (p=0.62)",
+          "engine": "llama-cpp",
+          "quantization": "GGUF-Q8_0",
+          "gguf_file": "Qwen3-1.7B-Instruct-Q8_0.gguf",
+          "gguf_sha256": "061b54daade076b5d3362dac252678d17da8c68f07560be70818cace6590cb1a",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "n_ctx": 4096,
+            "enable_thinking": false
+          },
+          "canonical": false,
+          "cost": 50,
+          "n_problems": 30,
+          "tokens": {
+            "upper_bound": 112640
+          }
+        }
+      ]
+    }
+  ]
+}

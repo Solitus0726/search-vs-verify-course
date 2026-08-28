@@ -1,0 +1,35 @@
+{
+  "name": "cache_subset",
+  "purpose": "预计算缓存子集（无 GPU 学生模式回退）",
+  "granularity": "答案文本 + 判分 + 投票明细（不存全部生成原文）",
+  "models": [
+    "Qwen3-4B-Instruct (p=0.70)",
+    "Gemma-3-4B-Instruct (p=0.48)",
+    "Gemma-3-1B-Instruct (p=0.29)",
+    "Qwen3-0.6B-Instruct (p=0.41)",
+    "Qwen3-1.7B-Instruct (p=0.62)",
+    "Phi-4-Mini-Instruct (p=0.39)"
+  ],
+  "datasets": [
+    "GSM8K",
+    "MATH-500"
+  ],
+  "files": [
+    ".gitkeep",
+    "curves.json",
+    "dispersion.json",
+    "headline.json",
+    "manifest.json",
+    "samples",
+    "unified.json",
+    "samples/gsm8k_gemma34b_demo.json",
+    "samples/gsm8k_qwen34b_demo.json",
+    "samples/06b_demo.json",
+    "samples/17b_demo.json",
+    "samples/gemma31b_demo.json",
+    "samples/gemma34b_demo.json",
+    "samples/phi_demo.json",
+    "samples/qwen34b_demo.json"
+  ],
+  "note": "聚合口径：--seeds 0（全配置/核心 1 seed）。headline 三行以 3-seed 均值数据为准，本缓存为 seed 0 单次运行；不同运行的数据在同 seed 下数字可能有差异，不得交叉混用。unified.json 为 30 题小样本子实验（弱 vs 强验证器），仅作方向性参考，不与其他数据混用；curves.json 的 key 仅含模型名（GSM8K 条目与 MATH-500 同 key 不同 dataset），读取须按 dataset 过滤"
+}

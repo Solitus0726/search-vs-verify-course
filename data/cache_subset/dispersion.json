@@ -1,0 +1,60 @@
+{
+ "dispersion": [
+  {
+   "key": "qwen3-4b",
+   "model": "Qwen3-4B-Instruct (p=0.70)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 13,
+   "avg_winning_share": 0.49230769230769234
+  },
+  {
+   "key": "gemma-3-4b",
+   "model": "Gemma-3-4B-Instruct (p=0.48)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 24,
+   "avg_winning_share": 0.47583333333333333
+  },
+  {
+   "key": "gemma-3-1b",
+   "model": "Gemma-3-1B-Instruct (p=0.29)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 55,
+   "avg_winning_share": 0.3713
+  },
+  {
+   "key": "qwen3-0.6b",
+   "model": "Qwen3-0.6B-Instruct (p=0.41)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 41,
+   "avg_winning_share": 0.2546341463414634
+  },
+  {
+   "key": "qwen3-1.7b",
+   "model": "Qwen3-1.7B-Instruct (p=0.62)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 19,
+   "avg_winning_share": 0.32210526315789473
+  },
+  {
+   "key": "phi-4-mini",
+   "model": "Phi-4-Mini-Instruct (p=0.39)",
+   "dataset": "MATH-500",
+   "n_wrong_votes": 29,
+   "avg_winning_share": 0.33172413793103445
+  },
+  {
+   "key": "gemma-3-4b",
+   "model": "Gemma-3-4B-Instruct (p=0.48)",
+   "dataset": "GSM8K",
+   "n_wrong_votes": 41,
+   "avg_winning_share": 0.8078048780487804
+  },
+  {
+   "key": "qwen3-4b",
+   "model": "Qwen3-4B-Instruct (p=0.70)",
+   "dataset": "GSM8K",
+   "n_wrong_votes": 19,
+   "avg_winning_share": 0.6031578947368421
+  }
+ ]
+}

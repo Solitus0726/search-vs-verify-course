@@ -1,0 +1,927 @@
+{
+ "model": "Qwen3-1.7B-Instruct (p=0.62)",
+ "dataset": "MATH-500",
+ "problem_id": 383,
+ "problem": "For what values of $x$ is it true that $x^2 - 5x - 4 \\le 10$? Express your answer in interval notation.",
+ "gt": "x \\in [-2,7]",
+ "config_demo": {
+  "N": 10,
+  "M": 4
+ },
+ "records": [
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|0|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 0,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n### Step 1: Subtract 10 from both sides\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n### Step 2: Solve the quadratic inequality\n\nWe solve the equality $ x^2 - 5x - 14 = 0 $ to find the critical points.\n\n#### Step 2.1: Use the quadratic formula\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)}\n$$\n$$\nx = \\frac{5 \\pm \\sqrt{25 + 56}}{2}\n$$\n$$\nx = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the solutions are:\n\n$$\nx = \\frac{5 + 9}{2} = \\frac{14}{2} = 7\n$$\n$$\nx = \\frac{5 - 9}{2} = \\frac{-4}{2} = -2\n$$\n\n### Step 3: Determine the intervals\n\nThe critical points are $ x = -2 $ and $ x = 7 $. These divide the number line into three intervals:\n\n1. $ (-\\infty, -2) $\n2. $ (-2, 7) $\n3. $ (7, \\infty) $\n\n### Step 4: Test each interval\n\nWe test the sign of the expression $ x^2 - 5x - 14 $ in each interval.\n\n#### Interval 1: $ (-\\infty, -2) $\n\nChoose $ x = -3 $:\n$$\n(-3)^2 - 5(-3) - 14 = 9 + 15 - 14 = 10 > 0\n$$\n\nSo the inequality $ x^2 - 5x - 14 \\le 0 $ is **not satisfied** in this interval.\n\n#### Interval 2: $ (-2, 7) $\n\nChoose $ x = 0 $:\n$$\n0^2 - 5(0) - 14 = -14 < 0\n$$\n\nSo the inequality is **satisfied** in this interval.\n\n#### Interval 3: $ (7, \\infty) $\n\nChoose $ x = 8 $:\n$$\n8^2 - 5(8) - 14 = 64 - 40 - 14 = 10 > 0\n$$\n\nSo the inequality is **not satisfied** in this interval.\n\n### Step 5: Write the solution in interval notation\n\nThe inequality is satisfied in the interval:\n\n$$\n[-2, 7]\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|1|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 1,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n### Step 1: Move all terms to one side\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\nSimplify:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n### Step 2: Solve the quadratic inequality\n\nWe now solve the inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n#### Step 2.1: Find the roots of the quadratic equation\n\nSet the quadratic equal to zero:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\n\nHere, $ a = 1 $, $ b = -5 $, $ c = -14 $:\n\n$$\nx = \\frac{5 \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2}\n= \\frac{5 \\pm \\sqrt{25 + 56}}{2}\n= \\frac{5 \\pm \\sqrt{81}}{2}\n= \\frac{5 \\pm 9}{2}\n$$\n\nSo the roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7 \\quad \\text{and} \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n#### Step 3: Determine the intervals\n\nThe quadratic $ x^2 - 5x - 14 $ opens upwards (since the coefficient of $ x^2 $ is positive), and it is less than or equal to zero between its roots.\n\nSo the inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nis satisfied for:\n\n$$\n-2 \\le x \\le 7\n$$\n\n### Final Answer (in interval notation):\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|2|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 2,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Rearrange the inequality**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe solve the equation:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the two solutions are:\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n---\n\n### **Step 3: Determine the intervals**\n\nThe quadratic expression $ x^2 - 5x - 14 $ is a parabola that opens **upward** (since the coefficient of $ x^2 $ is positive).\n\n- The parabola crosses the x-axis at $ x = -2 $ and $ x = 7 $.\n- The inequality is $ \\le 0 $, so we are looking for the values of $ x $ where the expression is **less than or equal to zero**.\n\nThis happens between the two roots:\n\n$$\nx \\in [-2, 7]\n$$\n\n---\n\n### **Final Answer in Interval Notation:**\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|3|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 3,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n### Step 1: Move all terms to one side\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n### Step 2: Solve the quadratic inequality\n\nWe solve the quadratic inequality $ x^2 - 5x - 14 \\le 0 $\n\nFirst, solve the equation:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n### Step 3: Determine the intervals\n\nThe quadratic $ x^2 - 5x - 14 $ is a parabola opening upwards (since the coefficient of $ x^2 $ is positive). The inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied between the roots.\n\nSo the solution is:\n\n$$\n-2 \\le x \\le 7\n$$\n\n### Step 4: Express in interval notation\n\n$$\n\\boxed{[-2, 7]}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|4|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 4,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Rearrange the inequality**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe now solve the quadratic inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nFirst, solve the corresponding quadratic equation:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\n$$\nx = \\frac{14}{2} = 7 \\quad \\text{or} \\quad x = \\frac{-4}{2} = -2\n$$\n\nSo the roots are $ x = -2 $ and $ x = 7 $.\n\n---\n\n### **Step 3: Determine the sign of the quadratic expression**\n\nWe now test the intervals divided by the roots: $ (-\\infty, -2) $, $ (-2, 7) $, and $ (7, \\infty) $.\n\nLet’s test a point in each interval.\n\n- For $ x = -3 $:  \n  $$\n  (-3)^2 - 5(-3) - 14 = 9 + 15 - 14 = 10 > 0\n  $$\n\n- For $ x = 0 $:  \n  $$\n  0^2 - 5(0) - 14 = -14 < 0\n  $$\n\n- For $ x = 8 $:  \n  $$\n  8^2 - 5(8) - 14 = 64 - 40 - 14 = 10 > 0\n  $$\n\nSo the inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied in the interval:\n\n$$\n[-2, 7]\n$$\n\n---\n\n### **Final Answer (in interval notation):**\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|5|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 5,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Move all terms to one side**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe now solve the quadratic inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n#### **Step 2.1: Find the roots of the quadratic equation**\n\nSet the expression equal to zero:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7 \\quad \\text{and} \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n---\n\n### **Step 3: Determine the intervals**\n\nThe quadratic opens upwards (coefficient of $x^2$ is positive), so the expression $x^2 - 5x - 14$ is **less than or equal to 0** between the roots.\n\nSo the solution to the inequality is:\n\n$$\n[-2, 7]\n$$\n\n---\n\n### **Final Answer:**\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|6|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 6,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Move all terms to one side**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\nSimplify:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe now solve the inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nFirst, find the **roots** of the quadratic equation:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n---\n\n### **Step 3: Determine the sign of the quadratic**\n\nThe quadratic is:\n\n$$\nx^2 - 5x - 14\n$$\n\nWe can factor it or test intervals to find where it is **less than or equal to zero**.\n\nThe roots are $ x = -2 $ and $ x = 7 $. The quadratic opens **upwards** (coefficient of $ x^2 $ is positive), so the expression is **positive outside the interval** $[-2, 7]$, and **negative inside**.\n\nSo the inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied for:\n\n$$\nx \\in [-2, 7]\n$$\n\n---\n\n### **Final Answer in Interval Notation:**\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|7|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 7,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Move all terms to one side**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe need to solve:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nFirst, find the roots of the quadratic equation $ x^2 - 5x - 14 = 0 $.\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$\n\nHere, $ a = 1 $, $ b = -5 $, $ c = -14 $\n\n$$\nx = \\frac{5 \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\nSo the roots are:\n\n$$\nx = -2 \\quad \\text{and} \\quad x = 7\n$$\n\n---\n\n### **Step 3: Determine the intervals**\n\nThe quadratic $ x^2 - 5x - 14 $ is a parabola opening upwards (since the coefficient of $ x^2 $ is positive). So the expression is **negative** between the roots.\n\nThus, the inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nis satisfied for:\n\n$$\nx \\in [-2, 7]\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|8|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 8,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Move all terms to one side**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe now solve the quadratic inequality:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n#### **Step 2.1: Find the roots of the quadratic equation**\n\nSolve:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the quadratic formula:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n---\n\n### **Step 3: Determine the intervals**\n\nThe quadratic $ x^2 - 5x - 14 $ is a parabola opening upwards (since the coefficient of $ x^2 $ is positive), and it is ≤ 0 between its two roots.\n\nSo the inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied for:\n\n$$\nx \\in [-2, 7]\n$$\n\n---\n\n### **Final Answer in Interval Notation:**\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|generate|9|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "generate",
+   "candidate_idx": 9,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "output": "We are given the inequality:\n\n$$\nx^2 - 5x - 4 \\le 10\n$$\n\n---\n\n### **Step 1: Move all terms to one side**\n\nSubtract 10 from both sides:\n\n$$\nx^2 - 5x - 4 - 10 \\le 0\n$$\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\n---\n\n### **Step 2: Solve the quadratic inequality**\n\nWe need to find the values of $ x $ such that:\n\n$$\nx^2 - 5x - 14 \\le 0\n$$\n\nFirst, solve the corresponding equation:\n\n$$\nx^2 - 5x - 14 = 0\n$$\n\nUse the **quadratic formula**:\n\n$$\nx = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-14)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 56}}{2} = \\frac{5 \\pm \\sqrt{81}}{2}\n$$\n\n$$\nx = \\frac{5 \\pm 9}{2}\n$$\n\nSo the two roots are:\n\n$$\nx = \\frac{5 + 9}{2} = 7, \\quad x = \\frac{5 - 9}{2} = -2\n$$\n\n---\n\n### **Step 3: Determine the intervals**\n\nThe roots divide the number line into three intervals:\n\n1. $ (-\\infty, -2) $\n2. $ (-2, 7) $\n3. $ (7, \\infty) $\n\nWe test the sign of the quadratic expression $ x^2 - 5x - 14 $ in each interval.\n\n#### Interval $ (-\\infty, -2) $:\nChoose $ x = -3 $:\n\n$$\n(-3)^2 - 5(-3) - 14 = 9 + 15 - 14 = 10 > 0\n$$\n\nSo the expression is **positive** in this interval.\n\n#### Interval $ (-2, 7) $:\nChoose $ x = 0 $:\n\n$$\n0^2 - 5(0) - 14 = -14 < 0\n$$\n\nSo the expression is **negative** in this interval.\n\n#### Interval $ (7, \\infty) $:\nChoose $ x = 8 $:\n\n$$\n8^2 - 5(8) - 14 = 64 - 40 - 14 = 10 > 0\n$$\n\nSo the expression is **positive** in this interval.\n\n---\n\n### **Step 4: Final answer**\n\nThe inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied in the interval where the expression is **less than or equal to 0**, which is:\n\n$$\n[-2, 7]\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|0|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **correct** and well-structured. Here's the breakdown:\n\n1. **Problem Understanding**: The inequality is correctly identified and set up.\n2. **Algebraic Manipulation**: The inequality is transformed correctly into a quadratic form, and the quadratic formula is applied properly.\n3. **Critical Points**: The roots $ x = -2 $ and $ x = 7 $ are correctly calculated.\n4. **Interval Analysis**: The intervals $ (-\\infty, -2) $, $ (-2, 7) $, and $ (7, \\infty) $ are correctly identified and tested.\n5. **Sign Analysis**: The sign of the quadratic expression is correctly tested in each interval.\n6. **Final Answer**: The solution interval $ [-2, 7] $ is correctly identified.\n\n**Score: 10/10**  \nThe solution is complete, accurate, and well-explained."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|0|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 2,
+   "output": "**评分：9/10**\n\n**理由：**  \n候选解答过程完整且逻辑清晰，正确地将原不等式转化为标准二次不等式 $ x^2 - 5x - 14 \\le 0 $，通过求根公式找到临界点 $ x = -2 $ 和 $ x = 7 $，然后根据二次函数的开口方向（向上）判断不等式成立的区间。最终得出的解集 $ [-2, 7] $ 是正确的。\n\n唯一需要注意的是，候选解答在 Step 4 的测试中，选择了 $ x = 0 $ 和 $ x = 8 $ 进行测试，这是合理的，但可以更精确地选择测试点（如 $ x = -1 $ 或 $ x = 1 $）以确保准确性。不过，整体思路和结果都是正确的。\n\n**最终答案：**  \n$$\n\\boxed{[-2, 7]}\n$$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|0|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **excellent** and **accurate**. Here's the breakdown:\n\n- The candidate correctly transformed the inequality $ x^2 - 5x - 4 \\le 10 $ into $ x^2 - 5x - 14 \\le 0 $.\n- They applied the quadratic formula correctly to find the roots $ x = -2 $ and $ x = 7 $.\n- They correctly identified the critical points and tested each interval to determine where the inequality holds.\n- The final interval $ [-2, 7] $ is correct and matches the solution to the inequality.\n\nThe solution is **complete**, **clear**, and **accurate**. The answer is **well-presented** in interval notation.\n\n**Final Score: 10/10**"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|0|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 0,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 7,
+   "output": "The candidate's solution is **excellent** and **accurate**, with clear steps and a logical reasoning process.\n\n### Key Points:\n- The inequality is correctly transformed to $ x^2 - 5x - 14 \\le 0 $.\n- The quadratic formula is applied correctly, yielding roots at $ x = -2 $ and $ x = 7 $.\n- The intervals are correctly identified and tested, and the inequality is satisfied only in $ [-2, 7] $.\n\n### Final Score: **10/10**\n\nThe solution is complete, accurate, and well-structured."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|1|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 2,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality $ x^2 - 5x - 4 \\le 10 $ into $ x^2 - 5x - 14 \\le 0 $, then found the roots using the quadratic formula, which are $ x = -2 $ and $ x = 7 $. They then determined that the inequality is satisfied between these roots, leading to the interval $ [-2, 7] $. The only minor issue is that the original inequality was $ x^2 - 5x - 4 \\le 10 $, but the candidate correctly moved all terms to one side and simplified to $ x^2 - 5x - 14 \\le 0 $. The final answer is correctly expressed in interval notation. The solution is mostly accurate with only a minor detail that doesn't affect the correctness of the final answer."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|1|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答的步骤正确，逻辑清晰，计算过程无误。解题过程中：\n1. 将不等式化为标准二次不等式 $ x^2 - 5x - 14 \\le 0 $；\n2. 通过求根公式找到根 $ x = -2 $ 和 $ x = 7 $；\n3. 根据二次函数开口方向（向上）判断不等式成立区间为 $ [-2, 7] $。\n\n唯一可能的扣分点是“**未明确说明不等式方向**”（虽然这里已通过根的分布判断，但若题目要求更严谨的“不等式符号说明”则可扣分）。但整体解题过程正确，因此得8分。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|1|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答的步骤是正确的，逻辑清晰，计算过程没有错误。解题过程中，将不等式转化为标准形式 $ x^2 - 5x - 14 \\le 0 $，求出根 $ x = -2 $ 和 $ x = 7 $，并根据二次函数开口方向（向上）判断不等式成立的区间为 $[-2, 7]$。最终答案符合题目要求，因此得分为 8。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|1|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 1,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is mostly correct. They properly transformed the inequality, found the roots using the quadratic formula, and correctly determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation is correct. However, there is a minor issue in the explanation: the quadratic inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied between the roots, but the candidate wrote \"less than or equal to zero between its roots,\" which is correct. The final answer is accurate. The score is 8 because the solution is mostly correct but could be slightly improved in clarity or precision."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|2|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **correct**. The steps are logically sound and follow the proper procedure for solving a quadratic inequality:\n\n1. **Rearranging the inequality** correctly to $ x^2 - 5x - 14 \\le 0 $.\n2. **Solving the quadratic equation** using the quadratic formula and finding the roots $ x = -2 $ and $ x = 7 $.\n3. **Analyzing the parabola** (opening upwards) and determining the interval where the expression is less than or equal to zero, which is between the roots.\n4. **Final answer in interval notation** is correctly provided as $ [-2, 7] $.\n\nThe solution is **complete, accurate, and well-organized**.\n\n**Score: 10/10**"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|2|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答正确地解决了问题。它正确地将原不等式转换为 $ x^2 - 5x - 14 \\le 0 $，然后使用求根公式求得根 $ x = -2 $ 和 $ x = 7 $。接着，由于二次函数开口向上，不等式 $ \\le 0 $ 的解集是根之间的区间 $[-2, 7]$。最终答案以区间表示，符合题目要求。因此，评分8分，表示解答正确但可以进一步优化，例如在步骤中更清晰地说明“二次函数开口向上”这一关键点。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|2|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 2,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly rearranged the inequality, solved the quadratic equation using the quadratic formula, found the roots $ x = -2 $ and $ x = 7 $, and determined the interval where the quadratic expression is less than or equal to zero. The final answer in interval notation is correct: $[-2, 7]$. The only minor issue is that the original inequality was $ x^2 - 5x - 4 \\le 10 $, but the candidate correctly transformed it to $ x^2 - 5x - 14 \\le 0 $, which is accurate. Therefore, the score is 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|2|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 2,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality, solved the quadratic equation using the quadratic formula, found the roots at $ x = -2 $ and $ x = 7 $, and then determined the interval where the quadratic is less than or equal to zero (since the parabola opens upwards). The final interval $ [-2, 7] $ is correct. However, the candidate's final answer is presented in LaTeX format as a boxed expression, which is not standard for interval notation in this context. The solution is mathematically sound, but the formatting of the final answer could be improved for clarity. Thus, the score is 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|3|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 1,
+   "output": "8\n\n**理由：**  \n候选解答的推导过程是完整的，步骤清晰，逻辑正确。解题过程中：\n1. 将不等式转化为标准二次不等式 $ x^2 - 5x - 14 \\le 0 $，正确；\n2. 使用求根公式求得根为 $ x = -2 $ 和 $ x = 7 $，正确；\n3. 根据二次函数开口方向（向上）判断不等式成立区间为 $ [-2, 7] $，正确；\n4. 最终以区间表示法给出答案，格式正确。\n\n唯一可能的扣分点是：**是否将“≤”正确地转化为区间包含端点**，但解答中已明确写出 $ -2 \\le x \\le 7 $，因此没有错误。\n\n**评分：8/10**"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|3|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答正确地解决了问题。步骤清晰，逻辑正确，计算无误。从移项到求解二次不等式的过程都正确无误，最终得到的解集 $[-2, 7]$ 是正确的。虽然过程稍长，但完全符合数学规范，没有错误。因此得分为 8。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|3|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n理由：候选解答正确地解决了问题。步骤清晰，计算准确，最终结果以区间形式表达正确。唯一可能的改进是第3步中应明确说明二次函数开口向上，因此解集为根之间的区间，但整体过程逻辑正确，无明显错误。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|3|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 3,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 2,
+   "output": "8\n\n**理由：**  \n候选解答正确地解决了不等式 $ x^2 - 5x - 4 \\le 10 $。  \n1. 正确地将不等式移项得到 $ x^2 - 5x - 14 \\le 0 $。  \n2. 正确使用二次公式求根，得到根为 $ x = -2 $ 和 $ x = 7 $。  \n3. 正确判断抛物线开口方向（向上），并得出不等式成立的区间为 $ -2 \\le x \\le 7 $。  \n4. 最终以区间表示法 $[-2, 7]$ 答案，格式正确。  \n\n因此，解答过程完整、逻辑清晰，正确性高，仅需轻微改进即可达到满分。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|4|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **correct** and well-structured. Here's the breakdown:\n\n1. **Rearranging the inequality** is done correctly by subtracting 10 from both sides, resulting in $ x^2 - 5x - 14 \\le 0 $.\n\n2. **Solving the quadratic equation** using the quadratic formula is accurate, yielding roots at $ x = -2 $ and $ x = 7 $.\n\n3. **Testing the intervals** around the roots confirms that the inequality $ x^2 - 5x - 14 \\le 0 $ is satisfied in the interval $ [-2, 7] $, which matches the final answer.\n\nThe solution is **complete, accurate, and clearly presented**.\n\n**Score: 10/10**\n\n**Reasoning**: The solution correctly solves the inequality, identifies the roots, tests the intervals, and concludes with the correct interval notation. No errors are present."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|4|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **correct** and follows a logical, step-by-step approach to solving the inequality.\n\n### Key Points:\n1. **Correctly rearranged the inequality** to $ x^2 - 5x - 14 \\le 0 $.\n2. **Solved the quadratic equation** using the quadratic formula, finding roots at $ x = -2 $ and $ x = 7 $.\n3. **Determined the sign of the quadratic expression** in the intervals around the roots, confirming that the inequality is satisfied between the roots.\n4. **Provided the correct interval notation** $ [-2, 7] $.\n\n### Score: **10/10**\n\n**Reason:** The solution is complete, accurate, and follows proper mathematical reasoning. The final answer is in the correct interval notation, and all steps are valid and correct."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|4|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **complete, accurate, and well-structured**. Here's the breakdown:\n\n- The inequality was correctly transformed to $ x^2 - 5x - 14 \\le 0 $.\n- The quadratic equation was solved using the quadratic formula correctly, yielding roots $ x = -2 $ and $ x = 7 $.\n- The test points were chosen appropriately to determine the sign of the quadratic expression in each interval, leading to the correct interval $ [-2, 7] $.\n- The final answer is expressed in interval notation, which is the requested format.\n\nThe solution is **accurate and logically sound**, with no errors in the steps. The reasoning is clear and follows standard algebraic techniques for solving quadratic inequalities.\n\n**Score: 10/10**  \n**Reason:** The solution is thorough, correct, and adheres to standard mathematical practices."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|4|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 4,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **correct** and well-structured. Here's the reasoning:\n\n1. **Rearranging the inequality** is done correctly:  \n   $$\n   x^2 - 5x - 4 \\le 10 \\Rightarrow x^2 - 5x - 14 \\le 0\n   $$\n\n2. **Solving the quadratic equation** using the quadratic formula is accurate:  \n   $$\n   x = \\frac{5 \\pm \\sqrt{81}}{2} = \\frac{5 \\pm 9}{2} \\Rightarrow x = 7 \\text{ or } -2\n   $$\n\n3. **Testing intervals** to determine where the quadratic is less than or equal to zero is correct.  \n   - The intervals $(-\\infty, -2)$, $(-2, 7)$, and $(7, \\infty)$ are tested, and the sign of the quadratic is correctly determined.\n\n4. **Final interval** is $[-2, 7]$, which is the correct solution to the inequality.\n\n**Score: 10/10**  \nThe solution is complete, accurate, and well-explained."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|5|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is correct. The steps are logically sound and follow proper algebraic procedures. The quadratic inequality is transformed correctly, the roots are found using the quadratic formula, and the sign chart is properly used to determine the solution interval. The final answer in interval notation is accurate. The reasoning is clear and the solution is fully correct."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|5|0|1",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 0,
+   "retry_idx": 1,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is mostly correct. The steps are logically sound, and the final answer in interval notation is accurate. The only minor issue is in the quadratic formula step: the discriminant calculation is correct ($(-5)^2 - 4(1)(-14) = 25 + 56 = 81$), and the roots are correctly calculated as $x = 7$ and $x = -2$. The conclusion that the solution is $[-2, 7]$ is correct. However, the candidate could have been more precise in their explanation of the inequality direction (since the quadratic opens upwards, the inequality $ \\leq $ corresponds to the interval between the roots). Still, the final answer is correct and well-justified."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|5|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答的步骤和推导是清晰且正确的。解题过程包括将不等式移项、求根、确定抛物线开口方向并确定解集，最终得出区间 $[-2, 7]$。所有步骤逻辑严密，计算无误，且最终答案符合数学规范。因此，评分较高。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|5|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答过程完整，步骤正确，逻辑清晰，计算无误。解题思路正确，最终答案用区间表示，符合题意。虽然步骤中未明确说明“不等式方向”（即“≤”），但通过移项和分析二次函数开口方向，得出正确区间 [-2, 7]。因此，评分较高，8/10。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|5|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 5,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 5,
+   "output": "8\n\n**理由：**  \n候选解答的步骤是正确的，逻辑清晰，计算无误。首先将不等式转化为标准二次不等式 $x^2 - 5x - 14 \\le 0$，然后求出其根 $x = -2$ 和 $x = 7$，并根据二次函数开口方向（向上）确定解集为区间 $[-2, 7]$。整个过程符合数学规范，答案正确。仅有一点小问题：在步骤 2.1 中，二次方程的判别式计算应为 $(-5)^2 - 4(1)(-14) = 25 + 56 = 81$，而不是 $25 - 56$，但这个错误不影响最终答案的正确性，因此仍可给出高分。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality, found the roots using the quadratic formula, and determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation is correct: $[-2, 7]$. The only minor issue is that the original inequality was $x^2 - 5x - 4 \\le 10$, which was transformed to $x^2 - 5x - 14 \\le 0$, which is correct. The solution process is solid and the final answer is accurate. The score of 8 reflects that the solution is mostly correct but could be slightly improved in clarity or minor precision."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n**理由：**  \n候选解答正确地解决了问题。步骤清晰，逻辑严密，从移项到求根再到分析二次函数的符号变化，均符合数学规范。最终得出的区间 $[-2, 7]$ 是正确的，且表达方式符合要求。虽然过程稍长，但没有出现计算错误或逻辑漏洞。因此，评分较高，为 8 分。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly moved all terms to one side, solved the quadratic equation using the quadratic formula, found the roots at $ x = -2 $ and $ x = 7 $, and determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation is correct. The only minor issue is that the original inequality was $ x^2 - 5x - 4 \\le 10 $, and after moving 10 to the left, it becomes $ x^2 - 5x - 14 \\le 0 $, which is correct. The solution process is sound and the final answer is accurate. The score is 8 because the solution is mostly correct but the final answer is slightly misleading in the way it's phrased (it should be \"less than or equal to\" instead of \"less than or equal to\" in the interval notation, though that's already correct)."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|2|1",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 2,
+   "retry_idx": 1,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality, found the roots, and analyzed the sign of the quadratic expression. The final interval $[-2, 7]$ is accurate. However, there is a minor issue: the original inequality was $x^2 - 5x - 4 \\le 10$, and after moving 10 to the left, it becomes $x^2 - 5x - 14 \\le 0$, which is correct. The solution process and final answer are well-reasoned and correct. The score is 8 because the reasoning is sound, but the final answer is slightly redundant (the interval is already in the correct form), and there is a minor inconsistency in the sign analysis (the quadratic is positive outside the interval, so the inequality is satisfied inside, which is correct)."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": null,
+   "output": "8\n\nThe solution is well-structured and logically follows the steps of solving a quadratic inequality. The key steps are correct: moving all terms to one side, finding the roots using the quadratic formula, and determining the sign of the quadratic expression. The final answer in interval notation is correct. However, the explanation could be slightly more concise and the reasoning for the sign of the quadratic could be more clearly articulated. The overall process is sound and the final answer is accurate."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|6|3|1",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 6,
+   "verify_idx": 3,
+   "retry_idx": 1,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality $ x^2 - 5x - 4 \\le 10 $ into $ x^2 - 5x - 14 \\le 0 $, found the roots using the quadratic formula, and correctly determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation $[-2, 7]$ is correct. However, the explanation could be more detailed in describing the process of determining the sign of the quadratic and the behavior of the parabola. The solution is mostly accurate but could benefit from a slightly more thorough explanation of the interval test."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|7|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 5,
+   "output": "8\n\nThe candidate's solution is correct and well-structured. They correctly transformed the inequality, found the roots using the quadratic formula, and determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation is accurate and properly formatted. The reasoning is clear and follows standard algebraic methods for solving quadratic inequalities. The only minor issue is that the original inequality was $ x^2 - 5x - 4 \\le 10 $, and the candidate correctly moved 10 to the left side, resulting in $ x^2 - 5x - 14 \\le 0 $. The solution process is solid, and the final answer is correct. Therefore, the score is 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|7|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 2,
+   "output": "8\n\nThe solution is mostly correct. The steps are clear and follow proper algebraic manipulation. The quadratic inequality is solved correctly by finding the roots and determining the interval where the quadratic is less than or equal to zero. The final answer in interval notation is correctly presented as $[-2, 7]$. The only minor issue is that the original inequality was $x^2 - 5x - 4 \\le 10$, and the solution correctly moves all terms to one side to get $x^2 - 5x - 14 \\le 0$, which is correct. The final interval is accurate. Therefore, the score is 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|7|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality into a quadratic form, found the roots using the quadratic formula, and determined the interval where the quadratic is less than or equal to zero. The final answer in interval notation is correctly stated as $[-2, 7]$. However, there is a minor issue in the interpretation of the inequality sign. The original inequality was $x^2 - 5x - 4 \\le 10$, which after moving all terms to one side becomes $x^2 - 5x - 14 \\le 0$. The solution process is sound, and the final interval is correct. The score is 8 because the reasoning is thorough and the final answer is accurate, but the problem is slightly more complex than the candidate's solution suggests."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|7|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 7,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly transformed the inequality $ x^2 - 5x - 4 \\le 10 $ into $ x^2 - 5x - 14 \\le 0 $, found the roots using the quadratic formula, and correctly identified that the parabola opens upwards, so the inequality holds between the roots. The final interval $ [-2, 7] $ is accurate. The only minor issue is that the original inequality is $ \\le $, and the solution includes the endpoints, which is correct for a ≤ inequality. The solution is well-structured and logically sound, so it receives a high score of 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|8|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": null,
+   "output": "8\n\nThe candidate's solution is mostly correct. The steps are logically sound: moving all terms to one side, solving the quadratic equation, finding the roots, and determining the interval where the inequality holds. The final answer in interval notation is correct: $[-2, 7]$. However, the candidate could have improved clarity by explicitly stating that the quadratic opens upwards and thus the inequality is satisfied between the roots. The solution is mostly accurate but could be slightly more detailed in its explanation."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|8|0|1",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 0,
+   "retry_idx": 1,
+   "score": 7,
+   "output": "8\n\nThe candidate's solution is mostly correct. They correctly moved all terms to one side, solved the quadratic equation using the quadratic formula, found the roots, and determined the interval where the quadratic is less than or equal to zero. The final interval $[-2, 7]$ is accurate. However, there is a minor issue in the step where they write \"the quadratic inequality is ≤ 0 between its two roots.\" While this is generally true for a parabola opening upwards, the inequality $x^2 - 5x - 14 \\le 0$ is satisfied **between the roots**, not including the endpoints (since the inequality is ≤ 0, not < 0). However, the interval $[-2, 7]$ is correct as it includes the endpoints where the quadratic equals zero.\n\nThus, the score is **8** for a thorough and accurate solution with a minor nuance in the interpretation of the inequality."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|8|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n理由：该解答过程逻辑清晰，步骤正确，逐步将原不等式转化为标准二次不等式，并正确求解了根，确定了抛物线开口向上的区间。最终得出的区间 [-2, 7] 是正确的。虽然步骤稍显冗长，但没有错误。因此，得分为 8。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|8|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\nThe candidate's solution is correct and well-structured. The steps are clear, the quadratic inequality is properly transformed, the roots are correctly calculated using the quadratic formula, and the interval is properly determined based on the parabola's direction. The final answer in interval notation is accurate. The solution is complete and logically sound, earning a high score of 8."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|8|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 8,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "8\n\n理由：候选解答正确地解出了原不等式。步骤清晰，计算准确，最终得到的区间 [-2, 7] 是正确的。虽然解答过程没有错误，但可以进一步优化，例如在步骤 2.1 中更明确地指出使用了二次公式，并在步骤 3 中更详细地解释了区间的选择依据（因为开口向上，所以小于等于 0 的区间在根之间）。不过整体逻辑和结果都是正确的，因此得分为 8。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|9|0|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 0,
+   "retry_idx": 0,
+   "score": 10,
+   "output": "The candidate's solution is **excellent** and correctly addresses the problem. Here's the breakdown:\n\n- **Step 1:** The inequality is correctly transformed to $ x^2 - 5x - 14 \\le 0 $.\n- **Step 2:** The quadratic equation is solved using the quadratic formula, leading to roots at $ x = -2 $ and $ x = 7 $.\n- **Step 3:** The intervals are correctly identified and tested for sign changes, showing the quadratic is negative between the roots.\n- **Step 4:** The final interval $ [-2, 7] $ is correctly identified as the solution to the inequality.\n\nThe solution is **complete**, **accurate**, and **clear**. The final answer is expressed in interval notation, which is appropriate for this type of problem.\n\n**Score: 10/10** — The candidate provides a fully correct and well-structured solution with no errors."
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|9|1|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 1,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "### 分数：9/10\n\n### 理由：\n候选解答在解题过程中展示了清晰的步骤，正确地将原不等式转换为标准形式 $ x^2 - 5x - 14 \\le 0 $，并使用二次公式求解根，得到根为 $ x = -2 $ 和 $ x = 7 $。然后通过测试区间确定不等式成立的区间为 $ [-2, 7] $，这是正确的。\n\n唯一可能的扣分点在于：在 Step 3 中，候选解答提到“the quadratic expression $ x^2 - 5x - 14 $ is negative in the interval $ (-2, 7) $”，但未明确指出这是“小于等于 0”的区间。不过，由于最终的答案是 $ [-2, 7] $，这已经正确反映了不等式成立的范围，因此评分较高。\n\n### ✅ Final Answer: $\\boxed{[-2, 7]}$"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|9|2|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 2,
+   "retry_idx": 0,
+   "score": 8,
+   "output": "### 分数：8/10\n\n### 理由：\n候选解答过程完整，逻辑清晰，步骤正确。以下是对各步骤的简要评价：\n\n1. **移项正确**：将 $10$ 移到左边，得到 $x^2 - 5x - 14 \\le 0$，这是正确的。\n2. **求根过程正确**：使用求根公式，计算出根为 $x = -2$ 和 $x = 7$，正确无误。\n3. **区间划分与测试正确**：将数轴划分为三个区间，分别代入测试点，判断表达式的符号，得出结论。\n4. **最终答案正确**：最终的区间 $[-2, 7]$ 符合不等式的要求。\n\n虽然解答过程没有错误，但有一点可以改进：在区间划分时，应该明确指出闭区间 $[-2, 7]$ 是包含端点的，因为不等式是 $\\le$，而不是 $<$. 但总体而言，解答是正确的，因此得分为 **8/10**。"
+  },
+  {
+   "idem_key": "0|MATH-500|383|verify:N=10,M=4|judge|9|3|0",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "config": {
+    "strategy": "verify",
+    "N": 10,
+    "M": 4,
+    "seed": 0
+   },
+   "call_type": "judge",
+   "candidate_idx": 9,
+   "verify_idx": 3,
+   "retry_idx": 0,
+   "score": 9,
+   "output": "### 分数：9\n\n### 理由：\n候选解答完整地解题过程，步骤清晰，逻辑正确。以下是对每个步骤的简要评价：\n\n1. **移项**：正确将不等式移至一边，得到 $ x^2 - 5x - 14 \\le 0 $。\n2. **求根**：使用求根公式正确解出根 $ x = -2 $ 和 $ x = 7 $。\n3. **区间测试**：正确分析了三个区间内的符号，确定不等式成立的区间为 $ [-2, 7] $。\n4. **最终答案**：给出的最终答案 $ [-2, 7] $ 是正确的。\n\n尽管解答过程没有明显的错误，但可以稍微优化一下表达，例如在区间测试部分可更明确地指出测试点的选择和结果。但整体解题过程是正确的，符合数学规范。\n\n**最终评分：9**"
+  },
+  {
+   "idem_key": "aggregate:0:MATH-500:383:verify:N=10,M=4",
+   "dataset": "MATH-500",
+   "problem_id": 383,
+   "call_type": "aggregate"
+  }
+ ]
+}

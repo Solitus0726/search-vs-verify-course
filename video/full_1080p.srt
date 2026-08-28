@@ -1,0 +1,304 @@
+1
+00:00:00,100 --> 00:00:02,767
+Imagine a math model facing a contest problem,
+
+2
+00:00:02,767 --> 00:00:05,733
+but your budget gives you only fifty inference calls
+
+3
+00:00:07,000 --> 00:00:10,033
+How should you spend those fifty calls?
+
+4
+00:00:10,667 --> 00:00:14,533
+We used to make models think deeper, step by step
+
+5
+00:00:14,533 --> 00:00:16,400
+In 2025, researchers asked:
+
+6
+00:00:16,400 --> 00:00:20,133
+should test-time compute go into generating more answers,
+
+7
+00:00:20,133 --> 00:00:22,467
+or checking them more carefully?
+
+8
+00:00:24,033 --> 00:00:26,467
+The first plan: search.
+
+9
+00:00:26,467 --> 00:00:31,833
+Generate fifty independent answers — fifty blocks, each one a fresh attempt
+
+10
+00:00:32,533 --> 00:00:36,367
+Then tally them up — the most frequent answer wins.
+
+11
+00:00:36,367 --> 00:00:39,433
+One condition must hold: the model has to be right
+
+12
+00:00:39,433 --> 00:00:41,933
+more than half the time for the trick to work
+
+13
+00:00:42,567 --> 00:00:44,800
+Counting costs no extra inference
+
+14
+00:00:44,800 --> 00:00:48,367
+the majority answer wins, and that's plan A
+
+15
+00:00:49,833 --> 00:00:52,733
+The second plan: verification.
+
+16
+00:00:52,733 --> 00:00:58,667
+Generate five answers, then bring in a judge — the model itself — to review each one
+
+17
+00:00:59,333 --> 00:01:05,100
+Each answer is checked nine times — passes get a check, failures a cross
+
+18
+00:01:05,100 --> 00:01:10,233
+Five answers, nine checks each — that already uses up the whole budget
+
+19
+00:01:11,000 --> 00:01:14,867
+That's plan B: generate less, review more.
+
+20
+00:01:14,867 --> 00:01:18,967
+Let the judge decide — review sounds like the smart move.
+
+21
+00:01:18,967 --> 00:01:21,133
+Let's see if it is.
+
+22
+00:01:22,567 --> 00:01:27,200
+Plan A spends everything on generating, plan B trades generation for checking
+
+23
+00:01:27,267 --> 00:01:29,267
+and anything in between is possible
+
+24
+00:01:29,900 --> 00:01:33,667
+Three models with different skill levels share the same fifty-call budget
+
+25
+00:01:33,700 --> 00:01:37,033
+solid lines are search, dashed lines are verification
+
+26
+00:01:37,700 --> 00:01:40,900
+The result is consistent: search wins across the board
+
+27
+00:01:40,900 --> 00:01:44,500
+by roughly nine to twelve percentage points at the fifty-call mark
+
+28
+00:01:45,000 --> 00:01:49,733
+But keep one condition in mind: the judge here is the model itself
+
+29
+00:01:49,733 --> 00:01:54,467
+Judging is harder than solving — so even a decent solver makes a weak judge
+
+30
+00:01:54,467 --> 00:01:58,500
+Swap in a well-trained strong judge, and the story may change completely
+
+31
+00:02:00,100 --> 00:02:02,367
+Why does verification fall behind?
+
+32
+00:02:03,033 --> 00:02:06,767
+In one sentence: if the right answer is not among the candidates
+
+33
+00:02:06,767 --> 00:02:08,700
+no amount of review will find it
+
+34
+00:02:09,300 --> 00:02:13,000
+Search widens the pool — fifty answers, some of them right
+
+35
+00:02:13,667 --> 00:02:15,533
+Verification has only five
+
+36
+00:02:15,533 --> 00:02:17,933
+with one right answer, checking works
+
+37
+00:02:17,933 --> 00:02:20,133
+without one, no review will help
+
+38
+00:02:20,733 --> 00:02:23,133
+Here, all five answers are wrong
+
+39
+00:02:23,767 --> 00:02:27,633
+No matter how careful the judge is, no correct answer can come out
+
+40
+00:02:27,633 --> 00:02:30,333
+that's a big part of why verification loses
+
+41
+00:02:31,733 --> 00:02:33,033
+How do you choose?
+
+42
+00:02:33,700 --> 00:02:36,333
+With fifty calls, two questions remain
+
+43
+00:02:37,000 --> 00:02:39,533
+First: how often is your model right?
+
+44
+00:02:40,200 --> 00:02:43,167
+At or below half, voting has no guarantee
+
+45
+00:02:43,267 --> 00:02:46,833
+run a small probe and compare voting against answering once
+
+46
+00:02:47,500 --> 00:02:51,933
+In the gray zone — between fifty and sixty percent — probe first too
+
+47
+00:02:52,600 --> 00:02:55,567
+Above sixty percent, voting has a guarantee
+
+48
+00:02:56,233 --> 00:02:58,633
+Second: how strong is your judge?
+
+49
+00:02:59,300 --> 00:03:02,800
+Weak — the model grading itself — then search wins
+
+50
+00:03:03,467 --> 00:03:06,533
+Strong — a little verification is worth trying
+
+51
+00:03:08,933 --> 00:03:15,733
+Time to run the experiment. Fixed budget of fifty calls: search, or verify?
+
+52
+00:03:15,733 --> 00:03:17,900
+We pick our model, and the setup is ready
+
+53
+00:03:18,733 --> 00:03:20,900
+Eight configurations on the shared subset
+
+54
+00:03:21,100 --> 00:03:24,367
+four search budgets, four verify splits at the same budgets
+
+55
+00:03:25,233 --> 00:03:28,467
+The analysis script rebuilds statistics from the recorded calls
+
+56
+00:03:28,667 --> 00:03:32,500
+records are the source of truth. Let's plot our results
+
+57
+00:03:33,333 --> 00:03:35,200
+Here is our budget-accuracy curve
+
+58
+00:03:35,367 --> 00:03:39,300
+six problems move in large steps, so flat lines are expected
+
+59
+00:03:40,167 --> 00:03:43,400
+The six-model p-spectrum — search beats weak verification
+
+60
+00:03:43,600 --> 00:03:46,100
+hollow over-budget markers stay below the lines
+
+61
+00:03:46,967 --> 00:03:50,400
+We also check error dispersion: when the vote picks a wrong answer
+
+62
+00:03:50,567 --> 00:03:52,933
+do the losing candidates agree on the same mistake?
+
+63
+00:03:53,800 --> 00:03:55,367
+Finally, four questions
+
+64
+00:03:55,600 --> 00:04:01,100
+crossing points, catch-up budgets, your model's place in the p-spectrum, class collaboration
+
+65
+00:04:01,967 --> 00:04:05,100
+An optional experiment compares weak and strong verifiers
+
+66
+00:04:05,300 --> 00:04:07,133
+does a stronger judge change the winner?
+
+67
+00:04:08,000 --> 00:04:11,500
+Search beats verify under a weak verifier and moderate budget
+
+68
+00:04:12,367 --> 00:04:13,733
+We'll point you to a paper
+
+69
+00:04:16,933 --> 00:04:19,733
+This paper is where our budget curves come from
+
+70
+00:04:20,400 --> 00:04:25,433
+Scaling LLM Test-Time Compute Optimally, ICLR 2025
+
+71
+00:04:26,100 --> 00:04:28,267
+If you're interested in other related works
+
+72
+00:04:28,267 --> 00:04:30,867
+check out a few more in our course PDF
+
+73
+00:04:33,267 --> 00:04:35,800
+So — more answers, or more checking?
+
+74
+00:04:36,467 --> 00:04:39,733
+It depends on your model: weak judge, search wins
+
+75
+00:04:39,733 --> 00:04:43,033
+strong judge, a little verification goes a long way
+
+76
+00:04:43,700 --> 00:04:47,300
+Now it's your turn — find your own answer in our notebooks
+
