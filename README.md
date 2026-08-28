@@ -56,6 +56,23 @@ python scripts/download_models.py     # six small GGUF models, Q8_0, ~15 GB
 python scripts/run_experiment.py --help
 ```
 
+### Installing the GPU tier (Windows)
+
+PyPI does not publish the CUDA 12.4 (cu124) wheel of `llama-cpp-python==0.3.34`
+for Windows. Download it from the project's GitHub Releases (file
+`llama_cpp_python-0.3.34-cpXXX-cpXXX-win_amd64.whl`, replacing `cpXXX` with your
+Python version, e.g. `cp311` for Python 3.11). If GitHub is slow or unreachable,
+prefix the URL with the `ghfast.top` mirror: `https://ghfast.top/<original-url>`.
+Then install everything:
+
+```bash
+pip install <path-or-url-to-the-cu124-wheel>
+pip install -r requirements-local.txt
+```
+
+`torch` is a CUDA-DLL dependency only: add `torch/lib` to your `PATH` before
+running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
+
 No-GPU / CPU-only fallback: `pip install -r requirements-cpu.txt`. The six models
 span measured single-answer accuracies from 0.29 to 0.70 on MATH-500, which is
 what makes the search-vs-verify trade-off visible from a single machine.

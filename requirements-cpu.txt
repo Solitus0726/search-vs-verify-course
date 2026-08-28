@@ -1,16 +1,16 @@
-# CPU 档依赖清单（无 GPU 学生：零算力层走缓存，或纯 CPU 跑小模型）
-# 推理引擎：llama.cpp CPU wheel（PyPI 默认即 CPU 版，无需 torch）
+# CPU tier dependencies (no-GPU students: use the cached layer, or run small models on CPU)
+# Inference engine: llama.cpp CPU wheel (the default PyPI build; no torch needed)
 
 llama-cpp-python==0.3.34
 
-# 数据与绘图
+# Data and plotting
 datasets==5.0.1
 huggingface_hub==0.36.2
 numpy==2.5.1
 matplotlib==3.11.1
 
-# 答案判定规范化（scripts/evaluate.py 依赖）
+# Answer normalization (used by scripts/evaluate.py)
 sympy==1.14.0
 
-# 模型下载（ModelScope 镜像）
+# Model download (ModelScope mirror)
 modelscope==1.39.1

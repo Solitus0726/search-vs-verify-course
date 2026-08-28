@@ -10,7 +10,7 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_DIR = os.path.join(PROJECT_ROOT, "model")
 
-# Six models: ModelScope repo + file name in repo + local name + sha256 (consistent with model_hashes.json)
+# Six models: ModelScope repo + file name in repo + local name + sha256
 # Sources: Qwen3 family = Qwen official GGUF repo; gemma/Phi-4-Mini = unsloth conversion repo
 MODELS = {
     "qwen3-0.6b": {

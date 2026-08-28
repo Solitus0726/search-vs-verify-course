@@ -242,7 +242,7 @@ class JsonlRecorder:
     def _scan(self, path: str) -> None:
         # readline() loop (iterator prefetch disables tell()); offsets recorded in bytes (multi-byte UTF-8)
         # errors="replace": disk-full/interrupted truncation can leave half a UTF-8 char (UnicodeDecodeError);
-        # after replacement the line fails JSON parsing and is skipped as a bad line (fixed 2026-08-16, exposed by a disk-full interruption during a re-run)
+        # after replacement the line fails JSON parsing and is skipped as a bad line (interrupted writes may truncate the last line)
         with open(path, encoding="utf-8", errors="replace") as f:
             offset = 0
             while True:
@@ -379,7 +379,7 @@ def process_problem(llm: object, judge_llm: object, recorder: JsonlRecorder,
                         rec = rec1  # use the retry result for aggregation (final state)
                 else:
                     # First call already persisted: if it failed, look up the retry record (retry_idx=1) as the final state
-                    # Fixed 2026-08-16 (second self-check M13): if a crash happened after retry0 was written but before retry1,
+                    # If a crash happened after retry0 was written but before retry1,
                     # retry1 would be missing on recovery -- replay retry1 here (retries are idempotent, safe to re-run),
                     # so this judge never ends up permanently scored None (dropped as NaN)
                     if rec["score"] is None:
@@ -414,7 +414,7 @@ def process_problem(llm: object, judge_llm: object, recorder: JsonlRecorder,
 
 
 def configure_hf_source() -> None:
-    # Dataset source fast path (added 2026-08-25, unified across the Notebook and script layers):
+    # Dataset source fast path (shared by the notebooks and the CLI):
     # 1) Local cache exists -> fully offline (zero network, zero retries, instant)
     #    Note: the huggingface_hub/datasets offline switches are module constants cached **at import time**
     #    (from evaluate import ... at the top of this module already pulled in hub) -- env vars have no effect,

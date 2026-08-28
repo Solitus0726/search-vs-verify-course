@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_experiment import MODEL_FULL_NAMES
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PASS1_DIR = os.path.join(PROJECT_ROOT, "data", "results")
+PASS1_DIR = os.path.join(PROJECT_ROOT, "data", "cache_subset")
 
 
 def estimate_p(model: str, n: int = 10, dataset: str = "MATH-500") -> Optional[float]:
