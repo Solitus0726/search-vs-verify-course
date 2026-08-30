@@ -31,7 +31,7 @@ Level 1: after the video, explain the search--verification trade-off in plain la
 Search has a mathematical guarantee: with independent candidates and accuracy p above 1/2, the failure probability of majority voting falls exponentially in N. Verification has no such guarantee; it only helps if the judge can tell good candidates from bad ones. Here the judge is the model grading its own answers; in our measurements that judge is weak, because self-scores barely separate correct from incorrect candidates. Verification value therefore depends on judge quality.
 
 \blk{Worked Example}
-Task: MATH 500 subset (100 problems), budget 50 calls per problem, Qwen3-4B, three seeds. Model spectrum (six models, measured p from 0.29 to 0.70): Gemma-3-1B, Phi-4-Mini, Qwen3-0.6B, Gemma-3-4B, Qwen3-1.7B, Qwen3-4B. Results are in Table~\ref{tab:worked}.
+Task: MATH 500 subset (100 problems), budget 50 calls per problem, Qwen3-4B, three seeds. Model spectrum (six models, measured p from 0.37 to 0.73): Gemma-3-1B, Phi-4-Mini, Qwen3-0.6B, Gemma-3-4B, Qwen3-1.7B, Qwen3-4B. Results are in Table~\ref{tab:worked}.
 
 \begin{table}[h!]
   \caption{Measured accuracy on the 100-problem MATH 500 subset (Qwen3-4B, three seeds, budget 50 calls per problem).}
@@ -43,9 +43,9 @@ Task: MATH 500 subset (100 problems), budget 50 calls per problem, Qwen3-4B, thr
     \toprule
     Strategy & Split & Accuracy [95\% CI] & Reference \\
     \midrule
-    Search & 50 candidates, majority vote & 0.850 [0.81, 0.89] & [2] (Majority) \\
-    Search + light verification & 25 candidates $\times$ 1 check & 0.773 [0.73, 0.82] & -- \\
-    Verification & 5 candidates $\times$ 9 checks & 0.727 [0.68, 0.78] & [2] (PRM weighted) \\
+    Search & 50 candidates, majority vote & 0.853 [0.81, 0.89] & [2] (Majority) \\
+    Search + light verification & 25 candidates $\times$ 1 check & 0.717 [0.67, 0.77] & -- \\
+    Verification & 5 candidates $\times$ 9 checks & 0.753 [0.70, 0.80] & [2] (PRM weighted) \\
     \bottomrule
   \end{tabular}
 \end{table}

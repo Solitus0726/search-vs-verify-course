@@ -7,7 +7,7 @@ check each one with a judge (*verify*)?
 
 **Central claim (conditional, measured):** under a *weak verifier* (the model
 grading its own answers) and a *moderate budget* (50 inference calls per problem),
-search beats verify — measured +9.3 to +12.3 pp on three models (100 problems,
+search beats verify — measured +7.3 to +10.0 pp on three models (100 problems,
 3 seeds, 95% CIs exclude 0). The materials teach *when* this holds and how to
 find the best split on your own model.
 
@@ -74,7 +74,7 @@ pip install -r requirements-local.txt
 running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
 
 No-GPU / CPU-only fallback: `pip install -r requirements-cpu.txt`. The six models
-span measured single-answer accuracies from 0.29 to 0.70 on MATH-500, which is
+span measured single-answer accuracies from 0.37 to 0.73 on MATH-500, which is
 what makes the search-vs-verify trade-off visible from a single machine.
 
 ## Reproducibility

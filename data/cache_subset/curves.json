@@ -2,7 +2,7 @@
  "curves": [
   {
    "key": "qwen3-4b",
-   "model": "Qwen3-4B-Instruct (p=0.70)",
+   "model": "Qwen3-4B-Instruct (p=0.73)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
@@ -12,11 +12,11 @@
       "N": 5,
       "M": 0
      },
-     "accuracy": 0.8,
-     "std": 0.402,
+     "accuracy": 0.81,
+     "std": 0.3943,
      "n_problems": 100,
-     "cost": 5,
-     "canonical": false
+     "canonical": false,
+     "cost": 5
     },
     {
      "config": {
@@ -24,11 +24,11 @@
       "N": 10,
       "M": 0
      },
-     "accuracy": 0.82,
-     "std": 0.3861,
+     "accuracy": 0.84,
+     "std": 0.3685,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -39,8 +39,8 @@
      "accuracy": 0.84,
      "std": 0.3685,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -48,11 +48,11 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.87,
-     "std": 0.338,
+     "accuracy": 0.86,
+     "std": 0.3487,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -60,11 +60,11 @@
       "N": 5,
       "M": 1
      },
-     "accuracy": 0.75,
-     "std": 0.4352,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -72,11 +72,11 @@
       "N": 5,
       "M": 2
      },
-     "accuracy": 0.76,
-     "std": 0.4292,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 15,
-     "canonical": false
+     "canonical": false,
+     "cost": 15
     },
     {
      "config": {
@@ -84,11 +84,11 @@
       "N": 5,
       "M": 3
      },
-     "accuracy": 0.75,
-     "std": 0.4352,
+     "accuracy": 0.72,
+     "std": 0.4513,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -96,11 +96,11 @@
       "N": 5,
       "M": 4
      },
-     "accuracy": 0.74,
-     "std": 0.4408,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 25,
-     "canonical": false
+     "canonical": false,
+     "cost": 25
     },
     {
      "config": {
@@ -111,8 +111,8 @@
      "accuracy": 0.75,
      "std": 0.4352,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -120,11 +120,11 @@
       "N": 5,
       "M": 6
      },
-     "accuracy": 0.71,
-     "std": 0.456,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 35,
-     "canonical": false
+     "canonical": false,
+     "cost": 35
     },
     {
      "config": {
@@ -135,8 +135,8 @@
      "accuracy": 0.73,
      "std": 0.4462,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -147,8 +147,8 @@
      "accuracy": 0.74,
      "std": 0.4408,
      "n_problems": 100,
-     "cost": 45,
-     "canonical": false
+     "canonical": false,
+     "cost": 45
     },
     {
      "config": {
@@ -156,11 +156,11 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.76,
-     "std": 0.4292,
+     "accuracy": 0.78,
+     "std": 0.4163,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -168,11 +168,11 @@
       "N": 10,
       "M": 1
      },
-     "accuracy": 0.7,
-     "std": 0.4606,
+     "accuracy": 0.71,
+     "std": 0.456,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -183,8 +183,8 @@
      "accuracy": 0.74,
      "std": 0.4408,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -192,11 +192,11 @@
       "N": 10,
       "M": 3
      },
-     "accuracy": 0.69,
-     "std": 0.4648,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -204,11 +204,11 @@
       "N": 10,
       "M": 4
      },
-     "accuracy": 0.75,
-     "std": 0.4352,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": false
+     "canonical": false,
+     "cost": 50
     },
     {
      "config": {
@@ -216,11 +216,11 @@
       "N": 10,
       "M": 5
      },
-     "accuracy": 0.77,
-     "std": 0.423,
+     "accuracy": 0.76,
+     "std": 0.4292,
      "n_problems": 100,
-     "cost": 60,
-     "canonical": false
+     "canonical": false,
+     "cost": 60
     },
     {
      "config": {
@@ -228,11 +228,11 @@
       "N": 10,
       "M": 6
      },
-     "accuracy": 0.8,
-     "std": 0.402,
+     "accuracy": 0.74,
+     "std": 0.4408,
      "n_problems": 100,
-     "cost": 70,
-     "canonical": false
+     "canonical": false,
+     "cost": 70
     },
     {
      "config": {
@@ -240,11 +240,11 @@
       "N": 10,
       "M": 7
      },
-     "accuracy": 0.76,
-     "std": 0.4292,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 80,
-     "canonical": false
+     "canonical": false,
+     "cost": 80
     },
     {
      "config": {
@@ -252,11 +252,11 @@
       "N": 10,
       "M": 8
      },
-     "accuracy": 0.7,
-     "std": 0.4606,
+     "accuracy": 0.71,
+     "std": 0.456,
      "n_problems": 100,
-     "cost": 90,
-     "canonical": false
+     "canonical": false,
+     "cost": 90
     },
     {
      "config": {
@@ -267,8 +267,8 @@
      "accuracy": 0.74,
      "std": 0.4408,
      "n_problems": 100,
-     "cost": 100,
-     "canonical": false
+     "canonical": false,
+     "cost": 100
     },
     {
      "config": {
@@ -276,17 +276,17 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.7,
-     "std": 0.4606,
+     "accuracy": 0.69,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "gemma-3-4b",
-   "model": "Gemma-3-4B-Instruct (p=0.48)",
+   "model": "Gemma-3-4B-Instruct (p=0.61)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
@@ -296,11 +296,11 @@
       "N": 5,
       "M": 0
      },
-     "accuracy": 0.68,
-     "std": 0.4688,
+     "accuracy": 0.69,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 5,
-     "canonical": false
+     "canonical": false,
+     "cost": 5
     },
     {
      "config": {
@@ -308,11 +308,11 @@
       "N": 10,
       "M": 0
      },
-     "accuracy": 0.73,
-     "std": 0.4462,
+     "accuracy": 0.74,
+     "std": 0.4408,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -323,8 +323,8 @@
      "accuracy": 0.74,
      "std": 0.4408,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -332,59 +332,59 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.76,
-     "std": 0.4292,
+     "accuracy": 0.73,
+     "std": 0.4462,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
       "strategy": "verify",
       "N": 5,
       "M": 1
-     },
-     "accuracy": 0.59,
-     "std": 0.4943,
-     "n_problems": 100,
-     "cost": 10,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 2
-     },
-     "accuracy": 0.66,
-     "std": 0.4761,
-     "n_problems": 100,
-     "cost": 15,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 3
-     },
-     "accuracy": 0.66,
-     "std": 0.4761,
-     "n_problems": 100,
-     "cost": 20,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 4
      },
      "accuracy": 0.65,
      "std": 0.4794,
      "n_problems": 100,
-     "cost": 25,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 2
+     },
+     "accuracy": 0.63,
+     "std": 0.4852,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 15
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 3
+     },
+     "accuracy": 0.63,
+     "std": 0.4852,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 20
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 4
+     },
+     "accuracy": 0.66,
+     "std": 0.4761,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 25
     },
     {
      "config": {
@@ -392,11 +392,11 @@
       "N": 5,
       "M": 5
      },
-     "accuracy": 0.63,
-     "std": 0.4852,
+     "accuracy": 0.67,
+     "std": 0.4726,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -404,11 +404,11 @@
       "N": 5,
       "M": 6
      },
-     "accuracy": 0.64,
-     "std": 0.4824,
+     "accuracy": 0.62,
+     "std": 0.4878,
      "n_problems": 100,
-     "cost": 35,
-     "canonical": false
+     "canonical": false,
+     "cost": 35
     },
     {
      "config": {
@@ -416,11 +416,11 @@
       "N": 5,
       "M": 7
      },
-     "accuracy": 0.66,
-     "std": 0.4761,
+     "accuracy": 0.67,
+     "std": 0.4726,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -428,11 +428,11 @@
       "N": 5,
       "M": 8
      },
-     "accuracy": 0.61,
-     "std": 0.4902,
+     "accuracy": 0.64,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 45,
-     "canonical": false
+     "canonical": false,
+     "cost": 45
     },
     {
      "config": {
@@ -440,11 +440,11 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.64,
-     "std": 0.4824,
+     "accuracy": 0.65,
+     "std": 0.4794,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -452,11 +452,11 @@
       "N": 10,
       "M": 1
      },
-     "accuracy": 0.62,
-     "std": 0.4878,
+     "accuracy": 0.64,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -467,8 +467,8 @@
      "accuracy": 0.63,
      "std": 0.4852,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -476,11 +476,11 @@
       "N": 10,
       "M": 3
      },
-     "accuracy": 0.69,
-     "std": 0.4648,
+     "accuracy": 0.72,
+     "std": 0.4513,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -488,11 +488,11 @@
       "N": 10,
       "M": 4
      },
-     "accuracy": 0.62,
-     "std": 0.4878,
+     "accuracy": 0.59,
+     "std": 0.4943,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": false
+     "canonical": false,
+     "cost": 50
     },
     {
      "config": {
@@ -500,11 +500,11 @@
       "N": 10,
       "M": 5
      },
-     "accuracy": 0.66,
-     "std": 0.4761,
+     "accuracy": 0.69,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 60,
-     "canonical": false
+     "canonical": false,
+     "cost": 60
     },
     {
      "config": {
@@ -512,11 +512,11 @@
       "N": 10,
       "M": 6
      },
-     "accuracy": 0.64,
-     "std": 0.4824,
+     "accuracy": 0.66,
+     "std": 0.4761,
      "n_problems": 100,
-     "cost": 70,
-     "canonical": false
+     "canonical": false,
+     "cost": 70
     },
     {
      "config": {
@@ -524,11 +524,11 @@
       "N": 10,
       "M": 7
      },
-     "accuracy": 0.63,
-     "std": 0.4852,
+     "accuracy": 0.64,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 80,
-     "canonical": false
+     "canonical": false,
+     "cost": 80
     },
     {
      "config": {
@@ -536,11 +536,11 @@
       "N": 10,
       "M": 8
      },
-     "accuracy": 0.68,
-     "std": 0.4688,
+     "accuracy": 0.65,
+     "std": 0.4794,
      "n_problems": 100,
-     "cost": 90,
-     "canonical": false
+     "canonical": false,
+     "cost": 90
     },
     {
      "config": {
@@ -548,11 +548,11 @@
       "N": 10,
       "M": 9
      },
-     "accuracy": 0.64,
-     "std": 0.4824,
+     "accuracy": 0.66,
+     "std": 0.4761,
      "n_problems": 100,
-     "cost": 100,
-     "canonical": false
+     "canonical": false,
+     "cost": 100
     },
     {
      "config": {
@@ -560,17 +560,17 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.61,
-     "std": 0.4902,
+     "accuracy": 0.64,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "gemma-3-1b",
-   "model": "Gemma-3-1B-Instruct (p=0.29)",
+   "model": "Gemma-3-1B-Instruct (p=0.37)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
@@ -580,11 +580,11 @@
       "N": 5,
       "M": 0
      },
-     "accuracy": 0.46,
-     "std": 0.5009,
+     "accuracy": 0.43,
+     "std": 0.4976,
      "n_problems": 100,
-     "cost": 5,
-     "canonical": false
+     "canonical": false,
+     "cost": 5
     },
     {
      "config": {
@@ -592,11 +592,11 @@
       "N": 10,
       "M": 0
      },
-     "accuracy": 0.45,
-     "std": 0.5,
+     "accuracy": 0.48,
+     "std": 0.5021,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -604,11 +604,11 @@
       "N": 20,
       "M": 0
      },
-     "accuracy": 0.45,
-     "std": 0.5,
+     "accuracy": 0.46,
+     "std": 0.5009,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -616,11 +616,11 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.45,
-     "std": 0.5,
+     "accuracy": 0.5,
+     "std": 0.5025,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -628,35 +628,35 @@
       "N": 5,
       "M": 1
      },
-     "accuracy": 0.38,
-     "std": 0.4878,
+     "accuracy": 0.43,
+     "std": 0.4976,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
       "strategy": "verify",
       "N": 5,
       "M": 2
-     },
-     "accuracy": 0.36,
-     "std": 0.4824,
-     "n_problems": 100,
-     "cost": 15,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 3
      },
      "accuracy": 0.42,
      "std": 0.496,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 15
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 3
+     },
+     "accuracy": 0.38,
+     "std": 0.4878,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -664,11 +664,11 @@
       "N": 5,
       "M": 4
      },
-     "accuracy": 0.43,
-     "std": 0.4976,
+     "accuracy": 0.41,
+     "std": 0.4943,
      "n_problems": 100,
-     "cost": 25,
-     "canonical": false
+     "canonical": false,
+     "cost": 25
     },
     {
      "config": {
@@ -676,11 +676,11 @@
       "N": 5,
       "M": 5
      },
-     "accuracy": 0.43,
-     "std": 0.4976,
+     "accuracy": 0.41,
+     "std": 0.4943,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -688,11 +688,11 @@
       "N": 5,
       "M": 6
      },
-     "accuracy": 0.38,
-     "std": 0.4878,
+     "accuracy": 0.37,
+     "std": 0.4852,
      "n_problems": 100,
-     "cost": 35,
-     "canonical": false
+     "canonical": false,
+     "cost": 35
     },
     {
      "config": {
@@ -700,11 +700,11 @@
       "N": 5,
       "M": 7
      },
-     "accuracy": 0.4,
-     "std": 0.4924,
+     "accuracy": 0.36,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -712,11 +712,11 @@
       "N": 5,
       "M": 8
      },
-     "accuracy": 0.37,
-     "std": 0.4852,
+     "accuracy": 0.35,
+     "std": 0.4794,
      "n_problems": 100,
-     "cost": 45,
-     "canonical": false
+     "canonical": false,
+     "cost": 45
     },
     {
      "config": {
@@ -724,11 +724,11 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.35,
-     "std": 0.4794,
+     "accuracy": 0.38,
+     "std": 0.4878,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -736,11 +736,11 @@
       "N": 10,
       "M": 1
      },
-     "accuracy": 0.38,
-     "std": 0.4878,
+     "accuracy": 0.39,
+     "std": 0.4902,
      "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 20
     },
     {
      "config": {
@@ -748,11 +748,11 @@
       "N": 10,
       "M": 2
      },
-     "accuracy": 0.41,
-     "std": 0.4943,
+     "accuracy": 0.38,
+     "std": 0.4878,
      "n_problems": 100,
-     "cost": 30,
-     "canonical": false
+     "canonical": false,
+     "cost": 30
     },
     {
      "config": {
@@ -760,11 +760,11 @@
       "N": 10,
       "M": 3
      },
-     "accuracy": 0.41,
-     "std": 0.4943,
+     "accuracy": 0.31,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 40,
-     "canonical": false
+     "canonical": false,
+     "cost": 40
     },
     {
      "config": {
@@ -772,11 +772,11 @@
       "N": 10,
       "M": 4
      },
-     "accuracy": 0.33,
-     "std": 0.4726,
+     "accuracy": 0.36,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": false
+     "canonical": false,
+     "cost": 50
     },
     {
      "config": {
@@ -784,11 +784,11 @@
       "N": 10,
       "M": 5
      },
-     "accuracy": 0.39,
-     "std": 0.4902,
+     "accuracy": 0.37,
+     "std": 0.4852,
      "n_problems": 100,
-     "cost": 60,
-     "canonical": false
+     "canonical": false,
+     "cost": 60
     },
     {
      "config": {
@@ -796,11 +796,11 @@
       "N": 10,
       "M": 6
      },
-     "accuracy": 0.36,
-     "std": 0.4824,
+     "accuracy": 0.37,
+     "std": 0.4852,
      "n_problems": 100,
-     "cost": 70,
-     "canonical": false
+     "canonical": false,
+     "cost": 70
     },
     {
      "config": {
@@ -808,11 +808,11 @@
       "N": 10,
       "M": 7
      },
-     "accuracy": 0.38,
-     "std": 0.4878,
+     "accuracy": 0.39,
+     "std": 0.4902,
      "n_problems": 100,
-     "cost": 80,
-     "canonical": false
+     "canonical": false,
+     "cost": 80
     },
     {
      "config": {
@@ -823,8 +823,8 @@
      "accuracy": 0.39,
      "std": 0.4902,
      "n_problems": 100,
-     "cost": 90,
-     "canonical": false
+     "canonical": false,
+     "cost": 90
     },
     {
      "config": {
@@ -832,11 +832,11 @@
       "N": 10,
       "M": 9
      },
-     "accuracy": 0.39,
-     "std": 0.4902,
+     "accuracy": 0.34,
+     "std": 0.4761,
      "n_problems": 100,
-     "cost": 100,
-     "canonical": false
+     "canonical": false,
+     "cost": 100
     },
     {
      "config": {
@@ -844,103 +844,31 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.39,
-     "std": 0.4902,
+     "accuracy": 0.36,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "qwen3-0.6b",
-   "model": "Qwen3-0.6B-Instruct (p=0.41)",
+   "model": "Qwen3-0.6B-Instruct (p=0.46)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
     {
      "config": {
       "strategy": "search",
-      "N": 5,
-      "M": 0
-     },
-     "accuracy": 0.48,
-     "std": 0.4996,
-     "n_problems": 100,
-     "cost": 5,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 1
-     },
-     "accuracy": 0.45,
-     "std": 0.5,
-     "n_problems": 100,
-     "cost": 10,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.49,
-     "std": 0.5024,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    {
-     "config": {
-      "strategy": "search",
       "N": 10,
       "M": 0
      },
-     "accuracy": 0.61,
-     "std": 0.4902,
+     "accuracy": 0.57,
+     "std": 0.4976,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 10,
-      "M": 4
-     },
-     "accuracy": 0.45,
-     "std": 0.5,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "search",
-      "N": 20,
-      "M": 0
-     },
-     "accuracy": 0.54,
-     "std": 0.4984,
-     "n_problems": 100,
-     "cost": 20,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.4,
-     "std": 0.4924,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -951,28 +879,88 @@
      "accuracy": 0.59,
      "std": 0.4943,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 1
+     },
+     "accuracy": 0.42,
+     "std": 0.496,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 10
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 9
+     },
+     "accuracy": 0.43,
+     "std": 0.4976,
+     "n_problems": 100,
+     "canonical": true,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 10,
+      "M": 4
+     },
+     "accuracy": 0.46,
+     "std": 0.5009,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 25,
+      "M": 1
+     },
+     "accuracy": 0.41,
+     "std": 0.4943,
+     "n_problems": 100,
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "qwen3-1.7b",
-   "model": "Qwen3-1.7B-Instruct (p=0.62)",
+   "model": "Qwen3-1.7B-Instruct (p=0.69)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
     {
      "config": {
       "strategy": "search",
-      "N": 5,
+      "N": 10,
       "M": 0
      },
-     "accuracy": 0.73,
-     "std": 0.444,
+     "accuracy": 0.76,
+     "std": 0.4292,
      "n_problems": 100,
-     "cost": 5,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
+    },
+    {
+     "config": {
+      "strategy": "search",
+      "N": 50,
+      "M": 0
+     },
+     "accuracy": 0.82,
+     "std": 0.3861,
+     "n_problems": 100,
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -983,8 +971,8 @@
      "accuracy": 0.69,
      "std": 0.4648,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -992,23 +980,11 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.73,
-     "std": 0.4462,
+     "accuracy": 0.69,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    {
-     "config": {
-      "strategy": "search",
-      "N": 10,
-      "M": 0
-     },
-     "accuracy": 0.75,
-     "std": 0.4352,
-     "n_problems": 100,
-     "cost": 10,
-     "canonical": false
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -1016,23 +992,11 @@
       "N": 10,
       "M": 4
      },
-     "accuracy": 0.7,
-     "std": 0.4606,
+     "accuracy": 0.64,
+     "std": 0.4824,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "search",
-      "N": 20,
-      "M": 0
-     },
-     "accuracy": 0.79,
-     "std": 0.4073,
-     "n_problems": 100,
-     "cost": 20,
-     "canonical": false
+     "canonical": false,
+     "cost": 50
     },
     {
      "config": {
@@ -1040,115 +1004,31 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.61,
-     "std": 0.4902,
+     "accuracy": 0.69,
+     "std": 0.4648,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.81,
-     "std": 0.3943,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "phi-4-mini",
-   "model": "Phi-4-Mini-Instruct (p=0.39)",
+   "model": "Phi-4-Mini-Instruct (p=0.54)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [
     {
      "config": {
       "strategy": "search",
-      "N": 5,
-      "M": 0
-     },
-     "accuracy": 0.62,
-     "std": 0.4854,
-     "n_problems": 100,
-     "cost": 5,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 1
-     },
-     "accuracy": 0.52,
-     "std": 0.5021,
-     "n_problems": 100,
-     "cost": 10,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.56,
-     "std": 0.4989,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    {
-     "config": {
-      "strategy": "search",
       "N": 10,
       "M": 0
      },
-     "accuracy": 0.68,
-     "std": 0.4688,
+     "accuracy": 0.71,
+     "std": 0.456,
      "n_problems": 100,
-     "cost": 10,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 10,
-      "M": 4
-     },
-     "accuracy": 0.55,
-     "std": 0.5,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "search",
-      "N": 20,
-      "M": 0
-     },
-     "accuracy": 0.73,
-     "std": 0.444,
-     "n_problems": 100,
-     "cost": 20,
-     "canonical": false
-    },
-    {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.53,
-     "std": 0.5016,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": false,
+     "cost": 10
     },
     {
      "config": {
@@ -1156,17 +1036,65 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.71,
-     "std": 0.456,
+     "accuracy": 0.72,
+     "std": 0.4513,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 1
+     },
+     "accuracy": 0.5,
+     "std": 0.5025,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 10
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 5,
+      "M": 9
+     },
+     "accuracy": 0.48,
+     "std": 0.5021,
+     "n_problems": 100,
+     "canonical": true,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 10,
+      "M": 4
+     },
+     "accuracy": 0.53,
+     "std": 0.5016,
+     "n_problems": 100,
+     "canonical": false,
+     "cost": 50
+    },
+    {
+     "config": {
+      "strategy": "verify",
+      "N": 25,
+      "M": 1
+     },
+     "accuracy": 0.48,
+     "std": 0.5021,
+     "n_problems": 100,
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "gemma-3-4b",
-   "model": "Gemma-3-4B-Instruct (p=0.48)",
+   "model": "Gemma-3-4B-Instruct (p=0.61)",
    "dataset": "GSM8K",
    "budget": 50,
    "configs": [
@@ -1179,8 +1107,8 @@
      "accuracy": 0.59,
      "std": 0.4943,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -1191,8 +1119,8 @@
      "accuracy": 0.52,
      "std": 0.5021,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -1203,14 +1131,14 @@
      "accuracy": 0.55,
      "std": 0.5,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   },
   {
    "key": "qwen3-4b",
-   "model": "Qwen3-4B-Instruct (p=0.70)",
+   "model": "Qwen3-4B-Instruct (p=0.73)",
    "dataset": "GSM8K",
    "budget": 50,
    "configs": [
@@ -1223,8 +1151,8 @@
      "accuracy": 0.81,
      "std": 0.3943,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -1235,8 +1163,8 @@
      "accuracy": 0.7,
      "std": 0.4606,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     },
     {
      "config": {
@@ -1247,8 +1175,8 @@
      "accuracy": 0.66,
      "std": 0.4761,
      "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "canonical": true,
+     "cost": 50
     }
    ]
   }

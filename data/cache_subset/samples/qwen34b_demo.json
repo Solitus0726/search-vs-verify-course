@@ -23,7 +23,7 @@
    "candidate_idx": 0,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\nGiven:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$\n\n#### So, the 2003rd term of the sequence is **4005**."
+   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\nThe formula is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nWe want the 2003rd term, so $ n = 2003 $, $ a = 1 $, $ d = 2 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$\n\n#### So, the 2003rd term of the sequence is **4005**."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
@@ -39,7 +39,7 @@
    "candidate_idx": 1,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe formula for the nth term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWe want to find the **2003rd term**, so $ n = 2003 $.\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe formula for the nth term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWe want to find the **2003rd term**, so $ n = 2003 $.\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
@@ -55,7 +55,7 @@
    "candidate_idx": 2,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\n---\n\n### Step 1: Understand the sequence\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\n---\n\n### Step 2: Plug in the values\n\nWe want the 2003rd term, so $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\n---\n\n### Step 1: Understand the pattern\n\nThis is an **arithmetic sequence** where:\n\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $ (since each term increases by 2)\n\n---\n\n### Step 2: Use the formula for the nth term of an arithmetic sequence\n\nThe formula for the $ n $th term $ a_n $ of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWe want the **2003rd term**, so $ n = 2003 $, $ a = 1 $, and $ d = 2 $.\n\n---\n\n### Step 3: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$\n\n#### So, the 2003rd term of the sequence of odd numbers is **4005**."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
@@ -71,7 +71,7 @@
    "candidate_idx": 3,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** with:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe formula for the $ n $th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\nWe want the 2003rd term ($ n = 2003 $):\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** with:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe formula for the $ n $th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nWe are looking for the **2003rd term**, so $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$\n\n#### So, the 2003rd term is **4005**."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
@@ -87,7 +87,7 @@
    "candidate_idx": 4,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$\n\n#### So, the 2003rd term of the sequence is **4005**."
+   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\nWe want the **2003rd term**, so:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
@@ -103,7 +103,7 @@
    "candidate_idx": 5,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Understand the pattern\n\nThis is an **arithmetic sequence** where:\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n---\n\n### Step 2: Simplify the expression\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Understand the pattern\n\nThis is an **arithmetic sequence** where:\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute $ a = 1 $ and $ d = 2 $:\n\n$$\na_n = 1 + (n - 1) \\cdot 2\n$$\n\n---\n\n### Step 2: Plug in $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
@@ -151,7 +151,7 @@
    "candidate_idx": 8,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\n---\n\n### Step 1: Understand the sequence\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $ (since each term increases by 2)\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\n---\n\n### Step 2: Plug in the values\n\nWe are looking for the **2003rd term**, so $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\n---\n\n### Step 1: Understand the Pattern\n\nThis is an **arithmetic sequence** where:\n\n- First term: $ a = 1 $\n- Common difference: $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n$$\na_n = a + (n - 1)d\n$$\n\n---\n\n### Step 2: Plug in the Values\n\nWe want the 2003rd term, so $ n = 2003 $, $ a = 1 $, $ d = 2 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
@@ -167,7 +167,7 @@
    "candidate_idx": 9,
    "verify_idx": 0,
    "retry_idx": 0,
-   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\n---\n\n### Step 1: Understand the pattern\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nSo the general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\n---\n\n### Step 2: Plug in the values\n\nWe want the **2003rd term**, so $ n = 2003 $:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+   "output": "We are asked to find the **2003rd term** of the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\n---\n\n### Step 1: Understand the Sequence\n\nThis is an **arithmetic sequence** where:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nSo the general formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\n---\n\n### Step 2: Plug in the Values\n\nWe are looking for the **2003rd term**, so $ n = 2003 $:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
@@ -184,7 +184,7 @@
    "verify_idx": 0,
    "retry_idx": 0,
    "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the formula for the nth term, and calculates the 2003rd term accurately as 4005. The explanation is clear and well-structured."
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula $ a_n = a + (n - 1)d $, and performs the arithmetic accurately to get the correct answer of 4005. The explanation is clear and well-structured."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
@@ -201,7 +201,7 @@
    "verify_idx": 1,
    "retry_idx": 0,
    "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The final answer is correct."
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the formula for the nth term of an arithmetic sequence, and computes the 2003rd term accurately as 4005. The explanation is clear and well-structured."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
@@ -218,7 +218,7 @@
    "verify_idx": 2,
    "retry_idx": 0,
    "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula $ a_n = a + (n-1)d $, and performs the calculation accurately. The answer $ 4005 $ is correct."
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the formula for the nth term, and calculates the 2003rd term accurately. The explanation is clear and well-structured."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
@@ -235,7 +235,7 @@
    "verify_idx": 3,
    "retry_idx": 0,
    "score": 1,
-   "output": "9\n\nThe candidate's solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The reasoning is clear and the final answer is correct."
+   "output": "9\n\nThe candidate correctly identifies the sequence as arithmetic with first term 1 and common difference 2. They apply the correct formula for the nth term of an arithmetic sequence and perform the calculation accurately. The final answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
@@ -251,8 +251,8 @@
    "candidate_idx": 1,
    "verify_idx": 0,
    "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2. It applies the correct formula for the nth term of an arithmetic sequence and performs the calculations accurately. The final answer is correct."
+   "score": 9,
+   "output": "9\n\n解答正确，使用了等差数列的公式，步骤清晰，计算无误，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
@@ -269,7 +269,7 @@
    "verify_idx": 1,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列的公式，计算步骤清晰，结果正确。"
+   "output": "9\n\n解答正确，使用了等差数列的通项公式，并正确代入计算得出第2003项为4005。步骤清晰，答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
@@ -286,7 +286,7 @@
    "verify_idx": 2,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n正确应用了等差数列公式，步骤清晰，计算无误，最终答案正确。"
+   "output": "9\n\n解答正确，应用了等差数列的第n项公式，计算过程清晰，答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
@@ -303,7 +303,7 @@
    "verify_idx": 3,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列的公式，并且计算过程清晰，最终答案正确。"
+   "output": "9\n\n解答正确，使用了等差数列公式并正确代入数值，得出结果4005。步骤清晰，逻辑正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
@@ -319,8 +319,8 @@
    "candidate_idx": 2,
    "verify_idx": 0,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，步骤清晰，应用了等差数列公式，计算无误。"
+   "score": 1,
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The final answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
@@ -336,8 +336,8 @@
    "candidate_idx": 2,
    "verify_idx": 1,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列的公式，计算过程清晰，结果正确。"
+   "score": 1,
+   "output": "9\n\nThe candidate correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The answer is correct and well-explained."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
@@ -353,8 +353,8 @@
    "candidate_idx": 2,
    "verify_idx": 2,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列公式，计算过程清晰，最终答案正确。"
+   "score": 1,
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
@@ -370,8 +370,8 @@
    "candidate_idx": 2,
    "verify_idx": 3,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列公式，并正确计算了第2003项，步骤清晰，没有错误。"
+   "score": 1,
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the calculations accurately. The answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
@@ -387,8 +387,8 @@
    "candidate_idx": 3,
    "verify_idx": 0,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列的公式，步骤清晰，计算无误，最终答案正确。"
+   "score": 10,
+   "output": "10\n\n解答正确，使用了等差数列的公式，步骤清晰，计算无误，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
@@ -404,8 +404,8 @@
    "candidate_idx": 3,
    "verify_idx": 1,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n使用等差数列公式正确，计算过程清晰，答案正确。"
+   "score": 1,
+   "output": "10  \nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The answer is correct and well-explained."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
@@ -421,8 +421,8 @@
    "candidate_idx": 3,
    "verify_idx": 2,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n使用等差数列公式正确计算了第2003项，步骤清晰，答案正确。"
+   "score": 10,
+   "output": "10\n\n解答正确，使用了等差数列的公式，计算过程清晰，答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
@@ -438,8 +438,8 @@
    "candidate_idx": 3,
    "verify_idx": 3,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n使用等差数列公式正确计算了第2003项，步骤清晰，答案正确。"
+   "score": 10,
+   "output": "10\n\n解答正确，使用了等差数列的通项公式，并正确代入了参数，计算过程清晰，答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
@@ -455,8 +455,8 @@
    "candidate_idx": 4,
    "verify_idx": 0,
    "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The final answer is correct."
+   "score": 9,
+   "output": "9\n\n解答正确，使用了等差数列的公式，并且计算过程清晰，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
@@ -472,8 +472,8 @@
    "candidate_idx": 4,
    "verify_idx": 1,
    "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic correctly. The final answer is accurate."
+   "score": 9,
+   "output": "9\n\n解答正确，使用了等差数列公式，并且计算过程清晰，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
@@ -489,8 +489,8 @@
    "candidate_idx": 4,
    "verify_idx": 2,
    "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2. It applies the correct formula for the $ n $-th term of an arithmetic sequence and performs the arithmetic accurately. The final answer is correct."
+   "score": 9,
+   "output": "9\n\n解答正确，使用了等差数列的正确公式，并且计算步骤清晰，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
@@ -506,8 +506,8 @@
    "candidate_idx": 4,
    "verify_idx": 3,
    "retry_idx": 0,
-   "score": 10,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the $ n $-th term, and performs the arithmetic accurately to arrive at the correct answer of 4005. Only one minor issue: the explanation could be slightly more concise, but the answer is correct."
+   "score": 9,
+   "output": "9\n\n解答正确，使用了等差数列的公式，并且计算过程清晰无误，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
@@ -523,8 +523,8 @@
    "candidate_idx": 5,
    "verify_idx": 0,
    "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列的公式，并正确代入了参数，计算过程清晰，最终结果正确。"
+   "score": 1,
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the formula for the nth term, and calculates the 2003rd term accurately. The steps are clear and logically ordered."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
@@ -541,7 +541,7 @@
    "verify_idx": 1,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，步骤清晰，应用了等差数列的通项公式，计算无误。"
+   "output": "9\n\n解答正确，步骤清晰，应用了等差数列公式，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
@@ -557,25 +557,8 @@
    "candidate_idx": 5,
    "verify_idx": 2,
    "retry_idx": 0,
-   "score": null,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The only minor issue is the unnecessary explanation of the sequence in the problem statement, but this doesn't affect the correctness of the answer."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 2,
-   "retry_idx": 1,
-   "score": 10,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The only minor issue is that the problem asks for the 2003rd term of the sequence of **odd numbers**, which is equivalent to the 2003rd term of the arithmetic sequence starting at 1 with difference 2. The answer is correct."
+   "score": 1,
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the calculation accurately. The answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
@@ -592,7 +575,7 @@
    "verify_idx": 3,
    "retry_idx": 0,
    "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the arithmetic accurately. The final answer is correct."
+   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and performs the calculation accurately. The answer is correct."
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
@@ -745,7 +728,7 @@
    "verify_idx": 0,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，应用了等差数列公式，计算过程清晰，最终答案正确。"
+   "output": "9\n\n解答正确，步骤清晰，应用了等差数列公式，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
@@ -762,7 +745,7 @@
    "verify_idx": 1,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，使用了等差数列公式，并正确代入了n=2003，计算过程清晰，答案正确。"
+   "output": "9\n\n解答正确，步骤清晰，应用了等差数列公式，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
@@ -778,8 +761,8 @@
    "candidate_idx": 8,
    "verify_idx": 2,
    "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence as arithmetic with first term 1 and common difference 2, applies the correct formula for the nth term, and calculates the 2003rd term accurately. The steps are clear and logically ordered."
+   "score": 9,
+   "output": "9\n\n解答正确，清晰地应用了等差数列的公式，步骤合理，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
@@ -796,7 +779,7 @@
    "verify_idx": 3,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，应用了等差数列公式，计算过程清晰，答案正确。"
+   "output": "9\n\n解答正确，步骤清晰，应用了等差数列公式，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
@@ -813,7 +796,7 @@
    "verify_idx": 0,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，清晰地应用了等差数列公式，步骤完整，计算无误。"
+   "output": "9\n\n解答正确，使用了等差数列公式，步骤清晰，计算无误。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
@@ -830,7 +813,7 @@
    "verify_idx": 1,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，清晰地应用了等差数列公式，步骤完整，计算无误。"
+   "output": "9\n\n解答正确，使用了等差数列公式，并正确代入了n=2003，计算过程清晰，最终答案正确。"
   },
   {
    "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
@@ -864,7 +847,7 @@
    "verify_idx": 3,
    "retry_idx": 0,
    "score": 9,
-   "output": "9\n\n解答正确，清晰地应用了等差数列公式，步骤完整，计算无误。"
+   "output": "9\n\n解答正确，使用了等差数列公式，步骤清晰，计算无误。"
   },
   {
    "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",

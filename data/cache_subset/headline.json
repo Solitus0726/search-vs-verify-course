@@ -1,51 +1,8 @@
 {
  "headline": [
   {
-   "key": "qwen3-4b",
-   "model": "Qwen3-4B-Instruct (p=0.70)",
-   "dataset": "MATH-500",
-   "headline": {
-    "N=50,M=0": {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.87,
-     "std": 0.338,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=25,M=1": {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.7,
-     "std": 0.4606,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=5,M=9": {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.76,
-     "std": 0.4292,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    }
-   }
-  },
-  {
    "key": "gemma-3-4b",
-   "model": "Gemma-3-4B-Instruct (p=0.48)",
+   "model": "Gemma-3-4B-Instruct (p=0.61)",
    "dataset": "MATH-500",
    "headline": {
     "N=50,M=0": {
@@ -54,11 +11,34 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.76,
-     "std": 0.4292,
-     "n_problems": 100,
+     "accuracy": 0.74,
+     "std": 0.4394,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-4B-Instruct (p=0.61)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-4b-it-Q8_0.gguf",
+     "gguf_sha256": "81bf0583ab5bad155a5a3b15d155a880a1a1e4f7de2de5c06f10f64ac49f8336",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 102400,
+      "actual": 14524328
+     }
     },
     "N=25,M=1": {
      "config": {
@@ -66,11 +46,34 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.61,
-     "std": 0.4902,
-     "n_problems": 100,
+     "accuracy": 0.6233,
+     "std": 0.4854,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-4B-Instruct (p=0.61)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-4b-it-Q8_0.gguf",
+     "gguf_sha256": "81bf0583ab5bad155a5a3b15d155a880a1a1e4f7de2de5c06f10f64ac49f8336",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 108800,
+      "actual": 15572632
+     }
     },
     "N=5,M=9": {
      "config": {
@@ -78,17 +81,40 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.64,
-     "std": 0.4824,
-     "n_problems": 100,
+     "accuracy": 0.65,
+     "std": 0.4778,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-4B-Instruct (p=0.61)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-4b-it-Q8_0.gguf",
+     "gguf_sha256": "81bf0583ab5bad155a5a3b15d155a880a1a1e4f7de2de5c06f10f64ac49f8336",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 113920,
+      "actual": 16733704
+     }
     }
    }
   },
   {
    "key": "gemma-3-1b",
-   "model": "Gemma-3-1B-Instruct (p=0.29)",
+   "model": "Gemma-3-1B-Instruct (p=0.37)",
    "dataset": "MATH-500",
    "headline": {
     "N=50,M=0": {
@@ -97,11 +123,34 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.45,
-     "std": 0.5,
-     "n_problems": 100,
+     "accuracy": 0.4733,
+     "std": 0.5001,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-1B-Instruct (p=0.37)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+     "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 102400,
+      "actual": 15595165
+     }
     },
     "N=25,M=1": {
      "config": {
@@ -109,202 +158,76 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.39,
-     "std": 0.4902,
-     "n_problems": 100,
+     "accuracy": 0.3633,
+     "std": 0.4818,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-1B-Instruct (p=0.37)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+     "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 108800,
+      "actual": 17198871
+     }
     },
     "N=5,M=9": {
      "config": {
       "strategy": "verify",
       "N": 5,
       "M": 9
-     },
-     "accuracy": 0.35,
-     "std": 0.4794,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    }
-   }
-  },
-  {
-   "key": "qwen3-0.6b",
-   "model": "Qwen3-0.6B-Instruct (p=0.41)",
-   "dataset": "MATH-500",
-   "headline": {
-    "N=50,M=0": {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.59,
-     "std": 0.4943,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=25,M=1": {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
      },
      "accuracy": 0.4,
-     "std": 0.4924,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=5,M=9": {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
+     "std": 0.4907,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Gemma-3-1B-Instruct (p=0.37)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "gemma-3-1b-it-Q8_0.gguf",
+     "gguf_sha256": "616dfb049ad14288d971d96f5ca4953fdebbf1e3cd407ad159f3bfd47090201d",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": true
      },
-     "accuracy": 0.49,
-     "std": 0.5024,
-     "n_problems": 100,
+     "canonical": true,
      "cost": 50,
-     "canonical": true
-    }
-   }
-  },
-  {
-   "key": "qwen3-1.7b",
-   "model": "Qwen3-1.7B-Instruct (p=0.62)",
-   "dataset": "MATH-500",
-   "headline": {
-    "N=50,M=0": {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.81,
-     "std": 0.3943,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=25,M=1": {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.61,
-     "std": 0.4902,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=5,M=9": {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.73,
-     "std": 0.4462,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    }
-   }
-  },
-  {
-   "key": "phi-4-mini",
-   "model": "Phi-4-Mini-Instruct (p=0.39)",
-   "dataset": "MATH-500",
-   "headline": {
-    "N=50,M=0": {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.71,
-     "std": 0.456,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=25,M=1": {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.53,
-     "std": 0.5016,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=5,M=9": {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.56,
-     "std": 0.4989,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    }
-   }
-  },
-  {
-   "key": "gemma-3-4b",
-   "model": "Gemma-3-4B-Instruct (p=0.48)",
-   "dataset": "GSM8K",
-   "headline": {
-    "N=50,M=0": {
-     "config": {
-      "strategy": "search",
-      "N": 50,
-      "M": 0
-     },
-     "accuracy": 0.59,
-     "std": 0.4943,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=25,M=1": {
-     "config": {
-      "strategy": "verify",
-      "N": 25,
-      "M": 1
-     },
-     "accuracy": 0.55,
-     "std": 0.5,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
-    },
-    "N=5,M=9": {
-     "config": {
-      "strategy": "verify",
-      "N": 5,
-      "M": 9
-     },
-     "accuracy": 0.52,
-     "std": 0.5021,
-     "n_problems": 100,
-     "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 113920,
+      "actual": 18578933
+     }
     }
    }
   },
   {
    "key": "qwen3-4b",
-   "model": "Qwen3-4B-Instruct (p=0.70)",
-   "dataset": "GSM8K",
+   "model": "Qwen3-4B-Instruct (p=0.73)",
+   "dataset": "MATH-500",
    "headline": {
     "N=50,M=0": {
      "config": {
@@ -312,11 +235,34 @@
       "N": 50,
       "M": 0
      },
-     "accuracy": 0.81,
-     "std": 0.3943,
-     "n_problems": 100,
+     "accuracy": 0.8533,
+     "std": 0.3544,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Qwen3-4B-Instruct (p=0.73)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "Qwen3-4B-Instruct-Q8_0.gguf",
+     "gguf_sha256": "8c2f07f26af9747e41988551106f149b03eb9b5cb6df636027b6bf6278473300",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": false
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 102400,
+      "actual": 13396748
+     }
     },
     "N=25,M=1": {
      "config": {
@@ -324,11 +270,34 @@
       "N": 25,
       "M": 1
      },
-     "accuracy": 0.66,
-     "std": 0.4761,
-     "n_problems": 100,
+     "accuracy": 0.7167,
+     "std": 0.4514,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Qwen3-4B-Instruct (p=0.73)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "Qwen3-4B-Instruct-Q8_0.gguf",
+     "gguf_sha256": "8c2f07f26af9747e41988551106f149b03eb9b5cb6df636027b6bf6278473300",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": false
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 108800,
+      "actual": 16004599
+     }
     },
     "N=5,M=9": {
      "config": {
@@ -336,11 +305,34 @@
       "N": 5,
       "M": 9
      },
-     "accuracy": 0.7,
-     "std": 0.4606,
-     "n_problems": 100,
+     "accuracy": 0.7533,
+     "std": 0.4318,
+     "runs": 3,
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "budget": 50,
+     "dataset": "MATH-500",
+     "model": "Qwen3-4B-Instruct (p=0.73)",
+     "engine": "llama-cpp",
+     "quantization": "GGUF-Q8_0",
+     "gguf_file": "Qwen3-4B-Instruct-Q8_0.gguf",
+     "gguf_sha256": "8c2f07f26af9747e41988551106f149b03eb9b5cb6df636027b6bf6278473300",
+     "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "n_ctx": 4096,
+      "enable_thinking": false
+     },
+     "canonical": true,
      "cost": 50,
-     "canonical": true
+     "n_problems": 300,
+     "tokens": {
+      "upper_bound": 113920,
+      "actual": 18025613
+     }
     }
    }
   }
