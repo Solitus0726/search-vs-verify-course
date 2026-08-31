@@ -29,8 +29,8 @@ QUANTIZATION = "GGUF-Q8_0"
 CHUNK = 1024 * 1024  # hash chunk size
 
 # Six-model p family (measured pass@1, 100-problem subset) - the model field carries p
-MODEL_P = {"gemma-3-1b": 0.29, "gemma-3-4b": 0.48, "phi-4-mini": 0.39,
-           "qwen3-0.6b": 0.41, "qwen3-1.7b": 0.62, "qwen3-4b": 0.70}
+MODEL_P = {"gemma-3-1b": 0.37, "gemma-3-4b": 0.61, "phi-4-mini": 0.54,
+           "qwen3-0.6b": 0.46, "qwen3-1.7b": 0.69, "qwen3-4b": 0.73}
 
 
 def sha256_file(path: str) -> str:
