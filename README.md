@@ -1,27 +1,29 @@
 # Test-Time Compute Allocation: Search vs. Verify
 
 A self-contained teaching unit for the **NeurIPS 2026 Education Track**: given a
-fixed inference budget, how should a model spend it — generate many candidate
-answers and take the most frequent one (*search*), or generate fewer answers and
-check each one with a judge (*verify*)?
+fixed inference budget, how should a model spend it (generate many candidate
+answers and take the most frequent one, *search*, or generate fewer answers and
+check each one with a judge, *verify*)?
 
 **Central claim (conditional, measured):** under a *weak verifier* (the model
 grading its own answers) and a *moderate budget* (50 inference calls per problem),
-search beats verify — measured +7.3 to +10.0 pp on three models (100 problems,
+search beats verify, measured +7.3 to +10.0 pp on three models (100 problems,
 3 seeds, 95% CIs exclude 0). The materials teach *when* this holds and how to
 find the best split on your own model.
+
+All materials are original and were created for the NeurIPS 2026 Education
+Track. The public repository is https://github.com/Solitus0726/search-vs-verify-course.
 
 ## Repository layout
 
 | Path | What it is |
 |------|------------|
-| `notebooks/` | Five Jupyter notebooks (00 self-check → 04 baseline review) — the hands-on core |
+| `notebooks/` | Five Jupyter notebooks (00 self-check through 04 baseline review), the hands-on core |
 | `video/concept_video.mp4` | Five-minute concept video (English narration, hardcoded subtitles, SRT included) |
 | `slides/lecture_slides.pptx`, `slides/lecture_slides.pdf` | Lecture slides: the math behind the trade-off |
-| `syllabus.md` | Course syllabus: concept, leveling, learning objectives, core principle, worked example, decision tree, progressive experiments |
 | `paper/` | The two-page submission paper (PDF + LaTeX source) |
 | `figures/` | Learning-path diagram and strategy comparison diagram |
-| `data/cache_subset/` | Precomputed experiment results — the full course runs without a GPU |
+| `data/cache_subset/` | Precomputed experiment results, so the full course runs without a GPU |
 | `data/subsets/` | Problem ID subsets for MATH-500 and GSM8K |
 | `scripts/` | Experiment runner, answer evaluator, split predictor, plotting utilities |
 | `references/` | The five papers the course builds on |
@@ -29,26 +31,34 @@ find the best split on your own model.
 
 ## Learning path
 
-```
-00 Self-check (5 min)
-   └─→ 01 Budget-accuracy curves → 02 Optimal mix ratio → 03 New-task prediction
-       → 04 Baseline review (advanced)
-```
+The course is organized as a learning path (see `figures/learning_path.png`):
 
-Notebook 00 is a five-minute self-check: learners who are new to transformer
-inference get a short on-demand primer; everyone else proceeds to the full
-sequence. Each notebook states its own prerequisites. The whole course can be
-completed without a GPU using the precomputed results in `data/cache_subset/`
-(about one to two hours); running the experiments yourself on a small local
-model is optional.
+1. **Notebook 00 · 5-minute self-check** is the entry point: three prerequisite
+   questions that route you to the right materials.
+2. **If the self-check fails**, work through the on-demand resources (the video,
+   slides, strategy diagram, and the five key papers) and retry the self-check.
+3. **If it passes**, choose one of three parallel paths, each a concrete material
+   sequence:
+   - *Intuition First (≈30 min):* video → strategy diagram → Notebook 01 (simplified run)
+   - *Systematic Study (≈3-4 h):* slides → Notebooks 01-03 (full run) → strategy
+     diagram → video review → Notebook 04 (write the report)
+   - *Quick Reference (≈10 min):* strategy diagram → jump to the relevant
+     notebook section
+4. Every path ends at the **acceptance check**: calculation problems, curve
+   interpretation, and an analysis report.
+
+Each notebook states its own prerequisites. Every path runs without a GPU using
+the precomputed results in `data/cache_subset/`; running the experiments
+yourself on a small local model is optional (about one to two hours of compute
+per notebook).
 
 ## Quick start
 
-**No-GPU (recommended first pass):** open `notebooks/00_self_check.ipynb`, then
-follow the sequence. All plots and tables load from `data/cache_subset/`.
+**CPU tier (recommended first pass):** open `notebooks/00_self_check.ipynb`, then
+follow the learning path. All plots and tables load from `data/cache_subset/`.
 
-**GPU (run the experiments yourself):** Python 3.10+, any CUDA 12.4 machine with
-an NVIDIA GPU (8 GB+ VRAM):
+**GPU tier (run the experiments yourself):** Python 3.10+, any CUDA 12.4 machine
+with an NVIDIA GPU (8 GB+ VRAM):
 
 ```bash
 pip install -r requirements-local.txt
@@ -73,16 +83,16 @@ pip install -r requirements-local.txt
 `torch` is a CUDA-DLL dependency only: add `torch/lib` to your `PATH` before
 running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
 
-No-GPU / CPU-only fallback: `pip install -r requirements-cpu.txt`. The six models
-span measured single-answer accuracies from 0.37 to 0.73 on MATH-500, which is
-what makes the search-vs-verify trade-off visible from a single machine.
+CPU tier: `pip install -r requirements-cpu.txt`. The six models span measured
+single-answer accuracies from 0.37 to 0.73 on MATH-500, which is what makes the
+search-vs-verify trade-off visible from a single machine.
 
 ## Reproducibility
 
 - Reported numbers are means over 3 seeds with 95% confidence intervals.
 - Per-call seeds are derived from a deterministic key via sha256 (no Python
   `hash()`); same seed, same code version, same machine, same output directory
-  ⇒ identical output. Cross-machine reproducibility is not guaranteed for
+  gives identical output. Cross-machine reproducibility is not guaranteed for
   llama.cpp.
 - Every LLM call is persisted immediately as a JSONL record (idempotent keys);
   interrupts resume with zero data loss.
@@ -93,4 +103,5 @@ what makes the search-vs-verify trade-off visible from a single machine.
 
 The course materials are licensed under [CC BY 4.0](LICENSE). Model licenses:
 Gemma Terms of Use, Apache-2.0 (Qwen3), MIT (Phi-4-Mini). The papers in
-`references/` are redistributed under their CC BY 4.0 licenses.
+`references/` are included for educational use; see each paper's source venue
+(arXiv/ICML/ICLR/NeurIPS/COLM) for its license terms.

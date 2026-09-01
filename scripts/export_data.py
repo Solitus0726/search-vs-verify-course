@@ -1,6 +1,6 @@
-# export_data.py —— export the syllabus §5.4 table data + field-name validation
+# export_data.py - export the headline table data + field-name validation
 # Input: experiment1_<model>.json (analyze_experiment output, containing full configuration statistics)
-# Output: syllabus §5.4 table data as JSON + CSV (headline rows always have output slots; null when missing)
+# Output: headline table data as JSON + CSV (headline rows always have output slots; null when missing)
 # Field validation: check each field against the JSON format; when canonical: true, gguf_sha256 is required
 # Run: python scripts/export_data.py --inputs data/results/experiment1_qwen3-4b.json --out-dir data/results
 
@@ -13,7 +13,7 @@ from typing import Dict, List, Optional
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# syllabus §5.4 headline rows
+# headline rows
 HEADLINE = [(50, 0), (25, 1), (5, 9)]
 
 # Required fields (validated one by one)
@@ -44,8 +44,8 @@ def validate_config_record(rec: dict) -> List[str]:
     return errors
 
 
-def export_section54(data: dict) -> dict:
-    # Organize the syllabus §5.4 table data: every model has slots for the headline rows (null when missing) + all configs
+def export_headline(data: dict) -> dict:
+    # Organize the headline table data: every model has slots for the headline rows (null when missing) + all configs
     model = data["model"]
     configs = data["configs"]
     by_key = {(c["config"]["N"], c["config"]["M"]): c for c in configs}
@@ -63,7 +63,7 @@ def export_section54(data: dict) -> dict:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="export syllabus §5.4 table data + field validation")
+    ap = argparse.ArgumentParser(description="export headline table data + field validation")
     ap.add_argument("--inputs", nargs="+", required=True, help="paths to experiment1_*.json (multiple allowed)")
     ap.add_argument("--out-dir", default=os.path.join(PROJECT_ROOT, "data", "results"))
     args = ap.parse_args()
@@ -79,17 +79,17 @@ def main() -> None:
             errors += validate_config_record(c)
         if errors:
             all_errors += [f"{os.path.basename(path)}: {e}" for e in errors]
-        sections.append(export_section54(data))
+        sections.append(export_headline(data))
         print(f"{os.path.basename(path)}: {len(data.get('configs', []))} configs processed")
 
     # Write JSON
-    out_json = os.path.join(args.out_dir, "section54_data.json")
+    out_json = os.path.join(args.out_dir, "headline_data.json")
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump({"models": sections}, f, ensure_ascii=False, indent=2)
-    print(f"syllabus §5.4 data → {out_json}")
+    print(f"headline data → {out_json}")
 
-    # Write CSV (headline rows per model; the dataset column distinguishes same-name models across datasets — MATH and GSM8K share the same model name and p)
-    out_csv = os.path.join(args.out_dir, "section54_table.csv")
+    # Write CSV (headline rows per model; the dataset column distinguishes same-name models across datasets (MATH and GSM8K) share the same model name and p)
+    out_csv = os.path.join(args.out_dir, "headline_table.csv")
     with open(out_csv, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["model", "dataset", "strategy", "N", "M", "accuracy", "cost", "canonical"])
@@ -101,7 +101,7 @@ def main() -> None:
                                 rec["accuracy"], rec.get("cost", ""), rec["canonical"]])
                 else:
                     w.writerow([s["model"], s["dataset"], "", n, m, "", "", ""])  # keep the slot
-    print(f"syllabus §5.4 CSV → {out_csv}")
+    print(f"headline CSV → {out_csv}")
 
     # Validation report
     if all_errors:

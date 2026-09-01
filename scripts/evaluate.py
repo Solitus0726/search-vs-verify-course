@@ -1,10 +1,10 @@
-# evaluate.py —— adapter for the official evaluation equivalence relation
+# evaluate.py - adapter for the official evaluation equivalence relation
 # extraction / voting / scoring share the same canonical form (consistent with the official logic in scripts/eval_reference/math_utils.py)
 # Same equivalence relation across all three stages:
 #   - extraction  extract_answer: \boxed{} -> #### -> $ boundaries (official MATH pipeline) -> fall back to the full text
 #   - voting  majority_vote: group by canonicalize; on a tie, take the candidate that appears first
 #   - scoring  is_correct: pred and gt go through the same extract_answer, then are compared by the official is_equiv
-# Design constraint: avoid the contradiction of "voting accepts X but evaluation accepts Y" — grouping for voting and scoring
+# Design constraint: avoid the contradiction of "voting accepts X but evaluation accepts Y"; grouping for voting and scoring
 # use the same equivalence relation (is_equiv / strip_string, ported from official lm-eval hendrycks_math).
 
 import os

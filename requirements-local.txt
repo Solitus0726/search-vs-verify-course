@@ -14,10 +14,8 @@ datasets==5.0.1
 huggingface_hub==0.36.2
 numpy==2.5.1
 matplotlib==3.11.1
+# ipywidgets: prevents tqdm progress-bar warnings in Jupyter
 ipywidgets==8.1.9
-
-# Answer normalization (used by scripts/evaluate.py)
-sympy==1.14.0
 
 # Model download (ModelScope mirror)
 modelscope==1.39.1

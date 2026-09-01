@@ -1,7 +1,7 @@
 {
  "name": "cache_subset",
- "purpose": "预计算缓存子集（无 GPU 学生模式回退）",
- "granularity": "答案文本 + 判分 + 投票明细（不存全部生成原文）",
+ "purpose": "Precomputed experiment results for the CPU-only mode (no GPU needed)",
+ "granularity": "Answer texts, scores, and voting details (not full generations)",
  "models": [
   "Qwen3-4B-Instruct (p=0.73)",
   "Gemma-3-4B-Instruct (p=0.61)",
@@ -35,5 +35,5 @@
   "samples/phi_demo.json",
   "samples/qwen34b_demo.json"
  ],
- "note": "统一数据口径：全部数据由同一代码版本在单一实验批次中生成（MATH-500 与 GSM8K）。headline 为 3-seed 均值，curves/其余为 seed 0；unified.json 为 30 题子实验（弱 vs 强验证器），仅作方向性参考；curves.json 的 key 仅含模型名（GSM8K 条目与 MATH-500 同 key 不同 dataset），读取须按 dataset 过滤"
+ "note": "All results were produced by the same code version. headline values are 3-seed means; curves and other files use seed 0. unified.json is a 30-problem sub-experiment (weak vs. strong verifier) for directional reference only. In curves.json, keys are model names only (GSM8K entries share keys with MATH-500 entries), so filter by the dataset field when reading."
 }

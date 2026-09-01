@@ -1,4 +1,4 @@
-# download_models.py —— download GGUF for six models (ModelScope mirror + sha256 verification)
+# download_models.py - download GGUF for six models (ModelScope mirror + sha256 verification)
 # GGUF mirror download and checksum; for ZIP offline reproduction
 # Used by both students and authors: after download, files are named <model>-<quant>.gguf and placed in model/
 # Run: python scripts/download_models.py [--model qwen3-4b] (downloads all by default)

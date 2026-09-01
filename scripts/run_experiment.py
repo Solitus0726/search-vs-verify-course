@@ -76,7 +76,7 @@ BASE_CONFIGS += [(10, m, "over") for m in range(5, 10)]
 BASE_CONFIGS.append((25, 1, "in"))
 # B=60 extension (optional, appended with --budget 60)
 B60_EXTRA = [(6, 9, "in"), (12, 4, "in"), (15, 3, "in"), (30, 1, "in"), (60, 0, "in")]
-# syllabus §5.4 headline three (canonical configs)
+# headline three (canonical configs)
 CANONICAL = {(50, 0), (25, 1), (5, 9)}
 
 SCORE_LABEL_RE = re.compile(r"(?:分数|得分|score)\s*[:：]?\s*(-?\d+)", re.I)
@@ -149,7 +149,7 @@ def usage_total(usage: Optional[dict]) -> int:
 
 
 def parse_judge_score(output: Optional[str]) -> Optional[int]:
-    # Robust judge score parsing (six-point parsing):
+    # Strict judge score parsing (six-point parsing):
     # 1) Prefer label match (integer after the score label, full-string search, supports negatives)
     # 2) Trailing "X points" pattern (phrases like "give 8 points overall", avoids false grabs of prose digits)
     # 3) Otherwise match an integer only within the last ~50 tokens of output (avoids false grabs of candidate text)

@@ -94,7 +94,7 @@ def main(argv: Optional[List[str]] = None) -> None:
     ap.add_argument("--model", required=True, choices=sorted(MODEL_FILES))
     ap.add_argument("--budget", type=int, default=50)
     ap.add_argument("--dataset", default="MATH-500")
-    ap.add_argument("--seeds", default=None, help="comma-separated seed list (default: all); use --seeds 0 to match the shipped cache")
+    ap.add_argument("--seeds", default=None, help="comma-separated seed list (default: all); use --seeds 0 to match the included cache")
     ap.add_argument("--out", default=None, help="output JSON path (default data/results/experiment1_<model>.json)")
     args = ap.parse_args(argv)
 
