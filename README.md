@@ -29,6 +29,16 @@ Track. The public repository is https://github.com/Solitus0726/search-vs-verify-
 | `references/` | The five papers the course builds on |
 | `requirements-*.txt` | Dependencies for the GPU tier and the CPU tier |
 
+## References
+
+The course builds on five recent papers (PDFs in `references/`):
+
+1. Scaling LLM Test-Time Compute Optimally Can be More Effective than Scaling Parameters for Reasoning (ICLR 2025)
+2. When To Solve, When To Verify: Compute-Optimal Problem Solving and Generative Verification for LLM Reasoning (COLM 2025)
+3. Sample, Scrutinize and Scale: Effective Inference-Time Search by Scaling Verification (ICML 2025)
+4. Let Me Think! A Long Chain of Thought Can Be Worth Exponentially Many Short Ones (NeurIPS 2025)
+5. Provable Scaling Laws for the Test-Time Compute of Large Language Models (NeurIPS 2025)
+
 ## Learning path
 
 The course is organized as a learning path (see `figures/learning_path.png`):
