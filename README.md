@@ -39,6 +39,8 @@ The course builds on five recent papers (PDFs in `references/`):
 4. Let Me Think! A Long Chain of Thought Can Be Worth Exponentially Many Short Ones (NeurIPS 2025)
 5. Provable Scaling Laws for the Test-Time Compute of Large Language Models (NeurIPS 2025)
 
+All five PDFs are available in the `references/` directory.
+
 ## Learning path
 
 The course is organized as a learning path (see `figures/learning_path.png`):
