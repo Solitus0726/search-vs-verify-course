@@ -13,13 +13,26 @@
 \newcommand{\blk}[1]{\vspace{1pt}\noindent\textbf{\normalsize #1}\hspace{0.5em}}
 
 \title{Test-Time Compute Allocation: Search vs.\ Verify}
-\author{Author Name \\ Affiliation}
+\author{%
+  Tianxiang Xie \\
+  Dalian University of Technology \\
+  \texttt{xietianxiang@mail.dlut.edu.cn} \And
+  Jingxuan Wu \\
+  Dalian University of Technology \\
+  \texttt{wujingxuan@mail.dlut.edu.cn} \And
+  Jiaying Liu \\
+  Dalian University of Technology \\
+  \texttt{jiaying\_liu@outlook.com} \And
+  Shuo Yu \\
+  Dalian University of Technology \\
+  \texttt{shuo.yu@ieee.org}%
+}
 
 \begin{document}
 \maketitle
 
 \blk{The Concept:}
-The concept introduced in this paper is \textbf{\textit{test-time compute allocation}}: the problem of dividing a fixed inference budget (a fixed number of model calls) between search and verification. Search generates many candidate answers and aggregates them, for example by majority voting. Verification generates fewer answers and checks each one with a judge (a verifier). Search carries a mathematical guarantee: with independent candidates and accuracy p above 1/2, the failure probability of majority voting falls exponentially in N; verification has no such guarantee, and only helps when the judge can tell good answers from bad ones. In this course, the judge is the model grading its own answers; our measurements show it is weak, barely separating correct from incorrect candidates. Under a weak judge and a moderate budget (the setting of this course), search usually wins; the best split depends on your model, your judge, and your budget. Our measured setting (100 MATH 500 problems, 50 calls per problem, Qwen3-4B, three seeds) is in Table~\ref{tab:worked}.
+The concept introduced in this paper is \textbf{\textit{test-time compute allocation}}: the problem of dividing a fixed inference budget (a fixed number of model calls) between search and verification. Search aggregates many candidate answers by majority voting; verification generates fewer and checks each with a judge. Search carries a mathematical guarantee: with independent candidates and accuracy p above 1/2, the failure probability of majority voting falls exponentially in N; verification has no such guarantee, and only helps when the judge can tell good answers from bad ones. In this course, the judge is the model grading its own answers; our measurements show it is weak. Under the weak-judge, moderate-budget setting of this course, search usually wins; the best split depends on your model, your judge, and your budget. Our measured setting is in Table~\ref{tab:worked}.
 
 \begin{table}[h!]
   \caption{Measured accuracy on the 100-problem MATH 500 subset (Qwen3-4B, three seeds, budget 50 calls per problem).}
@@ -39,30 +52,30 @@ The concept introduced in this paper is \textbf{\textit{test-time compute alloca
 \end{table}
 
 \blk{Leveling and Prerequisite Knowledge:}
-To follow this material, learners need three foundations: how an LLM generates answers (autoregressive decoding, one forward pass per token), enough probability for the binomial reasoning behind majority voting, and what the MATH and GSM8K benchmarks measure. The material supplies these foundations itself: three self-check questions in Notebook 00 verify them with worked answers, and the on-demand resources review them if learners fail any question.
+To follow this material, learners need three foundations: how an LLM generates answers (autoregressive decoding, one forward pass per token), enough probability for the binomial reasoning behind majority voting, and what the MATH and GSM8K benchmarks measure. The material supplies these foundations itself: three self-check questions in Notebook 00 verify them.
 
-These materials are suitable for the following individuals:\\
-Level 1: no prerequisites. Then learners need only the core trade-off in plain terms from the five-minute video. 
+Level 1: no prerequisites. Then learners need only the core trade-off in plain terms from the five-minute video.
 \\Level 2 (systematic) is aimed at graduate students and early-career researchers in LLM reasoning and is adaptable for advanced undergraduates; it adds the math and the hands-on experiments.
 
 \blk{Learning Objectives:}
-By the end of this material, learners will be able to: \textbf{Level 0 (Foundation)}: explain what test-time compute allocation is (dividing a fixed inference budget between search and verification) and why the split matters. \textbf{Level 1 (Advanced)}: explain the search--verification trade-off in plain language, naming the two conditions under which search wins (a weak judge, a moderate budget); evidence: a 30-second retelling. \textbf{Level 2 (Ultimate goal)}: (1) estimate a model's failure rate with a simplified majority-voting model and predict the candidate count N needed;  (2) plot their own budget--accuracy curve with at least two data points and read the six-model curve family; (3) given a new task and a fixed budget, reason out the best search--verify split from the model's accuracy and the judge's strength; (4) advanced: judge whether a research paper's baselines are fair.
+By the end of this material, learners will be able to: \textbf{Level 0 (Foundation)}: explain what test-time compute allocation is (dividing a fixed inference budget between search and verification) and why the split matters. \textbf{Level 1 (Advanced)}: explain the search--verification trade-off in plain language, naming the two conditions under which search wins (a weak judge, a moderate budget). \textbf{Level 2 (Ultimate goal)}: (1) estimate a model's failure rate with a simplified majority-voting model and predict the candidate count N needed;  (2) plot a budget--accuracy curve and read the six-model curve family; (3) given a new task and fixed budget, reason out the best search--verify split from the model's accuracy and the judge's strength; (4) judge whether a research paper's baselines are fair.
 
 \blk{Linked Papers:}
-Test-time compute allocation is in active use at the frontier; each paper below builds on it. \emph{Scaling LLM Test-Time Compute Optimally} \citep{iclr2025scaling} studies the allocation problem directly: compute-optimal splits beat fixed best-of-N by up to 4$\times$, and with a strong judge (e.g., a trained reward model), verification-guided search wins at low to moderate budgets. \emph{Sample, Scrutinize and Scale} \citep{icml2025sample} pushes the allocation toward verification at very large budgets, where sampling-based search with self-verification keeps scaling. \emph{Let Me Think!} \citep{neurips2025letme} allocates the budget between one long chain and many short ones, showing serial expansion can be exponentially better. \emph{Provable Scaling Laws} \citep{neurips2025provable} gives pairwise-comparison aggregation (a search-style strategy) a guarantee even below $p = 1/2$. \emph{When to Solve, When to Verify} \citep{colm2025whento} asks the same allocation question with a generative reward model, finding self-consistency (search) more compute-efficient than verification for most budgets, which is exactly the weak-judge regime that this course measures.
+Test-time compute allocation is in active use at the frontier; each paper below builds on it. \emph{Scaling LLM Test-Time Compute Optimally} \citep{iclr2025scaling} shows compute-optimal splits beat fixed best-of-N by up to 4$\times$, and with a strong judge (e.g., a trained reward model) verification-guided search wins at low to moderate budgets. \emph{Sample, Scrutinize and Scale} \citep{icml2025sample} pushes the allocation toward verification at very large budgets. \emph{Let Me Think!} \citep{neurips2025letme} shows one long chain can be worth exponentially many short ones. \emph{Provable Scaling Laws} \citep{neurips2025provable} gives pairwise-comparison aggregation a guarantee even below $p = 1/2$. \emph{When to Solve, When to Verify} \citep{colm2025whento} finds self-consistency (search) more compute-efficient than verification for most budgets, exactly the weak-judge regime this course measures.
 
 \blk{Teaching Materials Summary:}
-All materials are original and were created for the NeurIPS 2026 Education Track; everything lives in \url{https://github.com/Solitus0726/search-vs-verify-course}, containing: (1) video; (2) slides; (3) notebooks 00--04 (the self-check, three experiments, and the report template); (4) scripts and pre-computed data; (5) the strategy diagram and PDFs of the five reference papers.
+All materials are original and were created for the NeurIPS 2026 Education Track; everything lives in \url{https://github.com/Solitus0726/search-vs-verify-course}, containing: (1) video; (2) slides; (3) notebooks 00--04 (self-check, three experiments, report template); (4) scripts and pre-computed data; (5) the strategy diagram and the five reference papers.
 
-Suggested order: start with the self-check (Notebook 00) to find the learning path, then follow the materials in the order shown in Figure~\ref{fig:learning}, with the slides as a reference for the math. Shorter routes for limited time: an intuition-first pass (about 30 minutes) follows the video, the strategy diagram, and Notebook 01 in simplified mode; a quick reference (about 10 minutes) starts from the strategy diagram and jumps to the relevant notebook section. All routes end at the acceptance checks. The video (about five minutes) explains the trade-off in plain terms. Notebook 00 runs the three-question self-check, and failing any question routes you to the supplementary materials. Notebook 01 plots budget--accuracy curves and reads the six-model family (p from 0.37 to 0.73); Notebook 02 finds the optimal split under the budget identity $N\times(1+M)=50$; Notebook 03 predicts the best split for GSM8K and tests it; Notebook 04 is the report template. The slides and strategy diagram add the formal math and a one-page visual summary. The scripts and data make every result reproducible: about one to two hours from scratch, or instantly with the pre-computed cache included in the repository.
+Suggested order: start with the self-check (Notebook 00), then follow the materials in the order shown in Figure~\ref{fig:learning}. Shorter routes for limited time: an intuition-first pass (about 30 minutes) follows the video, the strategy diagram, and Notebook 01 in simplified mode; a quick reference (about 10 minutes) starts from the strategy diagram and jumps to the relevant notebook section. All routes end at the acceptance checks. Notebooks 01--03 plot the budget--accuracy curves, find the optimal split under the budget identity $N\times(1+M)=50$, and predict the best split for GSM8K; Notebook 04 is the report template. The slides and strategy diagram add the formal math and a one-page visual summary. The scripts and data make every result reproducible: one to two hours from scratch, or instantly with the pre-computed cache.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{learning_path.png}
-\caption{Learning path: a five-minute self-check routes to the on-demand resources if it fails, or to the main sequence (video, strategy diagram, slides, experiments 1--3 and the report template) if it passes, ending at the acceptance checks.}
+\caption{Learning path: a five-minute self-check routes to the on-demand resources if it fails, or to the main sequence if it passes.}
 \label{fig:learning}
 \end{figure}
 
+\setlength{\bibsep}{0pt}
 \bibliographystyle{plainnat}
 \footnotesize
 \bibliography{refs}
