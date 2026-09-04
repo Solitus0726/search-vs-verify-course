@@ -126,7 +126,9 @@ running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
 
 ## License
 
-The course materials are licensed under [CC BY 4.0](LICENSE). Model licenses:
-Gemma Terms of Use, Apache-2.0 (Qwen3), MIT (Phi-4-Mini). The papers in
-`references/` are included for educational use; see each paper's source venue
-(arXiv/ICML/ICLR/NeurIPS/COLM) for its license terms.
+The course content (paper, video, slides, figures) is licensed under
+[CC BY 4.0](LICENSE); the code (notebooks and scripts) is licensed under
+[Apache 2.0](LICENSE-CODE). Model licenses: Gemma Terms of Use, Apache-2.0
+(Qwen3), MIT (Phi-4-Mini). The papers in `references/` are included for
+educational use; see each paper's source venue (arXiv/ICML/ICLR/NeurIPS/COLM)
+for its license terms.
