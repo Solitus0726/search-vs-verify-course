@@ -1,18 +1,29 @@
 # Test-Time Compute Allocation: Search vs. Verify
 
-A self-contained teaching unit for the **NeurIPS 2026 Education Track**: given a
-fixed inference budget, how should a model spend it (generate many candidate
-answers and take the most frequent one, *search*, or generate fewer answers and
-check each one with a judge, *verify*)?
+A self-contained teaching unit for the **NeurIPS 2026 Education Track**.
 
-**Central claim (conditional, measured):** under a *weak verifier* (the model
+**Test-time compute allocation** is the problem of dividing a fixed number of
+model calls between search and verification: *search* aggregates many candidate
+answers by majority voting, while *verification* generates fewer and checks each
+one with a judge. The motivating question: given a fixed inference budget, how
+should a model spend it?
+
+**Central claim (conditional, measured):** under a *weak judge* (the model
 grading its own answers) and a *moderate budget* (50 inference calls per problem),
-search beats verify, measured +7.3 to +10.0 pp on three models (100 problems,
-3 seeds, 95% CIs exclude 0). The materials teach *when* this holds and how to
-find the best split on your own model.
+search beats verification by +7.3 to +10.0 pp, measured on three models
+(100 problems, 3 seeds; 95% CIs exclude 0). The materials teach *when* this
+holds and how to find the best split on your own model.
 
 All materials are original and were created for the NeurIPS 2026 Education
 Track. The public repository is https://github.com/Solitus0726/search-vs-verify-course.
+
+## Authors
+
+Tianxiang Xie, Jingxuan Wu, Jiaying Liu\*, and Shuo Yu
+
+Dalian University of Technology
+
+\*Corresponding author: jiayingliu@dlut.edu.cn
 
 ## Repository layout
 
@@ -24,7 +35,7 @@ Track. The public repository is https://github.com/Solitus0726/search-vs-verify-
 | `paper/` | The two-page submission paper (PDF + LaTeX source) |
 | `figures/` | Learning-path diagram and strategy comparison diagram |
 | `data/cache_subset/` | Precomputed experiment results, so the full course runs without a GPU |
-| `data/subsets/` | Problem ID subsets for MATH-500 and GSM8K |
+| `data/subsets/` | Problem ID subsets for MATH 500 and GSM8K |
 | `scripts/` | Experiment runner, answer evaluator, split predictor, plotting utilities |
 | `references/` | The five papers the course builds on |
 | `requirements-*.txt` | Dependencies for the GPU tier and the CPU tier |
@@ -39,21 +50,22 @@ The course builds on five recent papers (PDFs in `references/`):
 4. Let Me Think! A Long Chain of Thought Can Be Worth Exponentially Many Short Ones (NeurIPS 2025)
 5. Provable Scaling Laws for the Test-Time Compute of Large Language Models (NeurIPS 2025)
 
-All five PDFs are available in the `references/` directory.
-
 ## Learning path
 
-The course is organized as a learning path (see `figures/learning_path.png`):
+The course targets graduate students and early-career researchers in LLM
+reasoning (adaptable for advanced undergraduates); the video-only route needs
+no prerequisites. The course is organized as a learning path (see
+`figures/learning_path.png`):
 
 1. **Notebook 00 · 5-minute self-check** is the entry point: three prerequisite
    questions that route you to the right materials.
 2. **If the self-check fails**, work through the on-demand resources (the video,
    slides, strategy diagram, and the five key papers) and retry the self-check.
-3. **If it passes**, choose one of three parallel paths, each a concrete material
-   sequence:
+3. **If it passes**, follow the main sequence in the diagram, in one of three
+   ways, each a concrete material sequence:
+   - *Systematic Study (≈3-4 h):* video → strategy diagram → slides →
+     Notebooks 01-03 (full run) → Notebook 04 (write the report)
    - *Intuition First (≈30 min):* video → strategy diagram → Notebook 01 (simplified run)
-   - *Systematic Study (≈3-4 h):* slides → Notebooks 01-03 (full run) → strategy
-     diagram → video review → Notebook 04 (write the report)
    - *Quick Reference (≈10 min):* strategy diagram → jump to the relevant
      notebook section
 4. Every path ends at the **acceptance check**: calculation problems, curve
@@ -61,13 +73,18 @@ The course is organized as a learning path (see `figures/learning_path.png`):
 
 Each notebook states its own prerequisites. Every path runs without a GPU using
 the precomputed results in `data/cache_subset/`; running the experiments
-yourself on a small local model is optional (about one to two hours of compute
-per notebook).
+yourself on a small local model is optional (one to two hours from scratch, or
+instantly with the pre-computed cache).
 
 ## Quick start
 
 **CPU tier (recommended first pass):** open `notebooks/00_self_check.ipynb`, then
 follow the learning path. All plots and tables load from `data/cache_subset/`.
+Install with `pip install -r requirements-cpu.txt`. The six models span measured
+single-answer accuracies from 0.37 to 0.73 on MATH 500, which is what makes the
+search-vs-verify trade-off visible from a single machine. Notebooks preview
+directly on GitHub; to run them interactively, also install Jupyter
+(`pip install notebook`), which the requirements files do not cover.
 
 **GPU tier (run the experiments yourself):** Python 3.10+, any CUDA 12.4 machine
 with an NVIDIA GPU (8 GB+ VRAM):
@@ -95,17 +112,13 @@ pip install -r requirements-local.txt
 `torch` is a CUDA-DLL dependency only: add `torch/lib` to your `PATH` before
 running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
 
-CPU tier: `pip install -r requirements-cpu.txt`. The six models span measured
-single-answer accuracies from 0.37 to 0.73 on MATH-500, which is what makes the
-search-vs-verify trade-off visible from a single machine.
-
 ## Reproducibility
 
 - Reported numbers are means over 3 seeds with 95% confidence intervals.
 - Per-call seeds are derived from a deterministic key via sha256 (no Python
-  `hash()`); same seed, same code version, same machine, same output directory
-  gives identical output. Cross-machine reproducibility is not guaranteed for
-  llama.cpp.
+  `hash()`); with the same seed, code version, machine, and output directory,
+  rerunning gives identical output. Cross-machine reproducibility is not
+  guaranteed for llama.cpp.
 - Every LLM call is persisted immediately as a JSONL record (idempotent keys);
   interrupts resume with zero data loss.
 - Statistics are rebuilt from the records; the included cache is verified against
