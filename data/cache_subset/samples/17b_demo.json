@@ -1,859 +1,859 @@
 {
- "model": "Qwen3-1.7B-Instruct (p=0.62)",
- "dataset": "MATH-500",
- "problem_id": 265,
- "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
- "gt": "4005",
- "config_demo": {
-  "N": 10,
-  "M": 4
- },
- "records": [
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
+  "model": "Qwen3-1.7B-Instruct (p=0.69)",
+  "dataset": "MATH-500",
+  "problem_id": 265,
+  "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
+  "gt": "4005",
+  "config_demo": {
     "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe general formula for the nth term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the nth term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nWe have:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    "M": 4
   },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term $ a_n $ of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nSubstitute the known values:\n\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n\n$$\na_n = 1 + (n - 1) \\cdot 2\n$$\n\nSimplify:\n\n$$\na_n = 1 + 2n - 2 = 2n - 1\n$$\n\n---\n\n### Step 2: Find the 2003rd term\n\n$$\na_{2003} = 2 \\cdot 2003 - 1 = 4006 - 1 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, 13, 15, \\dots\n$$\n\nThis is an **arithmetic sequence** with:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n- $ a = 1 $\n- $ d = 2 $\n\n$$\na_n = 1 + (n - 1) \\cdot 2\n$$\n\n---\n\n### Step 2: Simplify the formula\n\n$$\na_n = 1 + 2(n - 1) = 1 + 2n - 2 = 2n - 1\n$$\n\nSo the $ n $-th term of the sequence is:\n\n$$\na_n = 2n - 1\n$$\n\n---\n\n### Step 3: Find the 2003rd term\n\nSubstitute $ n = 2003 $ into the formula:\n\n$$\na_{2003} = 2 \\cdot 2003 - 1 = 4006 - 1 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of odd numbers:\n\n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given a sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe $ n $-th term of an arithmetic sequence is given by:\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nHere:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\nSubstitute into the formula:\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nHere:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了该序列是等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终答案 $ 4005 $ 是正确的。虽然解答的结构和格式略显冗长，但逻辑清晰、步骤正确，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答逻辑清晰，正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算步骤正确，代入数值后得出的结果 $ 4005 $ 是正确的。解答中也明确指出了这是一个等差数列，并正确计算了第 2003 项。唯一可能的扣分点是“2003 - 1”是否为 2002，但这是基本的算术运算，没有错误。因此，评分 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终答案 $ 4005 $ 是正确的。  \n不过，评分时考虑到题目要求的是“验证器”，即对解答的**准确性**和**逻辑性**进行判断，而候选解答虽然步骤正确，但**没有明确指出**这是等差数列，且在公式应用中略显冗长，略显不够简洁。因此，评分在**8分**左右。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答清晰、逻辑严谨，没有错误。仅在细节上稍作优化（如公式中的 $ n $ 应该是 2003，而不是 2002），但不影响答案的正确性。因此，给出 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，给出了正确的首项 $ a = 1 $ 和公差 $ d = 2 $，并应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。  \n唯一可能的扣分点是“**arithmetic sequence**”的描述是否必要，但问题并未要求解释，因此答案正确，得8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，给出了正确的首项 $ a = 1 $ 和公差 $ d = 2 $，并应用了等差数列通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程稍显冗长，但逻辑清晰、步骤正确，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果为 4005。虽然解答中没有明确说明“等差数列”这一术语，但根据题目内容和解答逻辑，这是一个合理的推断。因此，评分8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终答案 4005 是正确的。虽然解答的结构和格式略显冗长，但逻辑清晰，没有错误。因此，给予 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答过程正确，步骤清晰，公式应用准确。使用等差数列公式计算第2003项时，计算过程正确，最终结果4005是正确的。虽然解答中未明确指出这是一个等差数列，但通过公式推导和计算过程已充分证明其正确性。因此，评分8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：该解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果4005是正确的。不过，虽然解答过程正确，但题目中提到的“序列 of odd numbers”可以更简洁地用“奇数序列”表示，且在数学中，通常直接使用“奇数”或“奇数序列”即可，无需特别强调“arithmetic sequence”。因此，虽然解答过程无误，但表达略显冗长，可考虑适当简化。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。然而，评分仅基于内容的准确性，而没有考虑格式或表达的清晰度，因此给出 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程正确，最终结果 4005 是正确的。解答逻辑清晰，步骤无误，只是在表达上可以更简洁一些，但整体上是合格的。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确地应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程详细，但评分标准中提到“只输出一个 1–10 的整数分数”，因此评分时考虑了逻辑清晰度和准确性，最终给出 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：该解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的第2003项为4005，符合数学规律。唯一可能的改进是更明确地指出这是等差数列，但整体解答是准确的。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确地应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的问题是，解答中没有明确说明这是等差数列，而直接使用公式推导，虽然这是正确的做法，但可以更清晰地说明这是等差数列。因此，评分8分，因为解答正确，但可以更明确地说明步骤。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的第2003项为4005。虽然解答过程稍显冗长，但逻辑清晰，计算无误，因此得分为8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答的结构和格式略显冗长，但内容和逻辑没有问题，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此，评分 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n-1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的不足是，解答中可以更简洁地表达公式，例如直接使用 $ a_n = 1 + (n-1) \\cdot 2 $，而不需要分开说明 $ a $ 和 $ d $。但整体逻辑和计算都是准确的，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算步骤清晰，最终结果 4005 是正确的。尽管过程中的计算（如 $ 2002 \\cdot 2 = 4004 $）是正确的，但最终答案 4005 是正确的，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程清晰，代数推导正确，最终得出的结果 $ 4005 $ 是正确的。解答中没有逻辑错误，步骤完整，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答过程完整，正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $，并正确计算了第 2003 项。推导过程清晰，计算无误，最终结果 4005 是正确的。仅在步骤 3 中略显冗长，但不影响答案的正确性。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤正确，没有错误。仅在表达上稍显冗长，但不影响答案的准确性。因此，评分8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程清晰，步骤正确，最终得出的答案 $ 4005 $ 是正确的。虽然解答中没有明显的错误，但可以进一步优化语言表达，例如在公式推导中更清晰地展示中间步骤，但整体逻辑和结果都正确，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程稍显冗长，但逻辑清晰，没有错误。因此，评分是 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。尽管解答格式较为简洁，但逻辑清晰，没有明显错误。因此，给予 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 4005 是正确的。然而，题目要求的是“2003rd term”，而候选解答中给出的公式和计算是正确的，但未明确说明是否需要使用公式，且在步骤中没有使用公式直接计算，而是通过中间步骤推导出结果，这在评分时略显不够简洁。因此，评分8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 1,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的 2003rd 项为 4005。虽然解答过程清晰，但可以进一步优化，例如在公式应用时更明确地指出 $ a = 1 $ 和 $ d = 2 $，并在计算过程中更详细地展示中间步骤，以增强可读性。不过整体逻辑和结果都是正确的，因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n-1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的问题是，题目要求的是“2003rd term”，而解答中使用了 $ n = 2003 $，这是正确的。因此，评分8分，因为解答过程正确但可以更简洁地表达（例如直接使用公式 $ a_n = 1 + (n-1)\\cdot2 $，然后代入 $ n = 2003 $）。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤正确，没有错误。因此，评分8分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程无误，最终结果 4005 是正确的。解答逻辑清晰，步骤正确，没有错误。仅有一点可以改进的是，可以更明确地指出“该数列的公差为 2”，但整体上是一个非常准确和完整的解答。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果 4005 是正确的。虽然解答的结构清晰，但可以更简洁地表达，例如直接使用公式 $ a_n = 2n - 1 $ 来计算第 2003 项，结果也是一样的。因此，评分 8 是合理的。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果为 4005。解答逻辑清晰，步骤正确，没有计算错误或逻辑漏洞。仅有一点小瑕疵是“n = 2003”在公式中应为“n = 2003”，但这是公式本身的表达方式，不影响结果。因此，评分 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算步骤清晰，最终结果 4005 是正确的。虽然过程稍显冗长，但逻辑正确，无明显错误。因此，给出 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1) \\cdot d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此，评分 8 分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答结构清晰，但可以更简洁地表达，例如直接使用公式 $ a_n = 1 + (n - 1) \\cdot 2 $，并直接代入 $ n = 2003 $ 得到 $ 4005 $。因此，评分 8 是合理的。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1) \\cdot d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此得分为 8。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\n理由：解答过程正确，逻辑清晰，步骤完整。使用了等差数列的通用公式，并正确代入已知值计算第2003项，最终结果为4005。唯一可能的扣分点是公式应用是否严格，但此处完全正确。"
-  },
-  {
-   "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "call_type": "aggregate"
-  }
- ]
+  "records": [
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\nThe general formula for the nth term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the nth term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nWe have:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nThe general formula for the $ n $-th term of an arithmetic sequence is:\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term $ a_n $ of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nSubstitute the known values:\n\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n\n$$\na_n = 1 + (n - 1) \\cdot 2\n$$\n\nSimplify:\n\n$$\na_n = 1 + 2n - 2 = 2n - 1\n$$\n\n---\n\n### Step 2: Find the 2003rd term\n\n$$\na_{2003} = 2 \\cdot 2003 - 1 = 4006 - 1 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of odd numbers:  \n$$\n1, 3, 5, 7, 9, 11, 13, 15, \\dots\n$$\n\nThis is an **arithmetic sequence** with:\n\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term is:\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute the known values:\n- $ a = 1 $\n- $ d = 2 $\n\n$$\na_n = 1 + (n - 1) \\cdot 2\n$$\n\n---\n\n### Step 2: Simplify the formula\n\n$$\na_n = 1 + 2(n - 1) = 1 + 2n - 2 = 2n - 1\n$$\n\nSo the $ n $-th term of the sequence is:\n\n$$\na_n = 2n - 1\n$$\n\n---\n\n### Step 3: Find the 2003rd term\n\nSubstitute $ n = 2003 $ into the formula:\n\n$$\na_{2003} = 2 \\cdot 2003 - 1 = 4006 - 1 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of odd numbers:\n\n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n\n- The **first term** $ a = 1 $\n- The **common difference** $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: Use the formula for the $ n $-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given a sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, 11, 13, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe $ n $-th term of an arithmetic sequence is given by:\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nHere:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\nSubstitute into the formula:\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n$$\na_{2003} = 1 + 4004\n$$\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of **odd numbers**:  \n$$\n1, 3, 5, 7, 9, \\dots\n$$\n\nThis is an **arithmetic sequence** where:\n- The first term $ a = 1 $\n- The common difference $ d = 2 $\n\nWe are asked to find the **2003rd term** of this sequence.\n\n---\n\n### Step 1: General formula for the $ n $-th term of an arithmetic sequence\n\nThe formula for the $ n $-th term of an arithmetic sequence is:\n\n$$\na_n = a + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a $ is the first term\n- $ d $ is the common difference\n- $ n $ is the term number\n\n---\n\n### Step 2: Plug in the known values\n\nHere:\n- $ a = 1 $\n- $ d = 2 $\n- $ n = 2003 $\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\cdot 2\n$$\n\n$$\na_{2003} = 1 + 4004\n$$\n\n$$\na_{2003} = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了该序列是等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终答案 $ 4005 $ 是正确的。虽然解答的结构和格式略显冗长，但逻辑清晰、步骤正确，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答逻辑清晰，正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算步骤正确，代入数值后得出的结果 $ 4005 $ 是正确的。解答中也明确指出了这是一个等差数列，并正确计算了第 2003 项。唯一可能的扣分点是“2003 - 1”是否为 2002，但这是基本的算术运算，没有错误。因此，评分 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终答案 $ 4005 $ 是正确的。  \n不过，评分时考虑到题目要求的是“验证器”，即对解答的**准确性**和**逻辑性**进行判断，而候选解答虽然步骤正确，但**没有明确指出**这是等差数列，且在公式应用中略显冗长，略显不够简洁。因此，评分在**8分**左右。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答清晰、逻辑严谨，没有错误。仅在细节上稍作优化（如公式中的 $ n $ 应该是 2003，而不是 2002），但不影响答案的正确性。因此，给出 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，给出了正确的首项 $ a = 1 $ 和公差 $ d = 2 $，并应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。  \n唯一可能的扣分点是“**arithmetic sequence**”的描述是否必要，但问题并未要求解释，因此答案正确，得8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，给出了正确的首项 $ a = 1 $ 和公差 $ d = 2 $，并应用了等差数列通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程稍显冗长，但逻辑清晰、步骤正确，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果为 4005。虽然解答中没有明确说明“等差数列”这一术语，但根据题目内容和解答逻辑，这是一个合理的推断。因此，评分8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终答案 4005 是正确的。虽然解答的结构和格式略显冗长，但逻辑清晰，没有错误。因此，给予 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答过程正确，步骤清晰，公式应用准确。使用等差数列公式计算第2003项时，计算过程正确，最终结果4005是正确的。虽然解答中未明确指出这是一个等差数列，但通过公式推导和计算过程已充分证明其正确性。因此，评分8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：该解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果4005是正确的。不过，虽然解答过程正确，但题目中提到的“序列 of odd numbers”可以更简洁地用“奇数序列”表示，且在数学中，通常直接使用“奇数”或“奇数序列”即可，无需特别强调“arithmetic sequence”。因此，虽然解答过程无误，但表达略显冗长，可考虑适当简化。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。然而，评分仅基于内容的准确性，而没有考虑格式或表达的清晰度，因此给出 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程正确，最终结果 4005 是正确的。解答逻辑清晰，步骤无误，只是在表达上可以更简洁一些，但整体上是合格的。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确地应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程详细，但评分标准中提到“只输出一个 1–10 的整数分数”，因此评分时考虑了逻辑清晰度和准确性，最终给出 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：该解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的第2003项为4005，符合数学规律。唯一可能的改进是更明确地指出这是等差数列，但整体解答是准确的。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确地应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的问题是，解答中没有明确说明这是等差数列，而直接使用公式推导，虽然这是正确的做法，但可以更清晰地说明这是等差数列。因此，评分8分，因为解答正确，但可以更明确地说明步骤。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的第2003项为4005。虽然解答过程稍显冗长，但逻辑清晰，计算无误，因此得分为8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答的结构和格式略显冗长，但内容和逻辑没有问题，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此，评分 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n-1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的不足是，解答中可以更简洁地表达公式，例如直接使用 $ a_n = 1 + (n-1) \\cdot 2 $，而不需要分开说明 $ a $ 和 $ d $。但整体逻辑和计算都是准确的，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算步骤清晰，最终结果 4005 是正确的。尽管过程中的计算（如 $ 2002 \\cdot 2 = 4004 $）是正确的，但最终答案 4005 是正确的，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程清晰，代数推导正确，最终得出的结果 $ 4005 $ 是正确的。解答中没有逻辑错误，步骤完整，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答过程完整，正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $，并正确计算了第 2003 项。推导过程清晰，计算无误，最终结果 4005 是正确的。仅在步骤 3 中略显冗长，但不影响答案的正确性。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤正确，没有错误。仅在表达上稍显冗长，但不影响答案的准确性。因此，评分8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程清晰，步骤正确，最终得出的答案 $ 4005 $ 是正确的。虽然解答中没有明显的错误，但可以进一步优化语言表达，例如在公式推导中更清晰地展示中间步骤，但整体逻辑和结果都正确，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答过程稍显冗长，但逻辑清晰，没有错误。因此，评分是 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。尽管解答格式较为简洁，但逻辑清晰，没有明显错误。因此，给予 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 4005 是正确的。然而，题目要求的是“2003rd term”，而候选解答中给出的公式和计算是正确的，但未明确说明是否需要使用公式，且在步骤中没有使用公式直接计算，而是通过中间步骤推导出结果，这在评分时略显不够简洁。因此，评分8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 1,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终得出的 2003rd 项为 4005。虽然解答过程清晰，但可以进一步优化，例如在公式应用时更明确地指出 $ a = 1 $ 和 $ d = 2 $，并在计算过程中更详细地展示中间步骤，以增强可读性。不过整体逻辑和结果都是正确的，因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n-1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。唯一的问题是，题目要求的是“2003rd term”，而解答中使用了 $ n = 2003 $，这是正确的。因此，评分8分，因为解答过程正确但可以更简洁地表达（例如直接使用公式 $ a_n = 1 + (n-1)\\cdot2 $，然后代入 $ n = 2003 $）。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤正确，没有错误。因此，评分8分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程无误，最终结果 4005 是正确的。解答逻辑清晰，步骤正确，没有错误。仅有一点可以改进的是，可以更明确地指出“该数列的公差为 2”，但整体上是一个非常准确和完整的解答。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果 4005 是正确的。虽然解答的结构清晰，但可以更简洁地表达，例如直接使用公式 $ a_n = 2n - 1 $ 来计算第 2003 项，结果也是一样的。因此，评分 8 是合理的。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算过程也正确，最终结果为 4005。解答逻辑清晰，步骤正确，没有计算错误或逻辑漏洞。仅有一点小瑕疵是“n = 2003”在公式中应为“n = 2003”，但这是公式本身的表达方式，不影响结果。因此，评分 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式。计算步骤清晰，最终结果 4005 是正确的。虽然过程稍显冗长，但逻辑正确，无明显错误。因此，给出 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：**  \n候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1) \\cdot d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此，评分 8 分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1)d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。虽然解答结构清晰，但可以更简洁地表达，例如直接使用公式 $ a_n = 1 + (n - 1) \\cdot 2 $，并直接代入 $ n = 2003 $ 得到 $ 4005 $。因此，评分 8 是合理的。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n**理由：** 候选解答正确地识别了这是一个等差数列，并正确应用了等差数列的通项公式 $ a_n = a + (n - 1) \\cdot d $。计算过程也正确，最终结果 $ 4005 $ 是正确的。解答逻辑清晰，步骤完整，没有错误。因此得分为 8。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\n理由：解答过程正确，逻辑清晰，步骤完整。使用了等差数列的通用公式，并正确代入已知值计算第2003项，最终结果为4005。唯一可能的扣分点是公式应用是否严格，但此处完全正确。"
+    },
+    {
+      "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "call_type": "aggregate"
+    }
+  ]
 }

@@ -1,859 +1,859 @@
 {
- "model": "Gemma-3-4B-Instruct (p=0.48)",
- "dataset": "MATH-500",
- "problem_id": 265,
- "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
- "gt": "4005",
- "config_demo": {
-  "N": 10,
-  "M": 4
- },
- "records": [
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
+  "model": "Gemma-3-4B-Instruct (p=0.61)",
+  "dataset": "MATH-500",
+  "problem_id": 265,
+  "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
+  "gt": "4005",
+  "config_demo": {
     "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe $n$th term of an arithmetic progression is given by the formula $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
+    "M": 4
   },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic sequence is given by:\n$$a_n = a_1 + (n-1)d$$\nWe want to find the 2003rd term, so we need to find $a_{2003}$.\nWe have $n = 2003$, $a_1 = 1$, and $d = 2$.\n$$a_{2003} = 1 + (2003 - 1)(2)$$\n$$a_{2003} = 1 + (2002)(2)$$\n$$a_{2003} = 1 + 4004$$\n$$a_{2003} = 4005$$\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic progression is given by $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nWe have $a_1 = 1$, $d = 2$, and $n = 2003$.\nSubstituting these values into the formula, we get:\n$a_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + (2002) \\cdot 2 = 1 + 4004 = 4005$.\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and the common difference $d = 3-1 = 2$.\nThe formula for the $n$th term of an arithmetic progression is given by:\n$$a_n = a_1 + (n-1)d$$\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula with $n = 2003$, $a_1 = 1$, and $d = 2$, we have:\n$$a_{2003} = 1 + (2003-1) \\cdot 2$$\n$$a_{2003} = 1 + (2002) \\cdot 2$$\n$$a_{2003} = 1 + 4004$$\n$$a_{2003} = 4005$$\n\n#### 4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe formula for the $n$-th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\n\nWe want to find the 2003rd term, so we want to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe formula for the $n$th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of this sequence, so we need to find $a_{2003}$.\nUsing the formula, we have:\n$$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$$\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and a common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we want to find $a_{2003}$.\nUsing the formula, we have\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe formula for the $n$th term of an arithmetic sequence is given by $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of this sequence, so we want to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$-th term of an arithmetic sequence is given by:\n$a_n = a_1 + (n-1)d$\nWe want to find the 2003rd term, so we set $n = 2003$.\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThe $n$th term of the sequence can be expressed as $a_n = 2n - 1$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula $a_n = 2n - 1$, we have:\n$a_{2003} = 2(2003) - 1$\n$a_{2003} = 4006 - 1$\n$a_{2003} = 4005$\n\n####\n4005"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，思路清晰，步骤完整，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，解释完整，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，运用了公式，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - The solution is complete, correct, and clearly explained. It correctly identifies the sequence as an arithmetic progression, states the first term and common difference, applies the correct formula, and calculates the 2003rd term accurately."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 完整的解答，步骤清晰，计算正确，解释充分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，表达清晰，逻辑严谨。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - The solution is complete, correct, and clearly explained."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，逻辑严谨，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完整且正确，步骤清晰，公式应用正确，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，逻辑严谨，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，计算准确，解释充分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用恰当，结果准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式应用准确，答案正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释完整。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释完整，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释充分。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完整且正确，步骤清晰，公式运用正确，计算无误。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，思路清晰，步骤完整，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释完整，使用了正确的公式和计算。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用准确，结果正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式运用正确，结果准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式运用准确，计算正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式运用准确，计算无误。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式应用正确，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，解题思路清晰，公式运用准确，计算过程无误。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式应用准确，答案正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释充分，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式应用正确，计算准确，答案正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，公式运用准确，结果正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式运用恰当，答案准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 解答完全正确，步骤清晰，公式运用正确，计算准确，答案正确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，逻辑严谨，计算准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，解释完整。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案正确，步骤清晰，逻辑严谨，表达完整。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10 - 答案完全正确，步骤清晰，解释充分，计算准确。"
-  },
-  {
-   "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "call_type": "aggregate"
-  }
- ]
+  "records": [
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe $n$th term of an arithmetic progression is given by the formula $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic sequence is given by:\n$$a_n = a_1 + (n-1)d$$\nWe want to find the 2003rd term, so we need to find $a_{2003}$.\nWe have $n = 2003$, $a_1 = 1$, and $d = 2$.\n$$a_{2003} = 1 + (2003 - 1)(2)$$\n$$a_{2003} = 1 + (2002)(2)$$\n$$a_{2003} = 1 + 4004$$\n$$a_{2003} = 4005$$\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic progression is given by $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nWe have $a_1 = 1$, $d = 2$, and $n = 2003$.\nSubstituting these values into the formula, we get:\n$a_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + (2002) \\cdot 2 = 1 + 4004 = 4005$.\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic progression with the first term $a_1 = 1$ and the common difference $d = 3-1 = 2$.\nThe formula for the $n$th term of an arithmetic progression is given by:\n$$a_n = a_1 + (n-1)d$$\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula with $n = 2003$, $a_1 = 1$, and $d = 2$, we have:\n$$a_{2003} = 1 + (2003-1) \\cdot 2$$\n$$a_{2003} = 1 + (2002) \\cdot 2$$\n$$a_{2003} = 1 + 4004$$\n$$a_{2003} = 4005$$\n\n#### 4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with first term $a_1 = 1$ and common difference $d = 3 - 1 = 2$.\nThe formula for the $n$-th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\n\nWe want to find the 2003rd term, so we want to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe formula for the $n$th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of this sequence, so we need to find $a_{2003}$.\nUsing the formula, we have:\n$$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$$\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and a common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of the sequence, so we want to find $a_{2003}$.\nUsing the formula, we have\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe formula for the $n$th term of an arithmetic sequence is given by $a_n = a_1 + (n-1)d$.\nWe want to find the 2003rd term of this sequence, so we want to find $a_{2003}$.\nUsing the formula, we have:\n$a_{2003} = a_1 + (2003 - 1)d = 1 + (2002)(2) = 1 + 4004 = 4005$.\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThis is an arithmetic sequence with the first term $a_1 = 1$ and the common difference $d = 3 - 1 = 2$.\nThe general formula for the $n$-th term of an arithmetic sequence is given by:\n$a_n = a_1 + (n-1)d$\nWe want to find the 2003rd term, so we set $n = 2003$.\n$a_{2003} = a_1 + (2003-1)d = 1 + (2002)(2) = 1 + 4004 = 4005$\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "The sequence of odd numbers is 1, 3, 5, 7, ...\nThe $n$th term of the sequence can be expressed as $a_n = 2n - 1$.\nWe want to find the 2003rd term of the sequence, so we need to find $a_{2003}$.\nUsing the formula $a_n = 2n - 1$, we have:\n$a_{2003} = 2(2003) - 1$\n$a_{2003} = 4006 - 1$\n$a_{2003} = 4005$\n\n####\n4005"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，思路清晰，步骤完整，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，解释完整，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，运用了公式，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - The solution is complete, correct, and clearly explained. It correctly identifies the sequence as an arithmetic progression, states the first term and common difference, applies the correct formula, and calculates the 2003rd term accurately."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 完整的解答，步骤清晰，计算正确，解释充分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，表达清晰，逻辑严谨。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - The solution is complete, correct, and clearly explained."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，逻辑严谨，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完整且正确，步骤清晰，公式应用正确，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，逻辑严谨，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，计算准确，解释充分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用恰当，结果准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式应用准确，答案正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释完整。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释完整，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释充分。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完整且正确，步骤清晰，公式运用正确，计算无误。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，思路清晰，步骤完整，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释完整，使用了正确的公式和计算。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用准确，结果正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式应用准确，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式运用正确，结果准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式运用准确，计算正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式运用准确，计算无误。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式应用正确，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，解题思路清晰，公式运用准确，计算过程无误。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式应用准确，答案正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释充分，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式应用正确，计算准确，答案正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，公式运用准确，结果正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式运用恰当，答案准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 解答完全正确，步骤清晰，公式运用正确，计算准确，答案正确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，逻辑严谨，计算准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，解释完整。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案正确，步骤清晰，逻辑严谨，表达完整。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10 - 答案完全正确，步骤清晰，解释充分，计算准确。"
+    },
+    {
+      "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "call_type": "aggregate"
+    }
+  ]
 }

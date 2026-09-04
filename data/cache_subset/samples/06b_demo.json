@@ -1,961 +1,961 @@
 {
- "model": "Qwen3-0.6B-Instruct (p=0.41)",
- "dataset": "MATH-500",
- "problem_id": 265,
- "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
- "gt": "4005",
- "config_demo": {
-  "N": 10,
-  "M": 4
- },
- "records": [
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
+  "model": "Qwen3-0.6B-Instruct (p=0.46)",
+  "dataset": "MATH-500",
+  "problem_id": 265,
+  "problem": "What is the 2003rd term of the sequence of odd numbers 1, 3, 5, 7, $\\dots$?",
+  "gt": "4005",
+  "config_demo": {
     "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** in the sequence of **odd numbers** starting from 1, we can use the formula for the **n-th odd number**:\n\n$$\n\\text{2003rd odd number} = 2n - 1\n$$\n\nHere, $ n = 2003 $:\n\n$$\n2 \\cdot 2003 - 1 = 4006 - 1 = \\boxed{4005}\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
+    "M": 4
   },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers** starting at 1, we use the general formula for the $ n $-th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term,\n- $ a_1 = 1 $ (first term),\n- $ d = 2 $ (common difference, since each term increases by 2),\n- $ n = 2003 $.\n\nNow plug in the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can observe that:\n\n- The sequence of odd numbers is:  \n  $1, 3, 5, 7, 9, \\dots$  \n- Each term increases by **2**.\n\nThis is an **arithmetic sequence**, where the **first term** is $a = 1$, and the **common difference** is $d = 2$.\n\n---\n\n### Step 1: General Formula for the $n$-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute $a = 1$, $d = 2$, and $n = 2003$:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\n= 1 + 2002 \\cdot 2\n$$\n\n$$\n= 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the 2003rd term of the sequence of **odd numbers** starting from **1**, we use the general formula for the $n$th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n-1)d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $d = 2$ (common difference, since each term increases by 2),\n- $n = 2003$ (we are looking for the 2003rd term).\n\nPlug in the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n---\n\n**Final Answer:**\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers**:\n\n$$\n1, \\ 3, \\ 5, \\ 7, \\ 9, \\ \\dots\n$$\n\n### Step 1: General Formula for the $n$th term\nThe $n$th term of an arithmetic sequence is:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $d = 2$ (common difference between terms),\n- $n = 2003$ (the term we want).\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the formula for the **nth odd number**:\n\n$$\na_n = 2n - 1\n$$\n\nWhere:\n- $ n $ is the term number (1-based index)\n- $ a_n $ is the value of the nth term\n\n### Step-by-step:\n\n- For the 2003rd term:\n  $$\n  a_{2003} = 2(2003) - 1 = 4006 - 1 = 4005\n  $$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the **formula for the nth term of an arithmetic sequence**:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a_n $ is the nth term,\n- $ a_1 $ is the first term,\n- $ n $ is the term number,\n- $ d $ is the common difference.\n\nIn this case, the sequence is **odd numbers**, so:\n- The first term $ a_1 = 1 $\n- The common difference $ d = 2 $\n\nPlugging in $ n = 2003 $:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the formula for the **nth term of an arithmetic sequence**:\n\n$$\na_n = a + (n - 1)d\n$$\n\nHere:\n- $ a_n $ is the $ n $th term,\n- $ a $ is the first term,\n- $ d $ is the common difference.\n\nGiven:\n- The sequence is: $ 1, 3, 5, 7, \\dots $\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n- We want to find the 2003rd term.\n\nSubstitute into the formula:\n\n$$\na_{2003} = 1 + (2003 - 1) \\times 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\times 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "We are given the sequence of **odd numbers**:  \n$$1, 3, 5, 7, 9, \\dots$$\n\nTo find the **2003rd term**, we note that the sequence of **odd numbers** follows a simple arithmetic progression. Let's denote the sequence as $a_n$ where $a_n = 2n - 1$.\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\n$$\na_n = 2n - 1\n$$\n\n### Step 2: Plug in $n = 2003$\n\n$$\na_{2003} = 2(2003) - 1 = 4006 - 1 = \\boxed{4005}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "generate",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "output": "To find the 2003rd term of the sequence of odd numbers, we can use the formula for the $n$th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n - 1)d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $n = 2003$ (term we are interested in),\n- $d = 2$ (common difference between consecutive terms, since odd numbers increase by 2).\n\nSubstitute the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe solution is correct and follows the formula for the nth odd number. The reasoning is logical and applies correctly."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "9\n\nThe answer is correct and follows a valid mathematical approach. The formula $ 2n - 1 $ correctly computes the nth odd number, and the calculation is straightforward. The reasoning is logical and accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\nThe solution correctly applies the formula for the $ n $-th odd number: $ 2n - 1 $, which is accurate. The reasoning is logical and the arithmetic is correct. The answer is well-justified."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 0,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "4005\n\n理由：该解答正确地应用了等差数列的通项公式来找到第2003项，计算过程清晰且符合数学规则。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and correctly calculates the 2003rd term of the sequence of odd numbers. The reasoning is logical and follows mathematical principles."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 9,
-   "output": "9\n\n理由：解答正确地使用了数学公式来计算等差数列的第n项，公式和计算步骤合理，但可以进一步简化说明。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 9,
-   "output": "9  \n\n理由：该解答正确地应用了等差数列的通项公式，推导过程清晰，结果也正确。虽然最后的答案是4005，但题目中的“odd numbers”指的是1, 3, 5,...，而通项公式中的公差为2是正确的，因此该答案是正确的。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 1,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "8\n\nThe answer is correct, using the arithmetic sequence formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The solution correctly applies the formula and results in 4005."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 1,
-   "output": "9\n\nThe solution correctly identifies the sequence of odd numbers as an arithmetic sequence with the first term $a = 1$ and common difference $d = 2$. It applies the general formula for the $n$-th term of an arithmetic sequence, $a_n = a + (n - 1)d$, which is applied correctly. The final answer is computed accurately. Therefore, the score is **9**."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "10  \n\nThe solution correctly identifies that the sequence of odd numbers is an arithmetic sequence with a first term $a = 1$ and a common difference $d = 2$. Using the formula for the $n$-th term of an arithmetic sequence, $a_n = a + (n-1)d$, we find that the 2003rd term is $4005$. The reasoning is logical, and the answer is accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": null,
-   "output": "10\n\nThe answer is correct and follows the standard formula for the $n$-th term of an arithmetic sequence. It correctly identifies the sequence as odd numbers, applies the correct arithmetic progression formula, and calculates the term correctly. The reasoning is logical and mathematically sound."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 2,
-   "retry_idx": 1,
-   "score": 10,
-   "output": "10\n\nThe candidate answer correctly identifies the pattern of an arithmetic sequence and applies the formula for the $n$-th term of such a sequence. The reasoning is logically sound, and the calculation is accurate. The final answer is 4005, which is the correct value for the 2003rd term in the sequence of odd numbers."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 2,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate answer is correctly formulated, applies the formula for the nth term of an arithmetic sequence, and calculates the 2003rd term of the odd numbers sequence. The logic and calculation are accurate and follow standard mathematical reasoning."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate answer correctly identifies the formula for the nth term of an arithmetic sequence and applies it to find the 2003rd term. The calculation is accurate and follows the correct steps."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 9,
-   "output": "9  \n\n理由：该解答正确地应用了等差数列公式，计算步骤清晰，逻辑严谨，答案准确。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "**评分：8**  \n**理由：** 解答正确，应用了等差数列求第 $n$ 项公式。虽然推导过程看起来简单，但所有步骤均准确，没有计算错误，符合数学逻辑。"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 3,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "**9/10**\n\nThe candidate answer correctly identifies the formula for the nth term of an arithmetic sequence, applies the formula to find the 2003rd term, and provides the correct result. The reasoning is thorough and mathematically sound."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate solution correctly identifies the formula for the nth term of an arithmetic sequence and applies it to find the 2003rd term of the sequence of odd numbers. The steps are logically followed, and the final answer is computed accurately. The solution is both correct and complete."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\nReason: The candidate provides a clear and correct approach using the formula for the $n$th term of an arithmetic sequence. The steps are logically followed, and the final answer is correctly computed. The score is 8."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": null,
-   "output": "10\n\nThe candidate solution provides a clear and logical explanation, using the standard formula for the nth term of an arithmetic sequence. The reasoning follows correctly, and the final answer is calculated accurately. The solution is well-structured and fully explains the steps."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 2,
-   "retry_idx": 1,
-   "score": 10,
-   "output": "10"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 4,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and arrives at the 2003rd odd number by following a logical and mathematical process. The answer is both correct and complete."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "9\n\nThe solution correctly applies the formula for the nth odd number: $ a_n = 2n - 1 $. The step-by-step calculations are valid, and the final answer is correctly calculated as 4005. This makes the answer well-structured and accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "8\n\nReason: The candidate provides a correct mathematical formula for finding the nth term of the sequence of odd numbers and applies it to the 2003rd term, resulting in the correct answer. The solution is logically sound and follows standard sequence formula conventions."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\nThe candidate solution correctly applies the formula for the nth odd number, $ a_n = 2n - 1 $, and computes the 2003rd term as 4005. The reasoning is logical and accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 5,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "9\n\nThe candidate solution correctly applies the formula for the nth odd number, which is $ a_n = 2n - 1 $. The step-by-step explanation is correct, and the final answer is calculated accurately. The reasoning is logical and follows mathematical principles."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The calculation is correct as well. The answer is logically consistent and properly formatted."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate answer correctly solves the problem by identifying the 2003rd term in an arithmetic sequence of odd numbers. The formula is correctly applied, and the arithmetic operations are performed accurately. The answer is also clearly presented and logically consistent. Therefore, the score is **10**."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 1,
-   "output": "8\n\nThe reasoning is correct. The candidate solves the problem using an arithmetic sequence formula for the nth term of an arithmetic sequence. The first term is 1, the common difference is 2, and the term number is 2003. The calculation is correct, resulting in 4005. All steps are logically followed, and the answer is appropriately given."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": null,
-   "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence. The reasoning follows the pattern of odd numbers, and the final answer is correctly computed. The solution is accurate and well-structured."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 6,
-   "verify_idx": 3,
-   "retry_idx": 1,
-   "score": 10,
-   "output": "9\n\nThe candidate answer correctly identifies the formula for finding the nth term of an arithmetic sequence and applies it to find the 2003rd term of the odd-numbered sequence. The reasoning is logical and follows the standard approach for this type of problem."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence, solves for the 2003rd term, and arrives at the correct result of 4005. The reasoning is logical and mathematically sound."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 8,
-   "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence. The calculation is correct and follows the steps properly. The reasoning is clear and accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The arithmetic sequence used is valid because the difference between consecutive odd numbers is 2 (1, 3, 5, 7, ...). The calculation is also correct: $ 1 + 4004 = 4005 $. The solution is accurate and follows the correct mathematical steps."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 7,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 1,
-   "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and solves for the 2003rd term. It correctly identifies the first term (1), the common difference (2), and substitutes into the formula. The final answer is verified mathematically and logically. This makes the solution well-structured and correct."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": null,
-   "output": "10\n\nThe candidate solution correctly identifies the pattern of odd numbers as an arithmetic sequence and applies the correct formula for the nth term. The reasoning is sound and logically follows the problem's requirements."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 0,
-   "retry_idx": 1,
-   "score": null,
-   "output": "10\n\nThe candidate answer is correct and well-explained. The reasoning follows logically and applies the formula for the nth term of an arithmetic sequence. The answer is mathematically sound and correctly computed."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate answer correctly identifies the sequence of odd numbers as an arithmetic progression and applies the appropriate formula to find the 2003rd term. The solution follows the standard steps for finding the nth term of an arithmetic sequence, and the result is accurate."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": null,
-   "output": "10\n\nThe candidate solution is correct and follows the standard formula for finding the nth term of an arithmetic sequence. The reasoning is accurate, and the answer is correctly calculated. The solution is well-structured and contains no errors."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 2,
-   "retry_idx": 1,
-   "score": null,
-   "output": "10\n\nThe solution correctly identifies the pattern of the sequence of odd numbers and applies the formula for the nth term of an arithmetic sequence. The reasoning is accurate and follows standard mathematical principles. The final answer is correctly calculated."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 8,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "10\n\nThe candidate solution correctly identifies the formula for the nth term of an arithmetic sequence, applies the formula to find the 2003rd term, and provides a clear, well-structured explanation. The answer is accurate and logically follows the sequence."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 0,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "9\n\nThis answer correctly identifies the pattern of the sequence (odd numbers increasing by 2) and applies the arithmetic sequence formula. The calculation is accurate, and the reasoning follows logically."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 1,
-   "retry_idx": 0,
-   "score": 10,
-   "output": "9\n\nThe solution correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The formula is applied correctly, and the arithmetic is performed properly. The result matches the expected value. The answer is correct and well-explained."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 2,
-   "retry_idx": 0,
-   "score": null,
-   "output": "10\n\nThe candidate solution correctly identifies the pattern of odd numbers and applies the formula for the nth term of an arithmetic sequence. The formula is applied correctly, and the arithmetic is calculated properly. The answer is both logically sound and correctly derived."
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|1",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 2,
-   "retry_idx": 1,
-   "score": 10,
-   "output": "10"
-  },
-  {
-   "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "config": {
-    "strategy": "verify",
-    "N": 10,
-    "M": 4,
-    "seed": 0
-   },
-   "call_type": "judge",
-   "candidate_idx": 9,
-   "verify_idx": 3,
-   "retry_idx": 0,
-   "score": 2,
-   "output": "9\n\nReason: The candidate solution correctly applies the formula for the nth term of an arithmetic sequence to find the 2003rd term of the sequence of odd numbers. The arithmetic progression is well-defined with a common difference of 2 (since each odd number increases by 2), and the first term is 1. The calculations are straightforward and result in 4005."
-  },
-  {
-   "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
-   "dataset": "MATH-500",
-   "problem_id": 265,
-   "call_type": "aggregate"
-  }
- ]
+  "records": [
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** in the sequence of **odd numbers** starting from 1, we can use the formula for the **n-th odd number**:\n\n$$\n\\text{2003rd odd number} = 2n - 1\n$$\n\nHere, $ n = 2003 $:\n\n$$\n2 \\cdot 2003 - 1 = 4006 - 1 = \\boxed{4005}\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers** starting at 1, we use the general formula for the $ n $-th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a_n $ is the $ n $-th term,\n- $ a_1 = 1 $ (first term),\n- $ d = 2 $ (common difference, since each term increases by 2),\n- $ n = 2003 $.\n\nNow plug in the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can observe that:\n\n- The sequence of odd numbers is:  \n  $1, 3, 5, 7, 9, \\dots$  \n- Each term increases by **2**.\n\nThis is an **arithmetic sequence**, where the **first term** is $a = 1$, and the **common difference** is $d = 2$.\n\n---\n\n### Step 1: General Formula for the $n$-th term of an arithmetic sequence\n\n$$\na_n = a + (n - 1)d\n$$\n\nSubstitute $a = 1$, $d = 2$, and $n = 2003$:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2\n$$\n\n$$\n= 1 + 2002 \\cdot 2\n$$\n\n$$\n= 1 + 4004 = 4005\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the 2003rd term of the sequence of **odd numbers** starting from **1**, we use the general formula for the $n$th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n-1)d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $d = 2$ (common difference, since each term increases by 2),\n- $n = 2003$ (we are looking for the 2003rd term).\n\nPlug in the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n---\n\n**Final Answer:**\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers**:\n\n$$\n1, \\ 3, \\ 5, \\ 7, \\ 9, \\ \\dots\n$$\n\n### Step 1: General Formula for the $n$th term\nThe $n$th term of an arithmetic sequence is:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $d = 2$ (common difference between terms),\n- $n = 2003$ (the term we want).\n\n### Step 2: Plug in the values\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the formula for the **nth odd number**:\n\n$$\na_n = 2n - 1\n$$\n\nWhere:\n- $ n $ is the term number (1-based index)\n- $ a_n $ is the value of the nth term\n\n### Step-by-step:\n\n- For the 2003rd term:\n  $$\n  a_{2003} = 2(2003) - 1 = 4006 - 1 = 4005\n  $$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the **formula for the nth term of an arithmetic sequence**:\n\n$$\na_n = a_1 + (n - 1) \\cdot d\n$$\n\nWhere:\n- $ a_n $ is the nth term,\n- $ a_1 $ is the first term,\n- $ n $ is the term number,\n- $ d $ is the common difference.\n\nIn this case, the sequence is **odd numbers**, so:\n- The first term $ a_1 = 1 $\n- The common difference $ d = 2 $\n\nPlugging in $ n = 2003 $:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the **2003rd term** of the sequence of **odd numbers**, we can use the formula for the **nth term of an arithmetic sequence**:\n\n$$\na_n = a + (n - 1)d\n$$\n\nHere:\n- $ a_n $ is the $ n $th term,\n- $ a $ is the first term,\n- $ d $ is the common difference.\n\nGiven:\n- The sequence is: $ 1, 3, 5, 7, \\dots $\n- First term $ a = 1 $\n- Common difference $ d = 2 $\n- We want to find the 2003rd term.\n\nSubstitute into the formula:\n\n$$\na_{2003} = 1 + (2003 - 1) \\times 2\n$$\n\n$$\na_{2003} = 1 + 2002 \\times 2 = 1 + 4004 = 4005\n$$\n\n### ✅ Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "We are given the sequence of **odd numbers**:  \n$$1, 3, 5, 7, 9, \\dots$$\n\nTo find the **2003rd term**, we note that the sequence of **odd numbers** follows a simple arithmetic progression. Let's denote the sequence as $a_n$ where $a_n = 2n - 1$.\n\n### Step 1: Use the formula for the nth term of an arithmetic sequence\n\n$$\na_n = 2n - 1\n$$\n\n### Step 2: Plug in $n = 2003$\n\n$$\na_{2003} = 2(2003) - 1 = 4006 - 1 = \\boxed{4005}\n$$\n\n### Final Answer:\n\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|generate|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "generate",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "output": "To find the 2003rd term of the sequence of odd numbers, we can use the formula for the $n$th term of an arithmetic sequence:\n\n$$\na_n = a_1 + (n - 1)d\n$$\n\nHere:\n- $a_1 = 1$ (first term),\n- $n = 2003$ (term we are interested in),\n- $d = 2$ (common difference between consecutive terms, since odd numbers increase by 2).\n\nSubstitute the values:\n\n$$\na_{2003} = 1 + (2003 - 1) \\cdot 2 = 1 + 2002 \\cdot 2 = 1 + 4004 = 4005\n$$\n\n### Final Answer:\n$$\n\\boxed{4005}\n$$"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe solution is correct and follows the formula for the nth odd number. The reasoning is logical and applies correctly."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "9\n\nThe answer is correct and follows a valid mathematical approach. The formula $ 2n - 1 $ correctly computes the nth odd number, and the calculation is straightforward. The reasoning is logical and accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\nThe solution correctly applies the formula for the $ n $-th odd number: $ 2n - 1 $, which is accurate. The reasoning is logical and the arithmetic is correct. The answer is well-justified."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|0|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 0,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "4005\n\n理由：该解答正确地应用了等差数列的通项公式来找到第2003项，计算过程清晰且符合数学规则。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and correctly calculates the 2003rd term of the sequence of odd numbers. The reasoning is logical and follows mathematical principles."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 9,
+      "output": "9\n\n理由：解答正确地使用了数学公式来计算等差数列的第n项，公式和计算步骤合理，但可以进一步简化说明。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 9,
+      "output": "9  \n\n理由：该解答正确地应用了等差数列的通项公式，推导过程清晰，结果也正确。虽然最后的答案是4005，但题目中的“odd numbers”指的是1, 3, 5,...，而通项公式中的公差为2是正确的，因此该答案是正确的。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|1|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 1,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "8\n\nThe answer is correct, using the arithmetic sequence formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The solution correctly applies the formula and results in 4005."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 1,
+      "output": "9\n\nThe solution correctly identifies the sequence of odd numbers as an arithmetic sequence with the first term $a = 1$ and common difference $d = 2$. It applies the general formula for the $n$-th term of an arithmetic sequence, $a_n = a + (n - 1)d$, which is applied correctly. The final answer is computed accurately. Therefore, the score is **9**."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "10  \n\nThe solution correctly identifies that the sequence of odd numbers is an arithmetic sequence with a first term $a = 1$ and a common difference $d = 2$. Using the formula for the $n$-th term of an arithmetic sequence, $a_n = a + (n-1)d$, we find that the 2003rd term is $4005$. The reasoning is logical, and the answer is accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": null,
+      "output": "10\n\nThe answer is correct and follows the standard formula for the $n$-th term of an arithmetic sequence. It correctly identifies the sequence as odd numbers, applies the correct arithmetic progression formula, and calculates the term correctly. The reasoning is logical and mathematically sound."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|2|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 2,
+      "retry_idx": 1,
+      "score": 10,
+      "output": "10\n\nThe candidate answer correctly identifies the pattern of an arithmetic sequence and applies the formula for the $n$-th term of such a sequence. The reasoning is logically sound, and the calculation is accurate. The final answer is 4005, which is the correct value for the 2003rd term in the sequence of odd numbers."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|2|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 2,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate answer is correctly formulated, applies the formula for the nth term of an arithmetic sequence, and calculates the 2003rd term of the odd numbers sequence. The logic and calculation are accurate and follow standard mathematical reasoning."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate answer correctly identifies the formula for the nth term of an arithmetic sequence and applies it to find the 2003rd term. The calculation is accurate and follows the correct steps."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 9,
+      "output": "9  \n\n理由：该解答正确地应用了等差数列公式，计算步骤清晰，逻辑严谨，答案准确。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "**评分：8**  \n**理由：** 解答正确，应用了等差数列求第 $n$ 项公式。虽然推导过程看起来简单，但所有步骤均准确，没有计算错误，符合数学逻辑。"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|3|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 3,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "**9/10**\n\nThe candidate answer correctly identifies the formula for the nth term of an arithmetic sequence, applies the formula to find the 2003rd term, and provides the correct result. The reasoning is thorough and mathematically sound."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate solution correctly identifies the formula for the nth term of an arithmetic sequence and applies it to find the 2003rd term of the sequence of odd numbers. The steps are logically followed, and the final answer is computed accurately. The solution is both correct and complete."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\nReason: The candidate provides a clear and correct approach using the formula for the $n$th term of an arithmetic sequence. The steps are logically followed, and the final answer is correctly computed. The score is 8."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": null,
+      "output": "10\n\nThe candidate solution provides a clear and logical explanation, using the standard formula for the nth term of an arithmetic sequence. The reasoning follows correctly, and the final answer is calculated accurately. The solution is well-structured and fully explains the steps."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|2|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 2,
+      "retry_idx": 1,
+      "score": 10,
+      "output": "10"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|4|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 4,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and arrives at the 2003rd odd number by following a logical and mathematical process. The answer is both correct and complete."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "9\n\nThe solution correctly applies the formula for the nth odd number: $ a_n = 2n - 1 $. The step-by-step calculations are valid, and the final answer is correctly calculated as 4005. This makes the answer well-structured and accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "8\n\nReason: The candidate provides a correct mathematical formula for finding the nth term of the sequence of odd numbers and applies it to the 2003rd term, resulting in the correct answer. The solution is logically sound and follows standard sequence formula conventions."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\nThe candidate solution correctly applies the formula for the nth odd number, $ a_n = 2n - 1 $, and computes the 2003rd term as 4005. The reasoning is logical and accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|5|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 5,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "9\n\nThe candidate solution correctly applies the formula for the nth odd number, which is $ a_n = 2n - 1 $. The step-by-step explanation is correct, and the final answer is calculated accurately. The reasoning is logical and follows mathematical principles."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The calculation is correct as well. The answer is logically consistent and properly formatted."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate answer correctly solves the problem by identifying the 2003rd term in an arithmetic sequence of odd numbers. The formula is correctly applied, and the arithmetic operations are performed accurately. The answer is also clearly presented and logically consistent. Therefore, the score is **10**."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 1,
+      "output": "8\n\nThe reasoning is correct. The candidate solves the problem using an arithmetic sequence formula for the nth term of an arithmetic sequence. The first term is 1, the common difference is 2, and the term number is 2003. The calculation is correct, resulting in 4005. All steps are logically followed, and the answer is appropriately given."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": null,
+      "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence. The reasoning follows the pattern of odd numbers, and the final answer is correctly computed. The solution is accurate and well-structured."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|6|3|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 6,
+      "verify_idx": 3,
+      "retry_idx": 1,
+      "score": 10,
+      "output": "9\n\nThe candidate answer correctly identifies the formula for finding the nth term of an arithmetic sequence and applies it to find the 2003rd term of the odd-numbered sequence. The reasoning is logical and follows the standard approach for this type of problem."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence, solves for the 2003rd term, and arrives at the correct result of 4005. The reasoning is logical and mathematically sound."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 8,
+      "output": "8\n\nThe candidate answer correctly applies the formula for the nth term of an arithmetic sequence. The calculation is correct and follows the steps properly. The reasoning is clear and accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The arithmetic sequence used is valid because the difference between consecutive odd numbers is 2 (1, 3, 5, 7, ...). The calculation is also correct: $ 1 + 4004 = 4005 $. The solution is accurate and follows the correct mathematical steps."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|7|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 7,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 1,
+      "output": "8\n\nThe candidate solution correctly applies the formula for the nth term of an arithmetic sequence and solves for the 2003rd term. It correctly identifies the first term (1), the common difference (2), and substitutes into the formula. The final answer is verified mathematically and logically. This makes the solution well-structured and correct."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": null,
+      "output": "10\n\nThe candidate solution correctly identifies the pattern of odd numbers as an arithmetic sequence and applies the correct formula for the nth term. The reasoning is sound and logically follows the problem's requirements."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|0|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 0,
+      "retry_idx": 1,
+      "score": null,
+      "output": "10\n\nThe candidate answer is correct and well-explained. The reasoning follows logically and applies the formula for the nth term of an arithmetic sequence. The answer is mathematically sound and correctly computed."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate answer correctly identifies the sequence of odd numbers as an arithmetic progression and applies the appropriate formula to find the 2003rd term. The solution follows the standard steps for finding the nth term of an arithmetic sequence, and the result is accurate."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": null,
+      "output": "10\n\nThe candidate solution is correct and follows the standard formula for finding the nth term of an arithmetic sequence. The reasoning is accurate, and the answer is correctly calculated. The solution is well-structured and contains no errors."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|2|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 2,
+      "retry_idx": 1,
+      "score": null,
+      "output": "10\n\nThe solution correctly identifies the pattern of the sequence of odd numbers and applies the formula for the nth term of an arithmetic sequence. The reasoning is accurate and follows standard mathematical principles. The final answer is correctly calculated."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|8|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 8,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "10\n\nThe candidate solution correctly identifies the formula for the nth term of an arithmetic sequence, applies the formula to find the 2003rd term, and provides a clear, well-structured explanation. The answer is accurate and logically follows the sequence."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|0|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 0,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "9\n\nThis answer correctly identifies the pattern of the sequence (odd numbers increasing by 2) and applies the arithmetic sequence formula. The calculation is accurate, and the reasoning follows logically."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|1|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 1,
+      "retry_idx": 0,
+      "score": 10,
+      "output": "9\n\nThe solution correctly applies the formula for the nth term of an arithmetic sequence, which is appropriate for finding the 2003rd term of the sequence of odd numbers. The formula is applied correctly, and the arithmetic is performed properly. The result matches the expected value. The answer is correct and well-explained."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 2,
+      "retry_idx": 0,
+      "score": null,
+      "output": "10\n\nThe candidate solution correctly identifies the pattern of odd numbers and applies the formula for the nth term of an arithmetic sequence. The formula is applied correctly, and the arithmetic is calculated properly. The answer is both logically sound and correctly derived."
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|2|1",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 2,
+      "retry_idx": 1,
+      "score": 10,
+      "output": "10"
+    },
+    {
+      "idem_key": "0|MATH-500|265|verify:N=10,M=4|judge|9|3|0",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "config": {
+        "strategy": "verify",
+        "N": 10,
+        "M": 4,
+        "seed": 0
+      },
+      "call_type": "judge",
+      "candidate_idx": 9,
+      "verify_idx": 3,
+      "retry_idx": 0,
+      "score": 2,
+      "output": "9\n\nReason: The candidate solution correctly applies the formula for the nth term of an arithmetic sequence to find the 2003rd term of the sequence of odd numbers. The arithmetic progression is well-defined with a common difference of 2 (since each odd number increases by 2), and the first term is 1. The calculations are straightforward and result in 4005."
+    },
+    {
+      "idem_key": "aggregate:0:MATH-500:265:verify:N=10,M=4",
+      "dataset": "MATH-500",
+      "problem_id": 265,
+      "call_type": "aggregate"
+    }
+  ]
 }

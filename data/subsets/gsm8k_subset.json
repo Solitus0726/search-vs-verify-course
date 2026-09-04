@@ -2,7 +2,7 @@
   "name": "GSM8K",
   "split": "train",
   "seed": 20260804,
-  "note": "按固定种子随机抽 100 题",
+  "note": "100 problems drawn with a fixed seed.",
   "indices": [
     55,
     90,

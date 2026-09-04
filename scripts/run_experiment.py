@@ -58,7 +58,10 @@ PROMPT_MATH = "Please solve the following math problem step by step, and put you
 PROMPT_GSM8K = PROMPT_MATH
 PROMPT_HASH = hashlib.sha256(PROMPT_MATH.encode("utf-8")).hexdigest()[:16]
 
-# Judge prompt (six-point parsing rule 1: "output only an integer score from 1-10, score first, may add one sentence of reasoning")
+# Judge prompt. Kept verbatim: it is part of the measured configuration, so student runs
+# reproduce the published verification numbers exactly (do not translate or rewrite it).
+# Parsing rule 1: the judge outputs only an integer score from 1-10, score first, may add
+# one sentence of reasoning.
 JUDGE_PROMPT_TEMPLATE = (
     "你是验证器。给以下数学解答打分（1-10 分）。\n"
     "只输出一个 1–10 的整数分数，先打分，可附一句理由。\n"
@@ -503,7 +506,7 @@ def report_judge_failure(stats: dict, tag: str) -> None:
     rate = stats["judge_fail"] / stats["judge_total"]
     msg = f"[{tag}] judge parse failure rate {stats['judge_fail']}/{stats['judge_total']} = {rate:.1%}"
     if rate > 0.05:
-        msg += " ⚠️ above 5% threshold, warning: check prompt format or lower temperature and resample"
+        msg += " [!] above 5% threshold, warning: check prompt format or lower temperature and resample"
     print(msg, flush=True)
 
 
@@ -583,15 +586,15 @@ def finalize_records(out_dir: str, configs: List[Tuple[int, int, str]],
 
     print(f"[finalize] merge done -> {out_path} ({total} records; {dropped} duplicates removed; {bad} corrupted lines)")
     if warnings:
-        print("[finalize] ℹ️ notes:")
+        print("[finalize] [i] notes:")
         for msg in warnings:
             print(f"  - {msg}")
     if errors:
-        print("[finalize] ⚠️ to fix:")
+        print("[finalize] [!] to fix:")
         for msg in errors:
             print(f"  - {msg}")
     else:
-        print("[finalize] ✅ validation passed: call counts match / aggregate complete")
+        print("[finalize] [OK] validation passed: call counts match / aggregate complete")
     return (len(errors) == 0), errors
 
 

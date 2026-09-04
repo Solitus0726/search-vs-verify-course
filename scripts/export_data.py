@@ -105,11 +105,11 @@ def main() -> None:
 
     # Validation report
     if all_errors:
-        print("⚠️ field validation found issues:")
+        print("[!] field validation found issues:")
         for e in all_errors[:20]:
             print(f"  - {e}")
         sys.exit(1)
-    print("✅ all field validation passed (including required gguf_sha256 when canonical:true)")
+    print("[OK] all field validation passed (including required gguf_sha256 when canonical:true)")
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
   "name": "MATH-500",
   "split": "test",
   "seed": 20260805,
-  "note": "与 pass1 谱系同一 100 题分层子集（problem 前缀匹配重建）；前 6 题为代表性子集 [10,211,315,365,392,447]，与 100 题缓存对齐",
+  "note": "Same stratified 100-problem subset as the pass1 spectrum (rebuilt by problem-prefix matching); the first 6 problems are the representative subset [10,211,315,365,392,447], aligned with the 100-problem cache.",
   "problem_ids": [
     10,
     211,

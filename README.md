@@ -10,9 +10,9 @@ should a model spend it?
 
 **Central claim (conditional, measured):** under a *weak judge* (the model
 grading its own answers) and a *moderate budget* (50 inference calls per problem),
-search beats verification by +7.3 to +10.0 pp, measured on three models
-(100 problems, 3 seeds; 95% CIs exclude 0). The materials teach *when* this
-holds and how to find the best split on your own model.
+search beats verification by +7.3 to +10.0 pp on three models (100 problems,
+3 seeds; paired McNemar tests win on all nine model-seed pairs). The materials
+teach *when* this holds and how to find the best split on your own model.
 
 All materials are original and were created for the NeurIPS 2026 Education
 Track. The public repository is https://github.com/Solitus0726/search-vs-verify-course.
@@ -123,6 +123,9 @@ running (it provides the `cudart64_12` / `cublas64_12` runtime DLLs).
   interrupts resume with zero data loss.
 - Statistics are rebuilt from the records; the included cache is verified against
   the source records.
+- The judge prompt is part of the measured configuration and is kept verbatim in
+  `scripts/run_experiment.py`, so student runs reproduce the published
+  verification numbers exactly.
 
 ## License
 
