@@ -17,5 +17,9 @@ matplotlib==3.11.1
 # ipywidgets: prevents tqdm progress-bar warnings in Jupyter
 ipywidgets==8.1.9
 
+# Jupyter interface (to run the notebooks interactively); versions match the course environment
+jupyterlab==4.6.3
+ipykernel==7.3.0
+
 # Model download (ModelScope mirror)
 modelscope==1.39.1

@@ -83,8 +83,11 @@ follow the learning path. All plots and tables load from `data/cache_subset/`.
 Install with `pip install -r requirements-cpu.txt`. The six models span measured
 single-answer accuracies from 0.37 to 0.73 on MATH 500, which is what makes the
 search-vs-verify trade-off visible from a single machine. Notebooks preview
-directly on GitHub; to run them interactively, also install Jupyter
-(`pip install notebook`), which the requirements files do not cover.
+directly on GitHub; both requirements files include JupyterLab, so `jupyter lab`
+from the repository root opens them interactively. The experiment notebooks are
+cache-first: `RUN_EXPERIMENT = False` in each configuration cell makes the long
+experiment cells skip themselves, so running a notebook end to end without a
+GPU is safe. Set it to `True` only when you want to produce your own data points.
 
 **GPU tier (run the experiments yourself):** Python 3.10+, any CUDA 12.4 machine
 with an NVIDIA GPU (8 GB+ VRAM):
