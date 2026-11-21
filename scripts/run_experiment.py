@@ -174,11 +174,22 @@ def parse_judge_score(output: Optional[str]) -> Optional[int]:
 
 def load_model(model: str) -> object:
     # Load GGUF (full GPU offload); inject enable_thinking=False for the Qwen3 family (0.3.34 has no native support)
-    from llama_cpp import Llama
-
+    # Check the model file before importing llama.cpp: a missing file then produces an actionable message
+    # even when the CUDA runtime DLLs are not on PATH yet.
     path = os.path.join(MODEL_DIR, MODEL_FILES[model])
     if not os.path.exists(path):
-        raise SystemExit(f"model file not found: {path}")
+        # Readable failure instead of a bare traceback in the notebooks (the caller maps exit code 2 to a setup hint)
+        print(f"[error] model file not found: {path}", flush=True)
+        print("        Download the six GGUF models first: python scripts/download_models.py", flush=True)
+        print("        See README 'Installing the GPU tier' for the download list and the cu124 wheel notes.", flush=True)
+        raise SystemExit(2)
+    try:
+        from llama_cpp import Llama
+    except Exception as e:
+        print(f"[error] llama-cpp-python could not be loaded: {type(e).__name__}: {e}", flush=True)
+        print("        On Windows, add <env>/Lib/site-packages/torch/lib to PATH (CUDA runtime DLLs) and retry.", flush=True)
+        print("        See README 'Installing the GPU tier (Windows)'.", flush=True)
+        raise SystemExit(2)
     llm = Llama(model_path=path, n_ctx=N_CTX, n_gpu_layers=-1, verbose=False, seed=0)
     if model in QWEN3_MODELS:
         formatter = llm._chat_handlers.get("chat_template.default")
@@ -339,8 +350,10 @@ def process_problem(llm: object, judge_llm: object, recorder: JsonlRecorder,
     # Strictly serial within a problem: generate N candidates -> verify each M times -> aggregate (ordering constraint)
     # Returns stats {calls, judge_total, judge_fail} (used for the parse-failure-rate warning)
     stats = {"calls": 0, "judge_total": 0, "judge_fail": 0}
-    tokens_actual = 0
     for (n, m, _zone) in configs:
+        # Token accounting is per configuration: reset here, so each aggregate record counts only the calls of
+        # its own configuration (retries inside one configuration still add up, they never leak into the next one)
+        tokens_actual = 0
         cfg = config_str(n, m)
         cands: List[str] = []
         for i in range(n):
@@ -416,34 +429,46 @@ def process_problem(llm: object, judge_llm: object, recorder: JsonlRecorder,
     return stats
 
 
-def configure_hf_source() -> None:
-    # Dataset source fast path (shared by the notebooks and the CLI):
-    # 1) Local cache exists -> fully offline (zero network, zero retries, instant)
+def _dataset_cached(dataset: str, ds_cache: str) -> bool:
+    # Cache directories are named like "HuggingFaceH4___math-500" / "openai___gsm8k"
+    if not os.path.isdir(ds_cache):
+        return False
+    key = "gsm8k" if dataset == "GSM8K" else "math-500"
+    return any(key in name.lower() for name in os.listdir(ds_cache))
+
+
+def configure_hf_source(dataset: str) -> None:
+    # Dataset source fast path (shared by the notebooks and the CLI), decided per *requested* dataset:
+    # 1) The requested dataset is cached -> fully offline (zero network, zero retries, instant).
+    #    The name check matters: MATH-500 being cached says nothing about GSM8K, and forcing offline for an
+    #    uncached dataset makes its first load fail.
     #    Note: the huggingface_hub/datasets offline switches are module constants cached **at import time**
     #    (from evaluate import ... at the top of this module already pulled in hub) -- env vars have no effect,
     #    so the module constants must be patched directly (in the Notebook scenario import ordering is correct, env vars suffice)
-    # 2) No cache -> socket-probe huggingface.co (3s): if reachable use the official source; if unreachable (e.g. CN network) switch to hf-mirror -- avoids blind retries of ~23s
-    # 3) HF_DATASETS_OFFLINE/HF_HUB_OFFLINE already set (remote batch) -> do not interfere
+    # 2) Not cached but offline mode is already forced from outside (remote batch) -> do not override it, but say why it will fail
+    # 3) Not cached and no offline flag -> socket-probe huggingface.co (3s): reachable -> official source; unreachable (e.g. CN network) -> hf-mirror
     import socket
-    if os.environ.get("HF_DATASETS_OFFLINE") or os.environ.get("HF_HUB_OFFLINE"):
-        return
     hf_home = os.environ.get("HF_HOME", os.path.join(os.path.expanduser("~"), ".cache", "huggingface"))
     ds_cache = os.path.join(hf_home, "datasets")
-    if os.path.isdir(ds_cache):
-        if any("math-500" in n.lower() or "gsm8k" in n.lower() for n in os.listdir(ds_cache)):
-            os.environ["HF_HUB_OFFLINE"] = "1"
-            os.environ["HF_DATASETS_OFFLINE"] = "1"
-            try:
-                import huggingface_hub.constants as _hub_const
-                _hub_const.HF_HUB_OFFLINE = True
-            except ImportError:
-                pass
-            try:
-                import datasets.config as _ds_config
-                _ds_config.HF_DATASETS_OFFLINE = True
-            except ImportError:
-                pass
-            return
+    if _dataset_cached(dataset, ds_cache):
+        os.environ["HF_HUB_OFFLINE"] = "1"
+        os.environ["HF_DATASETS_OFFLINE"] = "1"
+        try:
+            import huggingface_hub.constants as _hub_const
+            _hub_const.HF_HUB_OFFLINE = True
+        except ImportError:
+            pass
+        try:
+            import datasets.config as _ds_config
+            _ds_config.HF_DATASETS_OFFLINE = True
+        except ImportError:
+            pass
+        return
+    if os.environ.get("HF_DATASETS_OFFLINE") or os.environ.get("HF_HUB_OFFLINE"):
+        print(f"[warn] {dataset} is not in the local cache ({ds_cache}), but offline mode is already on "
+              f"(HF_HUB_OFFLINE / HF_DATASETS_OFFLINE). Loading this dataset will fail: either unset those "
+              f"variables or download the dataset once while online.", flush=True)
+        return
     try:
         socket.create_connection(("huggingface.co", 443), timeout=3).close()
     except OSError:
@@ -452,7 +477,7 @@ def configure_hf_source() -> None:
 
 def load_dataset_rows(dataset: str) -> List[Tuple[int, str, str]]:
     # Load dataset + subset list -> [(problem_id, problem, gt)] (gt extracted with the same convention as evaluate)
-    configure_hf_source()
+    configure_hf_source(dataset)
     import datasets as hf_datasets
     from eval_reference.math_utils import last_boxed_only_string, remove_boxed
 
@@ -534,6 +559,48 @@ class StubLLM:
         return {"choices": [{"message": {"content": text}}], "usage": usage}
 
 
+def _records_coverage(path: str) -> Dict[Tuple[str, int], List[int]]:
+    # One pass over records.jsonl -> {(config, seed): [llm_calls, aggregates]}
+    # Coverage is tracked per configuration on purpose: run totals cannot tell a finished config from a
+    # different config that was never executed in this output directory.
+    cov: Dict[Tuple[str, int], List[int]] = {}
+    with open(path, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                d = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            ct = d.get("call_type")
+            if ct == "aggregate":
+                # aggregate records carry N/M/seed at the top level
+                slot = cov.setdefault((config_str(d.get("N"), d.get("M")), d.get("seed")), [0, 0])
+                slot[1] += 1
+            elif ct in ("generate", "judge"):
+                # per-call records carry them under "config"
+                c = d.get("config") or {}
+                slot = cov.setdefault((config_str(c.get("N"), c.get("M")), c.get("seed")), [0, 0])
+                slot[0] += 1
+    return cov
+
+
+def _coverage_gaps(cov: Dict[Tuple[str, int], List[int]], configs: List[Tuple[int, int, str]],
+                   seeds: List[int], n_problems: int) -> List[str]:
+    # A requested configuration counts as complete only when every seed has its full call count and
+    # one aggregate per problem. Gaps are reported per config x seed so the message points at what is missing.
+    gaps = []
+    for (n, m, _zone) in configs:
+        cfg = config_str(n, m)
+        need_calls = config_cost(n, m) * n_problems
+        for seed in seeds:
+            calls, aggs = cov.get((cfg, seed), [0, 0])
+            if calls < need_calls or aggs < n_problems:
+                gaps.append(f"{cfg} seed {seed}: calls {calls}/{need_calls}, aggregates {aggs}/{n_problems}")
+    return gaps
+
+
 def finalize_records(out_dir: str, configs: List[Tuple[int, int, str]],
                      seeds: List[int], n_problems: int, budget: int) -> Tuple[bool, List[str]]:
     # One-shot finalization (--finalize): merge dedup -> validation -> report
@@ -551,38 +618,12 @@ def finalize_records(out_dir: str, configs: List[Tuple[int, int, str]],
         warnings.append(f"{bad} corrupted lines (skipped by merge; missing calls rebuilt via count-check re-run)")
     if dropped > 0:
         warnings.append(f"{dropped} duplicate lines (removed by merge -- residue of old-version aggregate rewrites, fixed, integrity unaffected)")
-    # Check 2: LLM call count vs budget-accounting expectation (retries only add calls, so use >=)
-    expected_llm = sum(config_cost(n, m) for (n, m, _) in configs) * len(seeds) * n_problems
-    llm_count = 0
-    with open(out_path, encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                d = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if d.get("call_type") in ("generate", "judge"):
-                llm_count += 1
-    if llm_count < expected_llm:
-        errors.append(f"LLM call count {llm_count} < expected {expected_llm} (not finished, will re-run automatically)")
-    # Check 3: aggregate completeness (one per problem per config)
-    expected_agg = len(configs) * len(seeds) * n_problems
-    agg_count = 0
-    with open(out_path, encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                d = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if d.get("call_type") == "aggregate":
-                agg_count += 1
-    if agg_count < expected_agg:
-        errors.append(f"aggregate {agg_count} < expected {expected_agg} (not finished, will re-run automatically)")
+    # Check 2: coverage of the requested configurations (calls and aggregates, per config x seed).
+    # Run totals are not enough: reusing an output directory with a different config set would otherwise
+    # mark an unexecuted configuration as complete.
+    cov = _records_coverage(out_path)
+    for gap in _coverage_gaps(cov, configs, seeds, n_problems):
+        errors.append(f"{gap} (not finished, will re-run automatically)")
 
     print(f"[finalize] merge done -> {out_path} ({total} records; {dropped} duplicates removed; {bad} corrupted lines)")
     if warnings:
@@ -600,28 +641,12 @@ def finalize_records(out_dir: str, configs: List[Tuple[int, int, str]],
 
 def records_complete(out_dir: str, configs: List[Tuple[int, int, str]],
                      seeds: List[int], n_problems: int) -> bool:
-    # Idempotent early-exit check: records.jsonl already covers every call of this run (same convention as finalize_records)
+    # Idempotent early-exit check: every requested configuration already has its calls and aggregates
+    # in records.jsonl (same convention as finalize_records). Checks the requested records, not run totals.
     path = os.path.join(out_dir, "records.jsonl")
     if not os.path.exists(path):
         return False
-    expected_llm = sum(config_cost(n, m) for (n, m, _) in configs) * len(seeds) * n_problems
-    expected_agg = len(configs) * len(seeds) * n_problems
-    llm_count = agg_count = 0
-    with open(path, encoding="utf-8", errors="replace") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                d = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            ct = d.get("call_type")
-            if ct in ("generate", "judge"):
-                llm_count += 1
-            elif ct == "aggregate":
-                agg_count += 1
-    return llm_count >= expected_llm and agg_count >= expected_agg
+    return not _coverage_gaps(_records_coverage(path), configs, seeds, n_problems)
 
 
 def main() -> None:
