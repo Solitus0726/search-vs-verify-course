@@ -854,7 +854,7 @@
   },
   {
    "key": "qwen3-0.6b",
-   "model": "Qwen3-0.6B-Instruct (p=0.46)",
+   "model": "Qwen3-0.6B-Instruct (p=0.47)",
    "dataset": "MATH-500",
    "budget": 50,
    "configs": [

@@ -23,7 +23,7 @@
   },
   {
    "key": "qwen3-0.6b",
-   "model": "Qwen3-0.6B-Instruct (p=0.46)",
+   "model": "Qwen3-0.6B-Instruct (p=0.47)",
    "dataset": "MATH-500",
    "n_wrong_votes": 41,
    "avg_winning_share": 0.27658536585365856
