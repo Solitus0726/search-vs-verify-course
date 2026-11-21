@@ -32,7 +32,7 @@
 \maketitle
 
 \blk{The Concept:}
-The concept introduced in this paper is \textbf{\textit{test-time compute allocation}}: the problem of dividing a fixed number of model calls between search and verification. As inference dominates LLM deployment cost, allocation is an open frontier question (the papers below). Search aggregates many candidate answers by majority voting; verification generates fewer and checks each with a judge (a verifier). Search carries a mathematical guarantee: with independent candidates and accuracy p above 1/2, the failure probability of majority voting falls exponentially in N; verification has no such guarantee, and only helps when the judge can tell good answers from bad ones. In this course, the judge is the model grading its own answers; our measurements show it is weak. Under the weak-judge, moderate-budget setting of this course, search usually wins; the best split depends on your model, your judge, and your budget. Our measured setting is in Table~\ref{tab:worked}.
+The concept introduced in this paper is \textbf{\textit{test-time compute allocation}}: the problem of dividing a fixed number of model calls between search and verification. As inference dominates LLM deployment cost, allocation is an open frontier question (the papers below). Search aggregates many candidate answers by majority voting, while verification generates fewer candidates and checks each with a judge (a verifier). At the same time, search carries a mathematical guarantee: with independent candidates and accuracy p above 1/2, the failure probability of majority voting falls exponentially in N. By contrast, verification has no such guarantee and only helps when the judge can tell good answers from bad ones. In this course, the judge is the model grading its own answers, and our measurements show it is weak. Under the weak-judge, moderate-budget setting of this course, search usually wins. The best split depends on three things: your model, your judge, and your budget. Our measured setting is in Table~\ref{tab:worked}.
 
 \begin{table}[h!]
   \caption{Measured accuracy on the 100-problem MATH 500 subset (Qwen3-4B, three seeds, budget 50 calls per problem).}
@@ -50,6 +50,8 @@ The concept introduced in this paper is \textbf{\textit{test-time compute alloca
     \bottomrule
   \end{tabular}
 \end{table}
+
+In both verification rows of Table~\ref{tab:worked} no majority vote is taken. The judge is the same model that generated the answers, and it scores each candidate from 1 to 10. The number after the multiplication sign is how many independent scores a candidate receives, and those scores are averaged. The candidate with the highest average is returned, with ties going to the candidate that appears first. Row 2 therefore spends 25 calls on candidates and 25 on scoring, while row 3 spends 5 on candidates and 45 on scoring.
 
 \blk{Leveling and Prerequisite Knowledge:}
 To follow this material, learners need three foundations: how an LLM generates answers (autoregressive decoding, one forward pass per token), enough probability for the binomial reasoning behind majority voting, and what the MATH and GSM8K benchmarks measure. The material supplies these foundations itself: three self-check questions in Notebook 00 verify them. These materials are suitable for the following individuals:\\
