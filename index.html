@@ -86,7 +86,8 @@
   }
 
   figure { margin: 0; }
-  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+  figure a { display: block; border-bottom: 0; }
+  figure img { width: 100%; height: auto; display: block; }
   figcaption { margin-top: 10px; color: var(--muted); font-size: 14.5px; }
 
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -221,9 +222,12 @@
 
   <section id="figure">
     <div class="wrap">
+      <h2>The learning path</h2>
       <figure>
-        <img src="figures/learning_path.png" alt="Learning path: a five-minute self-check routes to on-demand resources if it fails, or to the main notebook sequence if it passes.">
-        <figcaption>The learning path. A failed self-check sends learners to the on-demand resources; passing it opens the main sequence.</figcaption>
+        <a href="figures/learning_path_transparent.png" target="_blank" rel="noopener">
+          <img src="figures/learning_path_transparent.png" alt="Learning path: a five-minute self-check routes to on-demand resources if it fails, or to the main notebook sequence if it passes.">
+        </a>
+        <figcaption>A failed self-check sends learners to the on-demand resources. Passing it opens the main sequence.</figcaption>
       </figure>
     </div>
   </section>
