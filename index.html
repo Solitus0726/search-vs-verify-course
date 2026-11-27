@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test-Time Compute Allocation: Search vs. Verify — NeurIPS 2026 Education Track</title>
+<meta name="description" content="A short course on allocating a fixed inference budget between search and verification, with runnable notebooks that work without a GPU.">
+<style>
+  :root {
+    --ink: #16181d;
+    --muted: #5b6068;
+    --line: #e2ded4;
+    --paper: #fbfaf6;
+    --accent: #1f5d63;
+    --accent-soft: #e8f0ef;
+    --maxw: 980px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(31,93,99,.28); }
+  a:hover { border-bottom-color: var(--accent); }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600; font-size: clamp(30px, 4.6vw, 46px);
+    line-height: 1.15; margin: 0 0 18px; letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .88em; background: rgba(22, 24, 29, .06);
+    padding: 2px 5px; border-radius: 4px;
+  }
+  .byline { margin: 0; font-size: 17px; }
+  .byline .sep { color: var(--muted); padding: 0 6px; }
+  .affil { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+  .lede {
+    margin: 26px 0 0; max-width: 46em; font-size: 19px; color: #2b2f36;
+  }
+  .cta { margin: 30px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 9px 16px; border: 1px solid var(--line);
+    border-radius: 8px; background: #fff; color: var(--ink);
+    font-size: 15px; border-bottom-width: 1px;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.primary:hover { background: #17494e; color: #fff; }
+
+  main { padding: 8px 0 24px; }
+  section { padding: 44px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin: 0 0 20px;
+  }
+  h3 { font-size: 18px; margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  .narrow { max-width: 44em; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .card {
+    border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px;
+    background: #fff;
+  }
+  .card p { color: var(--muted); font-size: 15.5px; margin: 0; }
+  .card .tag {
+    display: inline-block; font-size: 12px; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-soft); border-radius: 4px;
+    padding: 3px 7px; margin-bottom: 10px;
+  }
+
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+  figcaption { margin-top: 10px; color: var(--muted); font-size: 14.5px; }
+
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; }
+  caption { text-align: left; color: var(--muted); font-size: 14.5px; padding-bottom: 10px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); }
+  th { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+
+  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+  .paths h3 { margin-bottom: 8px; }
+  .paths p { font-size: 15.5px; color: var(--muted); }
+
+  .note {
+    margin-top: 18px; padding: 14px 18px; background: var(--accent-soft);
+    border-radius: 8px; font-size: 15px; color: #24403f;
+  }
+  .note strong { color: var(--accent); }
+
+  ul.materials { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 34px; }
+  ul.materials li { margin: 0 0 10px; break-inside: avoid; font-size: 16px; }
+  ul.materials li span { color: var(--muted); }
+
+  footer { padding: 34px 0 56px; color: var(--muted); font-size: 14.5px; }
+  footer p { margin: 0 0 6px; }
+
+  @media (max-width: 720px) {
+    .grid, .paths { grid-template-columns: 1fr; }
+    ul.materials { columns: 1; }
+    header { padding-top: 48px; }
+    .table-wrap table { min-width: 0; }
+    th, td { padding: 8px 6px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">NeurIPS 2026 · Education Track</p>
+    <h1>Test-Time Compute Allocation: Search vs.&nbsp;Verify</h1>
+    <p class="byline">Tianxiang Xie<span class="sep">·</span>Jingxuan Wu<span class="sep">·</span>Jiaying Liu<span class="sep">·</span>Shuo Yu</p>
+    <p class="affil">Dalian University of Technology</p>
+    <p class="lede">At a fixed budget of model calls, should you generate many answers and vote, or generate fewer and let the model grade them? A two-page course, five notebooks, a short video and a 20-slide deck, all runnable without a GPU.</p>
+    <nav class="cta" aria-label="Materials">
+      <a class="btn primary" href="paper/education_paper.pdf">Paper (PDF)</a>
+      <a class="btn" href="video/concept_video.mp4">Video</a>
+      <a class="btn" href="slides/lecture_slides.pdf">Slides (PDF)</a>
+      <a class="btn" href="slides/lecture_slides.pptx">Slides (PPTX)</a>
+      <a class="btn" href="https://github.com/Solitus0726/search-vs-verify-course">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="idea">
+    <div class="wrap">
+      <h2>The idea</h2>
+      <div class="narrow">
+        <p><strong>Search</strong> spends the budget on many candidates and takes a majority vote. <strong>Verification</strong> spends part of it on candidate answers and the rest on having the model score each one.</p>
+        <p>Search carries a mathematical guarantee: with independent candidates and single-answer accuracy above 1/2, the failure probability falls exponentially in the number of candidates. Verification has no such guarantee, and only helps when the judge can tell good answers from bad ones. In this course the judge is the model grading its own answers, and our measurements show it is weak.</p>
+        <p>Under that setting, at a moderate budget, search usually wins. The best split depends on three things: your model, your judge, and your budget.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="inside">
+    <div class="wrap">
+      <h2>What is inside</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Notebook 00</span>
+          <h3>A five-minute self-check</h3>
+          <p>Three questions on decoding, binomial probability and the MATH and GSM8K benchmarks. Answer them, or read the answers, before anything else.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Notebooks 01–03</span>
+          <h3>Three experiments</h3>
+          <p>Budget–accuracy curves across six models, the optimal mix at a budget of 50 calls, and a prediction for a new task that you test yourself.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Notebook 04</span>
+          <h3>A report template</h3>
+          <p>Judge whether a research paper's baselines are fair, using the same questions the course asks about its own results.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Video and slides</span>
+          <h3>Five minutes, twenty slides</h3>
+          <p>An intuition-first explainer and a lecture deck covering the math, the measurements and the teaching path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="numbers">
+    <div class="wrap">
+      <h2>What the numbers look like</h2>
+      <div class="table-wrap">
+      <table>
+        <caption>Measured accuracy on the 100-problem MATH-500 subset. Qwen3-4B, three seeds, 50 calls per problem.</caption>
+        <thead>
+          <tr><th>Strategy</th><th>Split</th><th>Accuracy</th><th>95% CI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Search</td><td>50 candidates, majority vote</td><td class="num">0.853</td><td class="num">[0.81, 0.89]</td></tr>
+          <tr><td>Search + light verification</td><td>25 candidates × 1 check</td><td class="num">0.717</td><td class="num">[0.67, 0.77]</td></tr>
+          <tr><td>Verification</td><td>5 candidates × 9 checks</td><td class="num">0.753</td><td class="num">[0.70, 0.80]</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note"><strong>At the same 50-call budget, every verification mix trails pure search.</strong> The judge is the same model that wrote the answers, and its scores barely separate right from wrong.</p>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="wrap">
+      <h2>Two ways in</h2>
+      <div class="paths">
+        <div>
+          <h3>Thirty minutes, intuition first</h3>
+          <p>Watch the video, look at the strategy diagram, then open Notebook 01 in simplified mode. You will see the trade-off before doing any math.</p>
+        </div>
+        <div>
+          <h3>Two hours, the full arc</h3>
+          <p>Notebook 00 for the prerequisites, 01 to 03 for the experiments, 04 for the report. All plots load from the precomputed cache; the experiments are optional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="figure">
+    <div class="wrap">
+      <figure>
+        <img src="figures/learning_path.png" alt="Learning path: a five-minute self-check routes to on-demand resources if it fails, or to the main notebook sequence if it passes.">
+        <figcaption>The learning path. A failed self-check sends learners to the on-demand resources; passing it opens the main sequence.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="materials">
+    <div class="wrap">
+      <h2>Download everything</h2>
+      <ul class="materials">
+        <li><a href="paper/education_paper.pdf">Paper, two pages plus references</a></li>
+        <li><a href="video/concept_video.mp4">Video, five-minute explainer</a></li>
+        <li><a href="slides/lecture_slides.pdf">Slides, PDF</a> <span>·</span> <a href="slides/lecture_slides.pptx">PPTX</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/notebooks/00_self_check.ipynb">Notebook 00, self-check</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/notebooks/01_budget_efficiency.ipynb">Notebook 01, budget curves</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/notebooks/02_optimal_ratio.ipynb">Notebook 02, optimal mix</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/notebooks/03_new_task_prediction.ipynb">Notebook 03, new-task prediction</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/notebooks/04_baseline_review.ipynb">Notebook 04, baseline review</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course/tree/main/data/cache_subset">Precomputed results</a></li>
+        <li><a href="https://github.com/Solitus0726/search-vs-verify-course">Source code and data</a></li>
+      </ul>
+      <p class="note">The notebooks are <strong>cache-first</strong>. Every experiment cell skips itself unless you set <code>RUN_EXPERIMENT = True</code> in the configuration cell, so a full run needs neither a GPU nor an afternoon.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>All materials are original and were created for the NeurIPS 2026 Education Track.</p>
+    <p>Course content licensed <a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/LICENSE">CC BY 4.0</a>; code licensed <a href="https://github.com/Solitus0726/search-vs-verify-course/blob/main/LICENSE-CODE">Apache 2.0</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
