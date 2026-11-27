@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Test-Time Compute Allocation: Search vs. Verify — NeurIPS 2026 Education Track</title>
+<title>Test-Time Compute Allocation: Search vs. Verify · NeurIPS 2026 Education Track</title>
 <meta name="description" content="A short course on allocating a fixed inference budget between search and verification, with runnable notebooks that work without a GPU.">
 <style>
   :root {
@@ -132,7 +132,7 @@
     <h1>Test-Time Compute Allocation: Search vs.&nbsp;Verify</h1>
     <p class="byline">Tianxiang Xie<span class="sep">·</span>Jingxuan Wu<span class="sep">·</span>Jiaying Liu<span class="sep">·</span>Shuo Yu</p>
     <p class="affil">Dalian University of Technology</p>
-    <p class="lede">At a fixed budget of model calls, should you generate many answers and vote, or generate fewer and let the model grade them? A two-page course, five notebooks, a short video and a 20-slide deck, all runnable without a GPU.</p>
+    <p class="lede">A fixed budget of model calls can go to many candidate answers and a majority vote, or to fewer candidates and the model scoring each one. This course teaches that trade-off with a two-page paper, five notebooks, a five-minute video and a 20-slide deck. The notebooks run without a GPU.</p>
     <nav class="cta" aria-label="Materials">
       <a class="btn primary" href="paper/education_paper.pdf">Paper (PDF)</a>
       <a class="btn" href="video/concept_video.mp4">Video</a>
@@ -149,36 +149,36 @@
     <div class="wrap">
       <h2>The idea</h2>
       <div class="narrow">
-        <p><strong>Search</strong> spends the budget on many candidates and takes a majority vote. <strong>Verification</strong> spends part of it on candidate answers and the rest on having the model score each one.</p>
-        <p>Search carries a mathematical guarantee: with independent candidates and single-answer accuracy above 1/2, the failure probability falls exponentially in the number of candidates. Verification has no such guarantee, and only helps when the judge can tell good answers from bad ones. In this course the judge is the model grading its own answers, and our measurements show it is weak.</p>
-        <p>Under that setting, at a moderate budget, search usually wins. The best split depends on three things: your model, your judge, and your budget.</p>
+        <p>Search puts the whole budget into candidates and takes a majority vote. Verification splits it: some calls for candidates, the rest for the model to score each one.</p>
+        <p>With independent candidates and single-answer accuracy above 1/2, majority voting has a guarantee: the failure probability falls exponentially in the number of candidates. Verification has no such guarantee. It helps only when the judge can tell good answers from bad ones, and in this course the judge is the model grading its own answers. Our measurements say that judge is weak.</p>
+        <p>At a moderate budget under a weak judge, search usually wins. Which split is best depends on your model, your judge and your budget.</p>
       </div>
     </div>
   </section>
 
   <section id="inside">
     <div class="wrap">
-      <h2>What is inside</h2>
+      <h2>The materials</h2>
       <div class="grid">
         <div class="card">
           <span class="tag">Notebook 00</span>
           <h3>A five-minute self-check</h3>
-          <p>Three questions on decoding, binomial probability and the MATH and GSM8K benchmarks. Answer them, or read the answers, before anything else.</p>
+          <p>Three questions on decoding, binomial probability, and the MATH and GSM8K benchmarks. Answer them or read the answers first.</p>
         </div>
         <div class="card">
-          <span class="tag">Notebooks 01–03</span>
+          <span class="tag">Notebooks 01-03</span>
           <h3>Three experiments</h3>
-          <p>Budget–accuracy curves across six models, the optimal mix at a budget of 50 calls, and a prediction for a new task that you test yourself.</p>
+          <p>Budget-accuracy curves for six models, the best split at a budget of 50 calls, and a prediction for a new task that you test yourself.</p>
         </div>
         <div class="card">
           <span class="tag">Notebook 04</span>
           <h3>A report template</h3>
-          <p>Judge whether a research paper's baselines are fair, using the same questions the course asks about its own results.</p>
+          <p>Judge whether a research paper's baselines are fair, with the questions the course asks of its own results.</p>
         </div>
         <div class="card">
           <span class="tag">Video and slides</span>
           <h3>Five minutes, twenty slides</h3>
-          <p>An intuition-first explainer and a lecture deck covering the math, the measurements and the teaching path.</p>
+          <p>A five-minute explainer and a twenty-slide lecture deck, from the Chernoff bound to the verifier's errors.</p>
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@
 
   <section id="numbers">
     <div class="wrap">
-      <h2>What the numbers look like</h2>
+      <h2>What we measured</h2>
       <div class="table-wrap">
       <table>
         <caption>Measured accuracy on the 100-problem MATH-500 subset. Qwen3-4B, three seeds, 50 calls per problem.</caption>
@@ -200,21 +200,21 @@
         </tbody>
       </table>
       </div>
-      <p class="note"><strong>At the same 50-call budget, every verification mix trails pure search.</strong> The judge is the same model that wrote the answers, and its scores barely separate right from wrong.</p>
+      <p class="note"><strong>At the same 50-call budget, both verification rows trail pure search.</strong> The judge is the model that wrote the answers, and its scores for right and wrong answers overlap heavily.</p>
     </div>
   </section>
 
   <section id="path">
     <div class="wrap">
-      <h2>Two ways in</h2>
+      <h2>Where to start</h2>
       <div class="paths">
         <div>
           <h3>Thirty minutes, intuition first</h3>
-          <p>Watch the video, look at the strategy diagram, then open Notebook 01 in simplified mode. You will see the trade-off before doing any math.</p>
+          <p>Watch the video, look at the strategy diagram, then open Notebook 01. The trade-off is visible before any math.</p>
         </div>
         <div>
-          <h3>Two hours, the full arc</h3>
-          <p>Notebook 00 for the prerequisites, 01 to 03 for the experiments, 04 for the report. All plots load from the precomputed cache; the experiments are optional.</p>
+          <h3>The full sequence</h3>
+          <p>Notebook 00 for the prerequisites, 01 to 03 for the experiments, 04 for the report. With the precomputed cache every plot loads in seconds. Running the experiments yourself takes one to two hours.</p>
         </div>
       </div>
     </div>
@@ -234,7 +234,7 @@
 
   <section id="materials">
     <div class="wrap">
-      <h2>Download everything</h2>
+      <h2>Downloads</h2>
       <ul class="materials">
         <li><a href="paper/education_paper.pdf">Paper, two pages plus references</a></li>
         <li><a href="video/concept_video.mp4">Video, five-minute explainer</a></li>
@@ -247,7 +247,7 @@
         <li><a href="https://github.com/Solitus0726/search-vs-verify-course/tree/main/data/cache_subset">Precomputed results</a></li>
         <li><a href="https://github.com/Solitus0726/search-vs-verify-course">Source code and data</a></li>
       </ul>
-      <p class="note">The notebooks are <strong>cache-first</strong>. Every experiment cell skips itself unless you set <code>RUN_EXPERIMENT = True</code> in the configuration cell, so a full run needs neither a GPU nor an afternoon.</p>
+      <p class="note">The notebooks are <strong>cache-first</strong>. Every experiment cell skips itself unless you set <code>RUN_EXPERIMENT = True</code> in the configuration cell, so the whole course runs on a laptop, with no GPU and no long wait.</p>
     </div>
   </section>
 
